@@ -86,7 +86,9 @@ export class Login extends React.Component<IProps, IState> {
           await this.navigateToReturnUrl(returnUrl);
           break;
         case AuthenticationResultStatus.Fail:
-          this.setState({ message: result.message });
+          this.setState({
+            message: this.normalizeMessage(result.message),
+          });
           break;
         default:
           throw new Error(`Invalid status result ${result.status}.`);
@@ -108,7 +110,9 @@ export class Login extends React.Component<IProps, IState> {
         await this.navigateToReturnUrl(this.getReturnUrl(result.state));
         break;
       case AuthenticationResultStatus.Fail:
-        this.setState({ message: result.message });
+        this.setState({
+          message: this.normalizeMessage(result.message),
+        });
         break;
       default:
         throw new Error(
@@ -155,5 +159,18 @@ export class Login extends React.Component<IProps, IState> {
     // It's important that we do a replace here so that we remove the callback uri with the
     // fragment containing the tokens from the browser history.
     window.location.replace(returnUrl);
+  }
+
+  normalizeMessage(message: unknown) {
+    if (typeof message === "string") {
+      return message;
+    }
+    if (message && typeof message === "object" && "message" in message) {
+      const errorMessage = (message as { message?: unknown }).message;
+      if (typeof errorMessage === "string") {
+        return errorMessage;
+      }
+    }
+    return String(message ?? "");
   }
 }
