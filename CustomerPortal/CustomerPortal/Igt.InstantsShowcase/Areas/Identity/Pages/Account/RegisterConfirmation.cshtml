@@ -1,0 +1,104 @@
+﻿@page
+@model RegisterConfirmationModel
+@{
+    ViewData["Title"] = "Register confirmation";
+}
+
+<h1>Account created.</h1>
+<hr />
+<h2 id="requestAccessIntro">Please provide the following information and press "Submit" to request access.</h2>
+<div class="row" id="requestAccess">
+    <div class="col-md-4">
+        <form id="requestAccess">
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label>Email</label>
+                <input class="form-control" required id="email" value="@Model.Email" readonly />
+            </div>
+
+            <div class="form-group">
+                <label>First Name</label>
+                <input class="form-control" required id="first" />
+            </div>
+            <div class="form-group">
+                <label>Last Name</label>
+                <input class="form-control" required id="last" />
+            </div>
+
+            <div class="form-group">
+                <label>Phone</label>
+                <input class="form-control" required id="phone" />
+            </div>
+            <div class="form-group">
+                <label>Company / Organization</label>
+                <input class="form-control" required id="company" />
+            </div>
+            <div class="form-group">
+                <label>Client ID</label>
+                <input class="form-control" id="clientId" />
+            </div>
+            <a id="accountSubmit" class="btn btn-primary" href="" style="color: inherit">Submit</a>
+        </form>
+    </div>
+</div>
+
+<script>
+    const getBody = (first, last, email, phone, company, clientId) => {
+        const body = encodeURIComponent(`Account Access Request\n
+      Company: ${company} ${clientId ? clientId : ""}
+      Name: ${first} ${last}
+      Email: ${email}
+      Phone: ${phone}
+    `);
+
+        return body;
+    };
+
+    setTimeout(() => {
+        $('#first, #last, #email, #phone, #company, #clientId').on('blur', () => {
+            let first = $('#first')[0].value;
+            let last = $('#last')[0].value;
+            let email = $('#email')[0].value;
+            let phone = $('#phone')[0].value;
+            let company = $('#company')[0].value;
+            let clientId = $('#clientId')[0].value;
+
+            if (first && last && email && phone && company) {
+                $('#accountSubmit').removeClass('disabled');
+                $('#accountSubmit').attr("href", `mailto:InstantsShowcase@brightstarlottery.com,Gonzalo.Garcia@brightstarlottery.com?body=${getBody(first, last, email, phone, company, clientId)}&subject=InstantsShowcase.BrightStartLottery.com - Request Account Access`);
+            } else {
+                $('#accountSubmit').addClass('disabled');
+                $('#accountSubmit').attr("href", '');
+            }
+        });
+
+        $('#accountSubmit').on('click', () => {
+            if ($('#accountSubmit').attr('href')) {
+                $('#accountSubmit').addClass('disabled');
+                setTimeout(() => {
+                    location.href = '/';
+                }, 4000)
+            }
+        })
+    }, 2000)
+
+</script>
+
+
+@{
+
+    @*if (@Model.DisplayConfirmAccountLink)
+            {
+        <p>
+            This app does not currently have a real email sender registered, see <a href="https://aka.ms/aspaccountconf">these docs</a> for how to configure a real email sender.
+            Normally this would be emailed: <a id="confirm-link" href="@Model.EmailConfirmationUrl">Click here to confirm your account</a>
+        </p>
+            }
+            else
+            {
+        <p>
+                Please check your email to confirm your account.
+        </p>
+            }*@
+}

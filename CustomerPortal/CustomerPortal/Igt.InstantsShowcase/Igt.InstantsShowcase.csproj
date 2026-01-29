@@ -1,0 +1,261 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+	<PropertyGroup>
+		<UseRazorSourceGenerator>false</UseRazorSourceGenerator>
+	</PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <IsPackable>false</IsPackable>
+    <SpaRoot>ClientApp\</SpaRoot>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>obj\Debug\netcoreapp3.1\Igt.InstantsShowcase.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.35" />
+    <PackageReference Include="MicroKnights.Log4NetAdoNetAppender" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" Version="7.0.17" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="8.0.0" />
+    <PackageReference Include="Serilog" Version="3.1.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="6.5.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="8.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="%2a%2a\**" />
+    <Content Remove="$(SpaRoot)**" />
+    <Content Remove="%2a%2a\**" />
+    <EmbeddedResource Remove="%2a%2a\**" />
+    <None Remove="$(SpaRoot)**" />
+    <None Remove="%2a%2a\**" />
+    <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Controllers\AveragePricePointController.cs" />
+    <Compile Remove="Controllers\BingoCrosswordController.cs" />
+    <Compile Remove="Controllers\ConceptController.cs" />
+    <Compile Remove="Controllers\CustomerController.cs" />
+    <Compile Remove="Controllers\CustomIndexController.cs" />
+    <Compile Remove="Controllers\DashboardCurrentController.cs" />
+    <Compile Remove="Controllers\DashboardHistoricalController.cs" />
+    <Compile Remove="Controllers\DetailedGameSearchController.cs" />
+    <Compile Remove="Controllers\FavoriteController.cs" />
+    <Compile Remove="Controllers\FeatureController.cs" />
+    <Compile Remove="Controllers\FeatureIndexedController.cs" />
+    <Compile Remove="Controllers\FytdWeeklySalesController.cs" />
+    <Compile Remove="Controllers\FytdWeeklySalesSnapshotController.cs" />
+    <Compile Remove="Controllers\GameController.cs" />
+    <Compile Remove="Controllers\GameCountByPriceController.cs" />
+    <Compile Remove="Controllers\GameCountByYearPriceController.cs" />
+    <Compile Remove="Controllers\GameCountController.cs" />
+    <Compile Remove="Controllers\GameDetailsController.cs" />
+    <Compile Remove="Controllers\GameLaunchesController.cs" />
+    <Compile Remove="Controllers\GamePrizeStructureController.cs" />
+    <Compile Remove="Controllers\GameSalesController.cs" />
+    <Compile Remove="Controllers\GameSearchController.cs" />
+    <Compile Remove="Controllers\GameThemeController.cs" />
+    <Compile Remove="Controllers\HealthController.cs" />
+    <Compile Remove="Controllers\InstantWeeklySalesController.cs" />
+    <Compile Remove="Controllers\LicensedPropertyController.cs" />
+    <Compile Remove="Controllers\LotteryLogoController.cs" />
+    <Compile Remove="Controllers\LotterySalesController.cs" />
+    <Compile Remove="Controllers\NaloAverageSalesController.cs" />
+    <Compile Remove="Controllers\NaloLotterySalesController.cs" />
+    <Compile Remove="Controllers\NaloYtdSalesController.cs" />
+    <Compile Remove="Controllers\OptionsController.cs" />
+    <Compile Remove="Controllers\PlayStyleController.cs" />
+    <Compile Remove="Controllers\PlayStyleIndexedController.cs" />
+    <Compile Remove="Controllers\PrizeStructureProfileController.cs" />
+    <Compile Remove="Controllers\RateOfSalesController.cs" />
+    <Compile Remove="Controllers\RateOfSalesTrendController.cs" />
+    <Compile Remove="Controllers\ReportController.cs" />
+    <Compile Remove="Controllers\SalesWeekendingsController.cs" />
+    <Compile Remove="Controllers\ThemeIndexedController.cs" />
+    <Compile Remove="Controllers\ThemesPrior12MonthsController.cs" />
+    <Compile Remove="Controllers\TicketBreakdownController.cs" />
+    <Compile Remove="Controllers\TicketPriceController.cs" />
+    <Compile Remove="Controllers\TicketPricePenetrationController.cs" />
+    <Compile Remove="Controllers\VendorController.cs" />
+    <Compile Remove="Controllers\WeeklySalesPenetrationController.cs" />
+    <Compile Remove="Controllers\WeeklySalesYearController.cs" />
+    <Compile Remove="Controllers\WeeklySalesYearTicketPriceController.cs" />
+    <Compile Remove="Controllers\WeeksInMarketController.cs" />
+    <Compile Remove="Models\Color.cs" />
+    <Compile Remove="Models\Concept.cs" />
+    <Compile Remove="Models\ConceptDetailedGameSearch.cs" />
+    <Compile Remove="Models\ConceptFeatured.cs" />
+    <Compile Remove="Models\ConceptGameDetail.cs" />
+    <Compile Remove="Models\CustomerLogo.cs" />
+    <Compile Remove="Models\CustomerRequestBase.cs" />
+    <Compile Remove="Models\CustomIndexAdvanced.cs" />
+    <Compile Remove="Models\Feature.cs" />
+    <Compile Remove="Models\FytdWeeklySales.cs" />
+    <Compile Remove="Models\Game.cs" />
+    <Compile Remove="Models\GameFeatured.cs" />
+    <Compile Remove="Models\GameInfo.cs" />
+    <Compile Remove="Models\GameLaunch.cs" />
+    <Compile Remove="Models\GameSearch.cs" />
+    <Compile Remove="Models\iGrade\ChartIndexed.cs" />
+    <Compile Remove="Models\iGrade\LotteryAverageSellingPrice.cs" />
+    <Compile Remove="Models\iGrade\LotteryBingoCrossword.cs" />
+    <Compile Remove="Models\iGrade\LotteryFYTDWeeklySalesAndPriorYearByTicketPrice.cs" />
+    <Compile Remove="Models\iGrade\LotteryFYTDWeeklySalesAndPriorYearSnapshotByTicketPrice.cs" />
+    <Compile Remove="Models\iGrade\LotteryGameCountByPrice.cs" />
+    <Compile Remove="Models\iGrade\LotteryGameCountPriorYearsByTicketPrice.cs" />
+    <Compile Remove="Models\iGrade\LotteryPrimaryTheme.cs" />
+    <Compile Remove="Models\iGrade\LotteryTicketPrice.cs" />
+    <Compile Remove="Models\iGrade\LotteryTotalGameCount.cs" />
+    <Compile Remove="Models\iGrade\LotteryTotalYTDSalesSelectWithDate.cs" />
+    <Compile Remove="Models\iGrade\LotteryWithSalesInfo.cs" />
+    <Compile Remove="Models\iGrade\SalesWeekEndingsForYear.cs" />
+    <Compile Remove="Models\iGrade\WeeklySalesAndPriorYearsByTicketPrice.cs" />
+    <Compile Remove="Models\LicensedProperty.cs" />
+    <Compile Remove="Models\MetadataDetailedGameSearch.cs" />
+    <Compile Remove="Models\NaloAverageSales.cs" />
+    <Compile Remove="Models\PlayStyle.cs" />
+    <Compile Remove="Models\RegistrationUser.cs" />
+    <Compile Remove="Models\ReportPricePoint.cs" />
+    <Compile Remove="Models\ReportPricePointDynamic.cs" />
+    <Compile Remove="Models\ReportTop.cs" />
+    <Compile Remove="Models\ReportType.cs" />
+    <Compile Remove="Models\Repositories\AverageSellingPriceRepository.cs" />
+    <Compile Remove="Models\Repositories\BingoCrosswordRepository.cs" />
+    <Compile Remove="Models\Repositories\CustomerRepository.cs" />
+    <Compile Remove="Models\Repositories\CustomIndexRepository.cs" />
+    <Compile Remove="Models\Repositories\DetailedGameSearchRepository.cs" />
+    <Compile Remove="Models\Repositories\FavoriteRepository.cs" />
+    <Compile Remove="Models\Repositories\FeatureIndexedRepository.cs" />
+    <Compile Remove="Models\Repositories\FeatureRepository.cs" />
+    <Compile Remove="Models\Repositories\FytdWeeklySalesRepository.cs" />
+    <Compile Remove="Models\Repositories\FytdWeeklySalesSnapshotRepository.cs" />
+    <Compile Remove="Models\Repositories\GameCountByPriceRepository.cs" />
+    <Compile Remove="Models\Repositories\GameCountByYearPriceRepository.cs" />
+    <Compile Remove="Models\Repositories\GameCountRepository.cs" />
+    <Compile Remove="Models\Repositories\GameDetailsRepository.cs" />
+    <Compile Remove="Models\Repositories\GameLaunchRepository.cs" />
+    <Compile Remove="Models\Repositories\GamePrizeStructureRepository.cs" />
+    <Compile Remove="Models\Repositories\GameRepository.cs" />
+    <Compile Remove="Models\Repositories\GameSalesRepository.cs" />
+    <Compile Remove="Models\Repositories\GameSearchRepository.cs" />
+    <Compile Remove="Models\Repositories\IGradeRepository.cs" />
+    <Compile Remove="Models\Repositories\InstantWeeklySalesRepository.cs" />
+    <Compile Remove="Models\Repositories\LicensedPropertyRepository.cs" />
+    <Compile Remove="Models\Repositories\LotteryRepository.cs" />
+    <Compile Remove="Models\Repositories\NaloAverageSalesRepository.cs" />
+    <Compile Remove="Models\Repositories\NaloLotterySalesRepository.cs" />
+    <Compile Remove="Models\Repositories\NaloYTDSalesRepository.cs" />
+    <Compile Remove="Models\Repositories\PasswordHelper.cs" />
+    <Compile Remove="Models\Repositories\PlayStyleIndexedRepository.cs" />
+    <Compile Remove="Models\Repositories\PlayStyleRepository.cs" />
+    <Compile Remove="Models\Repositories\PrizeStructureProfileRepository.cs" />
+    <Compile Remove="Models\Repositories\RateOfSalesRepository.cs" />
+    <Compile Remove="Models\Repositories\RegistrationUserRepository.cs" />
+    <Compile Remove="Models\Repositories\ReportRepository.cs" />
+    <Compile Remove="Models\Repositories\Repository.cs" />
+    <Compile Remove="Models\Repositories\SalesWeekendingsRepository.cs" />
+    <Compile Remove="Models\Repositories\ThemeIndexedRepository.cs" />
+    <Compile Remove="Models\Repositories\ThemeRepository.cs" />
+    <Compile Remove="Models\Repositories\ThemesPrior12MonthsRepository.cs" />
+    <Compile Remove="Models\Repositories\TicketBreakdownRepository.cs" />
+    <Compile Remove="Models\Repositories\TicketPriceRepository.cs" />
+    <Compile Remove="Models\Repositories\UserRepository.cs" />
+    <Compile Remove="Models\Repositories\VendorRepository.cs" />
+    <Compile Remove="Models\Repositories\WeeklySalesPenetrationRepository.cs" />
+    <Compile Remove="Models\Repositories\WeeklySalesYearRepository.cs" />
+    <Compile Remove="Models\Repositories\WeeklySalesYearTicketPriceRepository.cs" />
+    <Compile Remove="Models\Repositories\WeeksInMarketRepository.cs" />
+    <Compile Remove="Models\Request\ConceptDetailedGameSearchRequest.cs" />
+    <Compile Remove="Models\Request\CustomIndexAdvancedRequest.cs" />
+    <Compile Remove="Models\Request\DetailedGameSearchRequest.cs" />
+    <Compile Remove="Models\Request\GameFeaturedRequest.cs" />
+    <Compile Remove="Models\Request\GameLaunchesRequest.cs" />
+    <Compile Remove="Models\Request\GameRequest.cs" />
+    <Compile Remove="Models\Request\MetadataDetailedGameSearchRequest.cs" />
+    <Compile Remove="Models\Request\NaloAverageSalesRequest.cs" />
+    <Compile Remove="Models\Request\RegisterUserRequest.cs" />
+    <Compile Remove="Models\Request\ReportActiveRequest.cs" />
+    <Compile Remove="Models\Request\ReportPricePointRequest.cs" />
+    <Compile Remove="Models\Request\ReportTopRequest.cs" />
+    <Compile Remove="Models\Theme.cs" />
+    <Compile Remove="Models\TicketPriceByCustomer.cs" />
+    <Compile Remove="Models\User.cs" />
+    <Compile Remove="Models\Vendor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="log4net.config" />
+    <Content Remove="wwwroot\favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="ClientApp\src\components\Footer.jsx" />
+    <None Remove="ClientApp\src\components\Footer.styles.jsx" />
+    <None Remove="ClientApp\src\features\analytics\Analytics.tsx" />
+    <None Remove="ClientApp\src\features\analytics\NorthAmericanLottery\NorthAmericanLottery.tsx" />
+    <None Remove="ClientApp\src\features\analytics\NorthAmericanLottery\NorthAmericanLotteryTable.tsx" />
+    <None Remove="ClientApp\src\features\analytics\PrizeStructureProfile\ExcludedGames.tsx" />
+    <None Remove="ClientApp\src\features\analytics\PrizeStructureProfile\LotteriesOfInterest.tsx" />
+    <None Remove="ClientApp\src\features\analytics\PrizeStructureProfile\PrizeStructureProfile.tsx" />
+    <None Remove="ClientApp\src\features\analytics\PrizeStructureProfile\TicketPrices.tsx" />
+    <None Remove="ClientApp\src\features\fetch_data.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\favicon.ico" />
+    <None Include="wwwroot\igt_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\components\Footer.styles.jsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\Footer.jsx" />
+    <TypeScriptCompile Include="ClientApp\src\features\analytics\Analytics.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\features\analytics\NorthAmericanLottery\NorthAmericanLottery.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\features\analytics\NorthAmericanLottery\NorthAmericanLotteryTable.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\features\analytics\PrizeStructureProfile\ExcludedGames.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\features\analytics\PrizeStructureProfile\LotteriesOfInterest.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\features\analytics\PrizeStructureProfile\PrizeStructureProfile.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\features\analytics\PrizeStructureProfile\TicketPrices.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\shared\utils\fetch_data.js" />
+  </ItemGroup>
+  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+  </Target>
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build" />
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)build\**" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+</Project>

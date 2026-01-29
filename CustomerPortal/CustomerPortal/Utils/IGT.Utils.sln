@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IGT.Utils", "IGT.Utils\IGT.Utils.csproj", "{3346C6C7-3663-4F0B-A285-9992AD4C448A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3346C6C7-3663-4F0B-A285-9992AD4C448A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3346C6C7-3663-4F0B-A285-9992AD4C448A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3346C6C7-3663-4F0B-A285-9992AD4C448A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3346C6C7-3663-4F0B-A285-9992AD4C448A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE3441D7-6748-4BF0-A066-00BDD71B5E3D}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://usflfpgtfs01/syseng
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = IGT.Utils\\IGT.Utils.csproj
+		SccProjectName1 = IGT.Utils
+		SccLocalPath1 = IGT.Utils
+	EndGlobalSection
+EndGlobal

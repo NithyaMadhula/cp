@@ -1,0 +1,40 @@
+.HeroContainer {
+    background-image: url("../assets/landing_hero2.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+    .HeroContainer img {
+        visibility: hidden;
+        object-fit: cover;
+        display: block;
+    }
+.FlavorContainer {
+    padding: 3vw 5vw 3vw 5vw
+}
+    .FlavorContainer h3 {
+        color: #002EE5;
+        font-size: calc(12px + 1.5vw);
+        padding: 0 0 1vw 0;
+    }
+    .FlavorContainer p {
+        font-family: "Lato", Arial, Helvetica, sans-serif;
+        font-size: calc(8px + 1vw);
+    }
+    .FlavorContainer button {
+        background-color: #ff671f;
+        color: #fff;
+        border: none;
+        text-align: center;
+        cursor: pointer;
+        padding: 1vw;
+        font-size: calc(6px + 1vw);
+        border-radius: .5vw;
+    }
+        .FlavorContainer button:hover {
+            background-color: #002EE5;
+        }
+        .FlavorContainer button:focus {
+            background-color: #0069d9;
+        }

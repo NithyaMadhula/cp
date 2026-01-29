@@ -1,0 +1,13 @@
+﻿namespace Igt.InstantsShowcase.Models
+{
+    public sealed class RegisterUserRequest
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public string Jurisdiction { get; set; }
+        public string Lottery { get; set; }
+        public string Role { get; set; }
+        public string Password { get; set; }
+    }
+}

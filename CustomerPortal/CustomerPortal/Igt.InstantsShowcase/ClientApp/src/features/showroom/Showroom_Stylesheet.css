@@ -1,0 +1,69 @@
+.SearchBar {
+    display: block;
+    background-color: #002EE5;
+}
+    .SearchBar ul {
+        font-size: calc(8px + 1vw);
+        font-family: "Verlag A", "Verlag B";
+        padding: 1.5vw 2vw;
+        box-shadow: 0 5px 5px rgba(0,0,0,.5);
+    }
+    .SearchBar ul li {
+        display: inline;
+        color: white;
+        padding: 0 2vw;
+    }
+    .SearchBar a {
+
+    }
+        .SearchBar a:hover {
+            border-bottom: .3vw solid #3475c1;
+            border-radius: .2vw;
+        }
+        .SearchBar a:focus {
+            border-bottom: .3vw solid #ff902e;
+            border-radius: .2vw;
+        }
+    .SearchBar span{
+        float:right;
+    }
+.DataTables{
+   width: 100%;
+}
+.DataTables div{
+    margin: 0 auto;
+}
+#favoritedGamesTable
+{
+    display:none;
+}
+
+@media (max-width: 600px) {
+    .DrawerStyle {
+        width: 200px!important;
+    }
+}
+
+.DrawerStyle {
+    width: 500px;
+}
+
+.TabStyle {
+    font-size: 22px !important;
+}
+TabTextStyle {
+    font-size: 22px !important;
+    right: 25px !important;
+    transform: translateY(0px) !important;
+}
+
+@media (max-width: 600px) {
+    .TabStyle {
+        font-size: 12px !important;
+    }
+    TabTextStyle {
+        font-size: 10px !important;
+        right: 25px !important;
+        transform: translateY(0px) !important;
+    }
+}

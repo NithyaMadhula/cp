@@ -1,0 +1,82 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<style>
+    .btn_blue input {
+        height: 35px;
+        color: white;
+        font-weight: 700;
+        font-size: 14px;
+        border: none;
+    }
+</style>
+
+<form id="account" method="post">
+    <div class="MainArea">
+        <div class="login_container">
+            <div class="login_left">
+                <h2>Please Login to the Instants Showcase</h2>
+                <div class="login_body">
+
+                    <div id="ctl00_ContentPlaceHolder1_error">
+                        <div class="form_alert">
+                            <p>InstantsShowcase.brightstarlottery.com passwords are case sensitive. Please check your caps-lock key.</p>
+                            <p><strong>Need Assistance?</strong> Please contact <a href="mailto:InstantsShowcase@brightstarlottery.com?subject=Incorrect%20Email/Password" title="InstantsShowcase@brightstarlottery.com">InstantsShowcase@brightstarlottery.com</a></p>
+                        </div>
+                    </div>
+
+                    <table border="0" cellpadding="4" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <strong><label asp-for="Input.Email"></label></strong>
+                                <input asp-for="Input.Email" type="text" maxlength="50" class="text_box" vcard_name="vCard.DisplayName" style="width: 150px" />
+                                <span asp-validation-for="Input.Email" class="text-danger"></span>
+                                <br/>
+                            </tr>
+                            <tr>
+                                <strong><label asp-for="Input.Password"></label></strong>
+                                <input asp-for="Input.Password" type="password" maxlength="50" class="text_box" style="width: 150px" />
+                                <span asp-validation-for="Input.Password" class="text-danger"></span>
+                                <br />
+                                <td>
+                                    @* TODO: email client integration *@
+                                    <a class="PasswordForgot text_box pt-3" asp-page="./ForgotPassword" style="width: 150px">I forgot my password</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="3">
+                                    <span class="button btn_orange" style="position:relative;top:20px;">
+                                        <input type="submit" value="Login" style="width: 80px; vertical-align: middle">
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="login_footer">&nbsp;</div>
+            </div>
+            <div class="login_right">
+                <h2>Other Options</h2>
+                <div class="login_body">
+                    <p><strong>Don't have an InstantsShowcase.BrightStarLottery.com Account?</strong></p>
+                    <span class="button btn_orange mt-3">
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="global_ribbon_dropdown" style="width: 250px; vertical-align: middle">
+                            <input type="button" value="Request Access" class="global_ribbon_dropdown" style="width: 250px; vertical-align: middle; height:40px; cursor:pointer;font-size:16px; color:white; font-size:bold; font-family:Helvetica">
+                        </a>
+                    </span>
+                    <hr>
+                </div>
+                <div class="login_footer">&nbsp;</div>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

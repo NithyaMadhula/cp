@@ -1,0 +1,7 @@
+﻿@model IGT.CustomerPortal.API.DTO.Response.GameResponse
+@{
+    Layout = null;
+}
+<a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-id="@Model.Id">
+    <i class="fas fa-bookmark fa-sm text-white-50"></i>&nbsp;@(Model.IsInFavorites ? "Remove from Favorites" : "Add to Favorites")
+</a>

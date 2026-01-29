@@ -1,0 +1,22 @@
+.dashboard-card {
+  height: 60px;
+}
+
+.d-f {
+  display: flex;
+}
+
+.f-1 {
+  flex: 1;
+}
+
+@media only screen and (max-width: 980px) {
+  .dashboard-card {
+    height: 100%;
+    padding: 1%;
+  } 
+
+  .dashboard-card form > * {
+    margin: 1%;
+  }
+}

@@ -1,0 +1,84 @@
+
+@media (min-width: 1000px) {
+    .FooterStyle {
+        /*position: fixed;
+        left: 0;
+        bottom: 0;*/
+        /*right: 0;*/
+        /*width: 100%;*/
+        
+    }
+    /*.MainFooterStyle {
+        min-height: 70vh;*/
+        /*overflow:hidden;*/
+    /*}*/
+}
+
+.MainFooterStyle {
+    min-height: 80vh;
+    background-color: #F7EDE5;
+    /*overflow:hidden;*/
+}
+
+.igt_copyright {
+    color:white;
+    font-size: 1rem;
+}
+
+.FooterLine {
+    margin: 1rem 0rem !important;
+}
+
+.FooterContainer {
+ /*   display: flex;
+    flex-direction: column;
+    align-items: flex-start;*/
+    /*justify-content:center;*/
+    padding: 2rem;
+    color:white;
+    width:100%;
+}
+
+.FooterContent {
+    display: inline-block;
+    color: white;
+    width: 70%;
+}
+    .FooterContent h1 a {
+        color: white;
+        font-size: calc(12px + 1.5vw)
+    }
+    .FooterContent p {
+        color: white;
+        font-size: calc(8px + .3vw)
+    }
+    .FooterContent img {
+        width: calc(45px + 1vw);
+        margin: 20px 0 4px;
+    }
+    .FooterContent h2 {
+        font-size: calc(6px + .3vw);
+        margin: 20px 0 4px;
+    }
+    .FooterContent ul a{
+        color:white;
+    }
+    .FooterContent ul a:hover {
+        color:#8dc8e8;
+    }
+    .FooterContent li {
+        display: inline;
+
+        padding: 0 1vw 0 0;
+    }
+    .FooterContent hr{
+        margin:1vw 0;
+        padding:0;
+    }
+
+.FooterLogo{
+    /*float:right;*/
+    width: calc(100px + 2vw);
+}
+
+

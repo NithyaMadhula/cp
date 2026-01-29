@@ -1,0 +1,777 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IGT.CustomerPortal.API</name>
+    </assembly>
+    <members>
+        <member name="M:IGT.CustomerPortal.API.Controllers.AveragePricePointController.Post(IGT.CustomerPortal.API.DTO.Request.DashboardCurrentRequest)">
+            <summary>
+            Returns a list of price points 
+            </summary>
+            <remarks>
+            Used in Dashboard current
+            
+            Data
+            </remarks>
+            <response code="200">Ok</response>
+            <param name="request">Request parameters</param>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.BingoCrosswordController.Post(IGT.CustomerPortal.API.DTO.Request.DashboardCurrentRequest)">
+            <summary>
+            Returns a list of bingo\crossword info
+            </summary>
+            <remarks>
+            Used in Dashboard current
+            
+            Data
+            </remarks>
+            <response code="200">Ok</response>
+            <param name="request">Request parameters</param>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.ConceptController.SearchConcept(IGT.CustomerPortal.API.DTO.Request.ConceptDetailedGameSearchRequest)">
+            <summary>
+            Returns a list of concept games based on a search criteria
+            </summary>
+            <remarks>
+            Used in Game Search
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.ConceptController.Get(System.Int32)">
+            <summary>
+            Returns detailed info about a concept game
+            </summary>
+            <remarks>
+            Used in Game Search, Indexing
+            
+            Details
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.ConceptController.Featured(IGT.CustomerPortal.API.DTO.Request.GameFeaturedRequest)">
+            <summary>
+            Returns a list of random featured concept games
+            </summary>
+            <remarks>
+            Used in Games
+            
+            Data
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.CustomerTypeController.Get">
+            <summary>
+            Returns a list of customer types (domestic or international) 
+            </summary>
+            <remarks>
+            Used in Dashboard current, Game Search, Penetration Charts
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.CustomIndexController.PostBasic(IGT.CustomerPortal.API.DTO.Request.CustomIndexBasicRequest)">
+            <summary>
+            Returns basic index info based on search criteria
+            </summary>
+            <remarks>
+            Used in Indexing
+            
+            Data
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.CustomIndexController.PostAdvanced(IGT.CustomerPortal.API.DTO.Request.CustomIndexAdvancedRequest)">
+            <summary>
+            Returns advanced index info based on search criteria
+            </summary>
+            <remarks>
+            Used in Indexing
+            
+            Data
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.DashboardHistoricalController.Post(IGT.CustomerPortal.API.DTO.Request.ApiFunctionalityRequest)">
+            Entry point for Dashboard Current 
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.DetailedGameSearchController.Post(IGT.CustomerPortal.API.DTO.Request.DetailedGameSearchRequest)">
+            <summary>
+            Returns a list of games based on a search criteria
+            </summary>
+            <remarks>
+            Used in Game Search
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.DetailedGameSearchController.Metadata(IGT.CustomerPortal.API.DTO.Request.MetadataDetailedGameSearchRequest)">
+            <summary>
+            Returns a list of metadata for the detailed game search
+            </summary>
+            <remarks>
+            Used in Game Search
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.FeatureIndexedController.Post(IGT.CustomerPortal.API.DTO.Request.DashboardCurrentRequest)">
+            <summary>
+            Returns a list of indexes by feature
+            </summary>
+            <remarks>
+            Used in Dashboard current
+            
+            Data
+            </remarks>
+            <response code="200">Ok</response>
+            <param name="request">Request parameters</param>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.FYTDWeeklySalesController.Post(IGT.CustomerPortal.API.DTO.Request.DashboardCurrentRequest)">
+            <summary>
+            Returns a list of weekly sales FYTD 
+            </summary>
+            <remarks>
+            Used in Dashboard current
+            
+            Data
+            </remarks>
+            <response code="200">Ok</response>
+            <param name="request">Request parameters</param>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.FYTDWeeklySalesSnapshotController.Post(IGT.CustomerPortal.API.DTO.Request.DashboardCurrentRequest)">
+            <summary>
+            Returns a list of snapshot weekly sales FYTD 
+            </summary>
+            <remarks>
+            Used in Dashboard current
+            
+            Data
+            </remarks>
+            <response code="200">Ok</response>
+            <param name="request">Request parameters</param>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.GameCountByPriceController.Post(IGT.CustomerPortal.API.DTO.Request.DashboardCurrentRequest)">
+            <summary>
+            Returns a list of game count by price
+            </summary>
+            <remarks>
+            Used in Dashboard current
+            
+            Data
+            </remarks>
+            <response code="200">Ok</response>
+            <param name="request">Request parameters</param>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.GameCountByYearPriceController.Post(IGT.CustomerPortal.API.DTO.Request.DashboardCurrentRequest)">
+            <summary>
+            Returns a list of game count by year / price
+            </summary>
+            <remarks>
+            Used in Dashboard current
+            
+            Data
+            </remarks>
+            <response code="200">Ok</response>
+            <param name="request">Request parameters</param>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.GameCountController.Post(IGT.CustomerPortal.API.DTO.Request.DashboardCurrentRequest)">
+            <summary>
+            Returns a list of game count
+            </summary>
+            <remarks>
+            Used in Dashboard current
+            
+            Data
+            </remarks>
+            <response code="200">Ok</response>
+            <param name="request">Request parameters</param>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.GameDetailsController.Get(System.Int32)">
+            <summary>
+            Returns detailed info about a game
+            </summary>
+            <remarks>
+            Used in Game Search, Indexing
+            
+            Details
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.GameLaunchesController.Post(IGT.CustomerPortal.API.DTO.Request.GameLaunchesRequest)">
+            <summary>
+            Returns game launches info based on search criteria
+            </summary>
+            <remarks>
+            Used in Game Launch
+            
+            Data
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.GamePrizeStructureController.Get(System.Int32)">
+            <summary>
+            Returns the prize structure for a game
+            </summary>
+            <remarks>
+            Used in Game Search, Indexing
+            
+            Details
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.GameSalesController.Get(System.Int32)">
+            <summary>
+            Returns the games sales info for a game
+            </summary>
+            <remarks>
+            Used in Game Search, Indexing
+            
+            Details
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.GameSearchController.Post(IGT.CustomerPortal.API.DTO.Request.GameSearchRequest)">
+            <summary>
+            Returns a list of games based on a search criteria
+            </summary>
+            <remarks>
+            Used in Game Search
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.InstantWeeklySalesController.Post(IGT.CustomerPortal.API.DTO.Request.DashboardCurrentRequest)">
+            <summary>
+            Returns info about weekly sales
+            </summary>
+            <remarks>
+            Used in Dashboard current
+            
+            Data
+            </remarks>
+            <response code="200">Ok</response>
+            <param name="request">Request parameters</param>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.LotteryController.Get(System.Int32)">
+            <summary>
+            Returns a list of lotteries
+            </summary>
+            <remarks>
+            Used in Dashboard current
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+            <param name="customerType">Customer type id</param>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.LotteryController.GetWithPenetration(System.Int32)">
+            <summary>
+            Returns a list of lotteries
+            </summary>
+            <remarks>
+            Used in Penetration Charts
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+            <param name="customerType">Customer type id</param>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.LotteryLogoController.Get">
+            <summary>
+            Returns logo info for external users
+            </summary>
+            <remarks>
+            Used in Dashboard current
+            
+            Data
+            </remarks>
+            <response code="200">Ok</response>
+            <response code="204">No Content</response>  
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.LotteryLogoController.Get(System.String)">
+            <summary>
+            Returns logo info for internal users
+            </summary>
+            <remarks>
+            Used in Dashboard current
+            
+            Data
+            </remarks>
+            <response code="200">Ok</response>
+            <param name="customerCode">Customer code</param>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.LotterySalesController.Post(IGT.CustomerPortal.API.DTO.Request.GameLaunchesRequest)">
+            <summary>
+            Returns NALO info
+            </summary>
+            <remarks>
+            Used in Nalo
+            
+            Data
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.NaloAverageSalesController.Post(IGT.CustomerPortal.API.DTO.Request.NaloAverageSalesRequest)">
+            <summary>
+            Returns info about Lotteries Average Sales
+            </summary>
+            <remarks>
+            Used in NALO
+            
+            Data
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.NaloLotterySalesController.Post(IGT.CustomerPortal.API.DTO.Request.NaloLotterySalesRequest)">
+            <summary>
+            Returns info about Lotteries Sales
+            </summary>
+            <remarks>
+            Used in NALO
+            
+            Data
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.NaloYTDSalesController.Post(IGT.CustomerPortal.API.DTO.Request.NaloYTDSalesRequest)">
+            <summary>
+            Returns info about Lottery YTD Sales
+            </summary>
+            <remarks>
+            Used in NALO
+            
+            Data
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.PlayStyleIndexedController.Post(IGT.CustomerPortal.API.DTO.Request.DashboardCurrentRequest)">
+            <summary>
+            Returns a list of indexes by playstyle
+            </summary>
+            <remarks>
+            Used in Dashboard current
+            
+            Data
+            </remarks>
+            <response code="200">Ok</response>
+            <param name="request">Request parameters</param>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.RateOfSalesController.Post(IGT.CustomerPortal.API.DTO.Request.RateOfSalesRequest)">
+            <summary>
+            Returns rate of sales info for chart
+            </summary>
+            <remarks>
+            Used in Penetration Charts
+            
+            Data
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.RateOfSalesGamesController.Get">
+            <summary>
+            Returns a list of game types 
+            </summary>
+            <remarks>
+            Used in Penetration Charts
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.RateOfSalesTrendController.Post(IGT.CustomerPortal.API.DTO.Request.RateOfSalesTrendRequest)">
+            <summary>
+            Returns rate of sales tren info for chart
+            </summary>
+            <remarks>
+            Used in Penetration Charts
+            
+            Data
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.ReportController.PostActive(IGT.CustomerPortal.API.DTO.Request.ReportActiveRequest)">
+            <summary>
+            Returns a report of active sales
+            </summary>
+            <remarks>
+            Used in Reports
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.ReportController.PostClosed(IGT.CustomerPortal.API.DTO.Request.ReportClosedRequest)">
+            <summary>
+            Returns a report of closed sales
+            </summary>
+            <remarks>
+            Used in Reports
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.ReportController.PostPricePointDynamic(IGT.CustomerPortal.API.DTO.Request.ReportPricePointRequest)">
+            <summary>
+            Returns a report of sales by price point (Dynamic)
+            </summary>
+            <remarks>
+            Used in Reports
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.ReportController.PostPricePoint(IGT.CustomerPortal.API.DTO.Request.ReportPricePointRequest)">
+            <summary>
+            Returns a report of sales by price point (Table)
+            </summary>
+            <remarks>
+            Used in Reports
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.ReportController.PostTop(IGT.CustomerPortal.API.DTO.Request.ReportTopRequest)">
+            <summary>
+            Returns a report of top 40 sales
+            </summary>
+            <remarks>
+            Used in Reports
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.ReportTypeController.Get">
+            <summary>
+            Returns a list of vendor types 
+            </summary>
+            <remarks>
+            Used in Reports
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.SalesWeekendingsController.Get(System.String)">
+            <summary>
+            Returns a list of lotteries
+            </summary>
+            <remarks>
+            Used in Dashboard current
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+            <param name="customer">Customer code</param>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.ThemeIndexedController.Post(IGT.CustomerPortal.API.DTO.Request.DashboardCurrentRequest)">
+            <summary>
+            Returns a list of indexes by theme
+            </summary>
+            <remarks>
+            Used in Dashboard current
+            
+            Data
+            </remarks>
+            <response code="200">Ok</response>
+            <param name="request">Request parameters</param>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.ThemesPrior12MonthsController.Post(IGT.CustomerPortal.API.DTO.Request.DashboardCurrentRequest)">
+            <summary>
+            Returns a list of themes info
+            </summary>
+            <remarks>
+            Used in Dashboard current
+            
+            Data
+            </remarks>
+            <response code="200">Ok</response>
+            <param name="request">Request parameters</param>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.TicketBreakdownController.Post(IGT.CustomerPortal.API.DTO.Request.DashboardCurrentRequest)">
+            <summary>
+            Returns a list of tickets 
+            </summary>
+            <remarks>
+            Used in Dashboard current, NALO
+            
+            Data
+            </remarks>
+            <response code="200">Ok</response>
+            <param name="request">Request parameters</param>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.TicketPricePenetrationController.Get(System.String)">
+            <summary>
+            Returns a list of ticket price for Penetration Charts
+            </summary>
+            <remarks>
+            Used in Penetration Charts
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+            <param name="customerCode">Customer code</param>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.VendorTypeController.Get">
+            <summary>
+            Returns a list of vendor types 
+            </summary>
+            <remarks>
+            Used in Reports
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.WeeklySalesPenetrationController.Post(IGT.CustomerPortal.API.DTO.Request.WeeklySalesPenetrationRequest)">
+            <summary>
+            Returns weekly sales penetration info for bubble chart
+            </summary>
+            <remarks>
+            Used in Penetration Charts
+            
+            Data
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.WeeklySalesYearController.Post(IGT.CustomerPortal.API.DTO.Request.DashboardCurrentRequest)">
+            <summary>
+            Returns a list weekly sales by year
+            </summary>
+            <remarks>
+            Used in Dashboard current
+            
+            Data
+            </remarks>
+            <response code="200">Ok</response>
+            <param name="request">Request parameters</param>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.WeeklySalesYearTicketPriceController.Post(IGT.CustomerPortal.API.DTO.Request.DashboardCurrentRequest)">
+            <summary>
+            Returns a list weekly sales by year / ticket price
+            </summary>
+            <remarks>
+            Used in Dashboard current
+            
+            Data
+            </remarks>
+            <response code="200">Ok</response>
+            <param name="request">Request parameters</param>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.WeeksInMarketController.Post(IGT.CustomerPortal.API.DTO.Request.WeeksInMarketRequest)">
+            <summary>
+            Returns weeks in market info for bubble chart
+            </summary>
+            <remarks>
+            Used in Penetration Charts
+            
+            Data
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.YearTypeController.Get">
+            <summary>
+            Returns a list of year types 
+            </summary>
+            <remarks>
+            Used in Dashboard current
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.CustomerController.GetCustomers(System.Int32)">
+            <summary>
+            Returns a list of customer
+            </summary>
+            <remarks>
+            Used in Game Search
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.CustomerController.GetYear(System.String)">
+            <summary>
+            Returns a list of years for a customer
+            </summary>
+            <remarks>
+            Used in Game Search
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.CustomerController.GetColor(System.String)">
+            <summary>
+            Returns a list of colors for a specific customer
+            </summary>
+            <remarks>
+            Used in Game Search
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.CustomerController.GetPlayStyle(System.String)">
+            <summary>
+            Returns a list of playstyle for a specific customer
+            </summary>
+            <remarks>
+            Used in Game Search
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.CustomerController.GetTheme(System.String)">
+            <summary>
+            Returns a list of themes for a specific customer
+            </summary>
+            <remarks>
+            Used in Game Search
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.CustomerController.GetTicketPrice(System.String)">
+            <summary>
+            Returns a list of ticket prices for a customer
+            </summary>
+            <remarks>
+            Used in Game Search
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.DashboardCurrentController.Post(IGT.CustomerPortal.API.DTO.Request.ApiFunctionalityRequest)">
+            Entry point for Dashboard Current 
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.DashboardCurrentController.EventHandler(IGT.CustomerPortal.API.DTO.Request.ApiFunctionalityRequest)">
+            Handle all the events available for Dashboard Current
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.FavoriteController.Get">
+            <summary>
+            Returns a list of favorite games for the current user
+            </summary>
+            <remarks>
+            Used in Favorites
+            
+            Data
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.FavoriteController.Post(System.Int32)">
+            <summary>
+            Saves a new favorite game for the current user
+            </summary>
+            <remarks>
+            Used in Favorites
+            
+            Data
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.FavoriteController.Delete(System.Int32)">
+            <summary>
+            Deletes a favorite game for the current user
+            </summary>
+            <remarks>
+            Used in Favorites
+            
+            Data
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.FeatureController.Get">
+            <summary>
+            Returns a list of features 
+            </summary>
+            <remarks>
+            Used in Indexing - Custom Index
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.GameController.Featured(IGT.CustomerPortal.API.DTO.Request.GameFeaturedRequest)">
+            <summary>
+            Returns a list of featured games
+            </summary>
+            <remarks>
+            Used in Games
+            
+            Data
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+        <member name="M:IGT.CustomerPortal.API.Controllers.GameThemeController.Get">
+            <summary>
+            Returns a list of game themes
+            </summary>
+            <remarks>
+            Used in Game Search
+            
+            Filter
+            </remarks>
+            <returns></returns>
+            <response code="200">Ok</response>
+        </member>
+    </members>
+</doc>

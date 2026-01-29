@@ -1,0 +1,89 @@
+{
+  "name": "igt.instantsshowcase",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@progress/kendo-data-query": "^1.5.4",
+    "@progress/kendo-drawing": "^1.8.1",
+    "@progress/kendo-react-animation": "^3.15.0",
+    "@progress/kendo-react-data-tools": "^3.15.0",
+    "@progress/kendo-react-dateinputs": "^3.15.0",
+    "@progress/kendo-react-dropdowns": "^3.15.0",
+    "@progress/kendo-react-grid": "^3.15.0",
+    "@progress/kendo-react-inputs": "^3.15.0",
+    "@progress/kendo-react-intl": "^3.15.0",
+    "@progress/kendo-react-tooltip": "^3.15.0",
+    "@progress/kendo-theme-bootstrap": "^4.19.0",
+    "@reduxjs/toolkit": "^1.4.0",
+    "@types/react-redux": "^7.1.9",
+    "chart.js": "3.9.1",
+    "isexe": "^3.1.1",
+    "jquery": "^3.5.1",
+    "merge": "^1.2.1",
+    "oidc-client": "^1.9.0",
+    "plotly.js": "^1.58.5",
+    "pure-react-carousel": "^1.27.4",
+    "react": "^16.0.0",
+    "react-animations": "^1.0.0",
+    "react-chartjs-2": "^4.3.1",
+    "react-csv": "^2.0.3",
+    "react-dom": "^16.0.0",
+    "react-plotly.js": "^2.4.0",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^5.0.1",
+    "react-table": "^7.7.0",
+    "reactstrap": "^8.4.1",
+    "rimraf": "^2.6.2",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/es6-promise": "^3.3.0",
+    "@types/jest": "^26.0.3",
+    "@types/node": "^14.0.14",
+    "@types/react": "^16.9.44",
+    "@types/react-csv": "^1.1.1",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-plotly.js": "^2.2.4",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/reactstrap": "^8.4.3",
+    "@types/styled-components": "^5.1.2",
+    "ajv": "^6.9.1",
+    "cross-env": "^5.2.0",
+    "eslint": "^8.36.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-flowtype": "8.0.3",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "typescript": "3.9.5"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "scripts": {
+    "start": "rimraf ./build && react-scripts --max_old_space_size=4096 start",
+    "build": "react-scripts --max_old_space_size=4096 build",
+    "test": "cross-env CI=true react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "lint": "eslint ./src/"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

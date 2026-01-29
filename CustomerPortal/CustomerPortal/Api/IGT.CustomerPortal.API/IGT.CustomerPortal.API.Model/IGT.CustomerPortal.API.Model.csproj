@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{98882AF8-1A4B-43C2-84C0-4A784EA17ABF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IGT.CustomerPortal.API.Model</RootNamespace>
+    <AssemblyName>IGT.CustomerPortal.API.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Staging|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Staging\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Color.cs" />
+    <Compile Include="Concept.cs" />
+    <Compile Include="ConceptDetailedGameSearch.cs" />
+    <Compile Include="ConceptFeatured.cs" />
+    <Compile Include="ConceptGameDetail.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="CustomerLogo.cs" />
+    <Compile Include="CustomIndexAdvanced.cs" />
+    <Compile Include="CustomIndexBasic.cs" />
+    <Compile Include="DetailedGameSearch.cs" />
+    <Compile Include="Favorite.cs" />
+    <Compile Include="Feature.cs" />
+    <Compile Include="FYTDWeeklySales.cs" />
+    <Compile Include="FYTDWeeklySalesSnapshot.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="GameDetails.cs" />
+    <Compile Include="GameFeatured.cs" />
+    <Compile Include="GameInfo.cs" />
+    <Compile Include="GameLaunch.cs" />
+    <Compile Include="GamePrizeStructure.cs" />
+    <Compile Include="GameSales.cs" />
+    <Compile Include="GameSearch.cs" />
+    <Compile Include="iGrade\ChartIndexed.cs" />
+    <Compile Include="iGrade\LotteryAverageSellingPrice.cs" />
+    <Compile Include="iGrade\LotteryBingoCrossword.cs" />
+    <Compile Include="iGrade\LotteryFYTDWeeklySalesAndPriorYearByTicketPrice.cs" />
+    <Compile Include="iGrade\LotteryFYTDWeeklySalesAndPriorYears.cs" />
+    <Compile Include="iGrade\LotteryFYTDWeeklySalesAndPriorYearSnapshotByTicketPrice.cs" />
+    <Compile Include="iGrade\LotteryGameCountByPrice.cs" />
+    <Compile Include="iGrade\LotteryGameCountPriorYearsByTicketPrice.cs" />
+    <Compile Include="iGrade\LotteryPrimaryTheme.cs" />
+    <Compile Include="iGrade\LotteryTicketPrice.cs" />
+    <Compile Include="iGrade\LotteryTotalGameCount.cs" />
+    <Compile Include="iGrade\LotteryTotalYTDSales.cs" />
+    <Compile Include="iGrade\LotteryTotalYTDSalesSelectWithDate.cs" />
+    <Compile Include="iGrade\LotteryWithSalesInfo.cs" />
+    <Compile Include="iGrade\SalesWeekEndingsForYear.cs" />
+    <Compile Include="iGrade\WeeklySalesAndPriorYearsByTicketPrice.cs" />
+    <Compile Include="LicensedProperty.cs" />
+    <Compile Include="MetadataDetailedGameSearch.cs" />
+    <Compile Include="NaloAverageSales.cs" />
+    <Compile Include="NaloLotterySales.cs" />
+    <Compile Include="NaloYTDSales.cs" />
+    <Compile Include="PlayStyle.cs" />
+    <Compile Include="RateOfSales.cs" />
+    <Compile Include="RateOfSalesTrend.cs" />
+    <Compile Include="RegistrationUser.cs" />
+    <Compile Include="ReportActive.cs" />
+    <Compile Include="ReportClosed.cs" />
+    <Compile Include="ReportPricePoint.cs" />
+    <Compile Include="ReportPricePointDynamic.cs" />
+    <Compile Include="ReportTop.cs" />
+    <Compile Include="ReportType.cs" />
+    <Compile Include="SalesWeekendings.cs" />
+    <Compile Include="Theme.cs" />
+    <Compile Include="TicketPrice.cs" />
+    <Compile Include="TicketPriceByCustomer.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vendor.cs" />
+    <Compile Include="WeeklySalesPenetration.cs" />
+    <Compile Include="WeeklySalesYearTicketPrice.cs" />
+    <Compile Include="WeeksInMarket.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

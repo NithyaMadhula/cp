@@ -1,0 +1,38 @@
+﻿@model IEnumerable<IGT.CustomerPortal.API.DTO.Response.GameResponse>
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+@section styles {
+    <link href="~/Content/igt-concept.css" media="all" rel="stylesheet" type="text/css" />
+}
+
+<div class="row">
+
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            <div class="col-lg-2 col-md-4 mb-4">
+                <div class="card shadow">
+
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-white">@item.Name</h6>
+                    </div>
+
+                    <div class="card-body">
+                        <a href="@Url.Action("Detail", "Concept", new { id = item.Id.ToString() })">
+                            <img class="concept-thumb hvr-float" src="@item.Concepts.First().Path" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+
+</div>
+
+@section scripts {
+    <script>
+    </script>
+}

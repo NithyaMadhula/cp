@@ -1,0 +1,45 @@
+trigger:
+- main  # Or your target branch
+
+pool:
+  name: TR_Pool
+
+variables:
+  buildConfiguration: 'Release'
+
+steps:
+
+
+# 🛠️ Restore
+#- task: DotNetCoreCLI@2
+#  displayName: 'Restore NuGet Packages'
+#  inputs:
+#    command: 'restore'
+#    projects: '**/Igt.InstantsShowcase.sln'
+
+# 🧱 Build
+- task: DotNetCoreCLI@2
+  displayName: 'Build Project'
+  inputs:
+    command: 'build'
+    arguments: '--configuration $(buildConfiguration)'
+    projects: '**/Igt.InstantsShowcase.sln'
+# 🔹 Step 3: Publish using MSBuild (new, replaces dotnet publish)
+- task: MSBuild@1
+  displayName: 'Publish Project with MSBuild'
+  inputs:
+    solution: '**/*.sln'
+    msbuildArchitecture: 'x64'
+    configuration: '$(buildConfiguration)'
+    msbuildArguments: >
+      /p:DeployOnBuild=true
+      /p:WebPublishMethod=FileSystem
+      /p:PublishDir=$(Build.ArtifactStagingDirectory)\publish
+      /p:Platform="Any CPU"
+# 🚀 Publish Artifacts
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'

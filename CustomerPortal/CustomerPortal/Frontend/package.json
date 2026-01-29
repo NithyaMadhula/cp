@@ -1,0 +1,42 @@
+{
+  "name": "brew_search",
+  "version": "1.0.0",
+  "description": "Search for breweries near you",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bin/server/server.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+  },
+  "engines": {
+    "node": "~12.6.0",
+    "npm": "~6.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maisonm/brewery_search.git"
+  },
+  "author": "Maison Moa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maisonm/brewery_search/issues"
+  },
+  "homepage": "https://github.com/maisonm/brewery_search#readme",
+  "dependencies": {
+    "@types/react-transition-group": "^4.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "image-downloader": "^3.5.0",
+    "method-override": "^3.0.0",
+    "morgan": "^1.9.1",
+    "node-fetch": "^2.6.0",
+    "nodemailer": "^6.3.0",
+    "nodemailer-mandrill-transport": "^1.2.0",
+    "react-slick": "^0.25.2",
+    "react-transition-group": "^4.3.0",
+    "request": "^2.88.2",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {}
+}

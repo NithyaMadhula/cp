@@ -1,0 +1,95 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IGT.CustomerPortal.API.DAL", "IGT.CustomerPortal.API.DAL\IGT.CustomerPortal.API.DAL.csproj", "{70C88FB2-881C-41DB-A958-E3D622953B1A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3346C6C7-3663-4F0B-A285-9992AD4C448A} = {3346C6C7-3663-4F0B-A285-9992AD4C448A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IGT.CustomerPortal.API.Model", "IGT.CustomerPortal.API.Model\IGT.CustomerPortal.API.Model.csproj", "{98882AF8-1A4B-43C2-84C0-4A784EA17ABF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IGT.CustomerPortal.API.DTO", "IGT.CustomerPortal.API.DTO\IGT.CustomerPortal.API.DTO.csproj", "{8AB5C407-83D4-446F-B8D3-140E6A29A925}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IGT.CustomerPortal.API", "IGT.CustomerPortal.API\IGT.CustomerPortal.API.csproj", "{1F8DA3E4-4FAB-4B3A-8AC0-4A38ACF60681}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IGT.CustomerPortal.API.Mail", "IGT.CustomerPortal.API.Mail\IGT.CustomerPortal.API.Mail.csproj", "{540534A6-9ACC-4C70-8EF9-A100A21472A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IGT.Utils", "IGT.Utils\IGT.Utils.csproj", "{3346C6C7-3663-4F0B-A285-9992AD4C448A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70C88FB2-881C-41DB-A958-E3D622953B1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70C88FB2-881C-41DB-A958-E3D622953B1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70C88FB2-881C-41DB-A958-E3D622953B1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70C88FB2-881C-41DB-A958-E3D622953B1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70C88FB2-881C-41DB-A958-E3D622953B1A}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{70C88FB2-881C-41DB-A958-E3D622953B1A}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{98882AF8-1A4B-43C2-84C0-4A784EA17ABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98882AF8-1A4B-43C2-84C0-4A784EA17ABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98882AF8-1A4B-43C2-84C0-4A784EA17ABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98882AF8-1A4B-43C2-84C0-4A784EA17ABF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98882AF8-1A4B-43C2-84C0-4A784EA17ABF}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{98882AF8-1A4B-43C2-84C0-4A784EA17ABF}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{8AB5C407-83D4-446F-B8D3-140E6A29A925}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AB5C407-83D4-446F-B8D3-140E6A29A925}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AB5C407-83D4-446F-B8D3-140E6A29A925}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AB5C407-83D4-446F-B8D3-140E6A29A925}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AB5C407-83D4-446F-B8D3-140E6A29A925}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{8AB5C407-83D4-446F-B8D3-140E6A29A925}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{1F8DA3E4-4FAB-4B3A-8AC0-4A38ACF60681}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F8DA3E4-4FAB-4B3A-8AC0-4A38ACF60681}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F8DA3E4-4FAB-4B3A-8AC0-4A38ACF60681}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F8DA3E4-4FAB-4B3A-8AC0-4A38ACF60681}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F8DA3E4-4FAB-4B3A-8AC0-4A38ACF60681}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{1F8DA3E4-4FAB-4B3A-8AC0-4A38ACF60681}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{540534A6-9ACC-4C70-8EF9-A100A21472A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{540534A6-9ACC-4C70-8EF9-A100A21472A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{540534A6-9ACC-4C70-8EF9-A100A21472A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{540534A6-9ACC-4C70-8EF9-A100A21472A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{540534A6-9ACC-4C70-8EF9-A100A21472A6}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{540534A6-9ACC-4C70-8EF9-A100A21472A6}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{3346C6C7-3663-4F0B-A285-9992AD4C448A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3346C6C7-3663-4F0B-A285-9992AD4C448A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3346C6C7-3663-4F0B-A285-9992AD4C448A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3346C6C7-3663-4F0B-A285-9992AD4C448A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3346C6C7-3663-4F0B-A285-9992AD4C448A}.Staging|Any CPU.ActiveCfg = Release|Any CPU
+		{3346C6C7-3663-4F0B-A285-9992AD4C448A}.Staging|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A9BAEC4-A607-460C-8913-16D6159EC858}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://usflfpgtfs01/syseng
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = IGT.CustomerPortal.API.DAL\\IGT.CustomerPortal.API.DAL.csproj
+		SccProjectName1 = IGT.CustomerPortal.API.DAL
+		SccLocalPath1 = IGT.CustomerPortal.API.DAL
+		SccProjectUniqueName2 = IGT.CustomerPortal.API.Model\\IGT.CustomerPortal.API.Model.csproj
+		SccProjectName2 = IGT.CustomerPortal.API.Model
+		SccLocalPath2 = IGT.CustomerPortal.API.Model
+		SccProjectUniqueName3 = IGT.CustomerPortal.API.DTO\\IGT.CustomerPortal.API.DTO.csproj
+		SccProjectName3 = IGT.CustomerPortal.API.DTO
+		SccLocalPath3 = IGT.CustomerPortal.API.DTO
+		SccProjectUniqueName4 = IGT.CustomerPortal.API\\IGT.CustomerPortal.API.csproj
+		SccProjectName4 = IGT.CustomerPortal.API
+		SccLocalPath4 = IGT.CustomerPortal.API
+		SccProjectUniqueName5 = IGT.CustomerPortal.API.Mail\\IGT.CustomerPortal.API.Mail.csproj
+		SccProjectName5 = IGT.CustomerPortal.API.Mail
+		SccLocalPath5 = IGT.CustomerPortal.API.Mail
+		SccProjectUniqueName6 = IGT.Utils\\IGT.Utils.csproj
+		SccProjectName6 = IGT.Utils
+		SccLocalPath6 = IGT.Utils
+	EndGlobalSection
+EndGlobal

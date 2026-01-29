@@ -1,0 +1,89 @@
+﻿@model IGT.CustomerPortal.API.DTO.Response.GameResponse
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+@section styles {
+    <link href="~/Content/igt-concept.css" media="all" rel="stylesheet" type="text/css" />
+}
+
+<div class="row">
+    <div class="col-12 mb-4">
+        <div class="card shadow">
+
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-white">@Model.Name</h6>
+            </div>
+
+            <div class="card-body">
+
+                <div class="row">
+
+                    <div class="col-12 col-md-5 mb-md-3">
+
+                        <div id="carouselExampleControls" class="carousel slide rounded" data-ride="carousel">
+                            <div class="carousel-inner">
+                                @{
+                                    string active = " active";
+                                    foreach (var item in Model.Concepts)
+                                    {
+                                        <div class="carousel-item@(active)">
+                                            <img class="d-block" src="@item.Path" alt="@item.Name">
+                                        </div>
+                                        active = "";
+                                    }
+                                }
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+                        <div id="btn-favorites" class="text-center mt-1">
+                            @Html.Partial("~/Views/Favorite/Toggle.cshtml", Model)
+                        </div>
+
+                    </div>
+
+                    <div class="col-12 col-md-7">
+                        <h5>Name</h5>
+                        <p>@Model.Name</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        function toggleFavorite() {
+            var id = $('#btn-favorites a').data('id');
+            $.ajax({
+                url: '/favorite/toggle',
+                type: 'POST',
+                data: JSON.stringify({ id }),
+                contentType: 'application/json; charset=utf-8',
+                success: function (data) {
+                    $('#btn-favorites').html(data);
+                    $('#btn-favorites a').click(toggleFavorite);
+                },
+                error: function () {
+                    alert("error");
+                }
+            });
+        }
+
+        $('.carousel').carousel({
+            interval: 0
+        });
+
+        $('#btn-favorites a').click(toggleFavorite);
+    </script>
+}

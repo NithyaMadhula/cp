@@ -1,0 +1,71 @@
+﻿.NavMenu {
+    width: 100%;
+    position: sticky;
+    z-index: 99;
+    background-color: white;
+}
+    .NavMenu img {
+        width: 8%;
+        min-width: 70px;
+    }
+    .NavMenu ul{
+        position:absolute;
+        display:inline-block;
+        right:2%;
+        bottom:0;
+    }
+    .NavMenu a {
+        font-size: calc(7px + .6vw);
+        font-family: 'Verlag A', 'Verlag B';
+        display: inline;
+        list-style-type: none;
+        padding: 1vw;
+        cursor: pointer;
+        color: #002EE5;
+    }
+.LogoutDropDown {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+    .LogoutDropDown:hover span, .LogoutDropDown:active span {
+        display: block;
+        background: #1b9ddb;
+        box-shadow: 0 10px 10px 5px rgba(0,0,0,.5);
+        animation: menuExpand 0.25s forwards;
+        background-color: #002EE5;
+    }
+    .LogoutDropDown h1 {
+        position: relative;
+        clear: both;
+        font-size: 1rem;
+        padding: 1vw 0 0 0;
+        margin:none;
+        color: white;
+        top: -6px;
+    }
+    .LogoutDropDown span {
+        display: none;
+        position: absolute;
+        left: auto;
+        right: .25vw;
+        background-color: #002EE5;
+        min-width: 2vw;
+        z-index: 1;
+        padding: 1rem;
+    }
+    .LogoutDropDown span a{
+        color:white;
+        margin:0;
+        padding:0;
+        font-size: calc(11px + .2vw);
+    }
+@keyframes menuExpand {
+    from {
+        height: 1%;
+    }
+
+    to {
+        height: 100%;
+    }
+}

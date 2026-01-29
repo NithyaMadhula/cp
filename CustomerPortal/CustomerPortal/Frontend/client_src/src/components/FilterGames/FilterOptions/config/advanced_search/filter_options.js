@@ -1,0 +1,33 @@
+// export const filter_options = {
+//   theme: [
+//     'Money / Cash',
+//     'Cards',
+//     'Music',
+//     'Luck',
+//     'Holiday',
+//     'Multiplier',
+//     'Numbers',
+//     'Dice',
+//     'Anniversary',
+//     'Tic-Tac-Toe',
+//     'Slots',
+//     'Games (nonLottery)',
+//     'Gems',
+//     'Precious Metals',
+//     'Crossword',
+//     'Annuity / For Life',
+//     'Keno',
+//     'Casino',
+//     'Whimsical',
+//     'TV / Movie',
+//     'Sports',
+//     'Extended Play - Other',
+//     'Food'
+//   ],
+//   color: ['Blue', 'Gold'],
+//   features: ['Foil Ticket'],
+//   playstyles: ['Scratch Off'],
+//   orientation: ['Horizontal'],
+//   'price-range': ['$0-$20', '$30+'],
+//   prizes: ['Cash', 'Car']
+// };

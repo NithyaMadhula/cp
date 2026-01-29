@@ -1,0 +1,37 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IGT.AWS.FileUpload", "IGT.AWS.FileUpload\IGT.AWS.FileUpload.csproj", "{A8517B7A-BC6C-49C4-9B9F-3A2E909FF070}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IGT.EmailLogSender", "IGT.EmailLogSender\IGT.EmailLogSender.csproj", "{2B75F556-9C84-46F5-8F68-9A0447362E15}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IGT.AWS.FileUpload.Core", "IGT.AWS.FileUpload.Core\IGT.AWS.FileUpload.Core.csproj", "{3F73C8FF-2754-4989-BD41-918E2F16E514}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8517B7A-BC6C-49C4-9B9F-3A2E909FF070}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8517B7A-BC6C-49C4-9B9F-3A2E909FF070}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8517B7A-BC6C-49C4-9B9F-3A2E909FF070}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8517B7A-BC6C-49C4-9B9F-3A2E909FF070}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B75F556-9C84-46F5-8F68-9A0447362E15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B75F556-9C84-46F5-8F68-9A0447362E15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B75F556-9C84-46F5-8F68-9A0447362E15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B75F556-9C84-46F5-8F68-9A0447362E15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F73C8FF-2754-4989-BD41-918E2F16E514}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F73C8FF-2754-4989-BD41-918E2F16E514}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F73C8FF-2754-4989-BD41-918E2F16E514}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F73C8FF-2754-4989-BD41-918E2F16E514}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4B5AF7E-9B74-4C07-8FCC-7C95814A8E98}
+	EndGlobalSection
+EndGlobal
