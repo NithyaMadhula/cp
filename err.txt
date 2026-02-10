@@ -1,0 +1,841 @@
+2026-01-29T19:25:48.9578290Z ##[section]Starting: Publish Project with MSBuild
+2026-01-29T19:25:48.9598248Z ==============================================================================
+2026-01-29T19:25:48.9598515Z Task         : MSBuild
+2026-01-29T19:25:48.9598616Z Description  : Build with MSBuild
+2026-01-29T19:25:48.9598779Z Version      : 1.260.0
+2026-01-29T19:25:48.9598902Z Author       : Microsoft Corporation
+2026-01-29T19:25:48.9599029Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/build/msbuild
+2026-01-29T19:25:48.9599231Z ==============================================================================
+2026-01-29T19:26:29.9310588Z ##[command]"E:\TR-Pool\work\_tasks\MSBuild_c6c4c611-aa2e-4a33-b606-5eaba2196824\1.260.0\node_modules\azure-pipelines-tasks-msbuildhelpers\tools\vswhere.exe" -version [17.0,18.0) -latest -format json
+2026-01-29T19:26:30.2253759Z ##[command]"C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\msbuild.exe" "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.sln" /nologo /nr:false /dl:CentralLogger,"E:\TR-Pool\work\_tasks\MSBuild_c6c4c611-aa2e-4a33-b606-5eaba2196824\1.260.0\node_modules\azure-pipelines-tasks-msbuildhelpers\tools\Microsoft.TeamFoundation.DistributedTask.MSBuild.Logger.dll";"RootDetailId=|SolutionDir=E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API|enableOrphanedProjectsLogs=true"*ForwardingLogger,"E:\TR-Pool\work\_tasks\MSBuild_c6c4c611-aa2e-4a33-b606-5eaba2196824\1.260.0\node_modules\azure-pipelines-tasks-msbuildhelpers\tools\Microsoft.TeamFoundation.DistributedTask.MSBuild.Logger.dll" /p:DeployOnBuild=true /p:WebPublishMethod=FileSystem /p:PublishDir=E:\TR-Pool\work\9\a\publish /p:Platform="Any CPU" /p:configuration="Release" /p:_MSDeployUserAgent="TFS_3e9107db-9701-4be3-9614-9c9235570cb5_build_49_0"
+2026-01-29T19:26:31.4833503Z Build started 1/29/2026 2:26:31 PM.
+2026-01-29T19:26:31.4844130Z 
+2026-01-29T19:26:31.8856911Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.sln" on node 1 (default targets).
+2026-01-29T19:26:31.8857421Z ValidateSolutionConfiguration:
+2026-01-29T19:26:31.8857692Z   Building solution configuration "Release|Any CPU".
+2026-01-29T19:26:32.0946394Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.sln" (1) is building "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.DAL\IGT.CustomerPortal.API.DAL.csproj.metaproj" (2) on node 1 (default targets).
+2026-01-29T19:26:32.0948304Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.DAL\IGT.CustomerPortal.API.DAL.csproj.metaproj" (2) is building "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\IGT.Utils.csproj" (3) on node 1 (default targets).
+2026-01-29T19:26:32.0948928Z PrepareForBuild:
+2026-01-29T19:26:32.0949149Z   Creating directory "bin\Release\".
+2026-01-29T19:26:32.0954316Z   Creating directory "obj\Release\".
+2026-01-29T19:26:32.3917011Z ResolveAssemblyReferences:
+2026-01-29T19:26:32.3917503Z   Primary reference "NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL".
+2026-01-29T19:26:32.4019551Z ##[warning]C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2433,5): Warning MSB3245: Could not resolve this reference. Could not locate the assembly "NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.
+2026-01-29T19:26:32.4032806Z C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2433,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\IGT.Utils.csproj]
+2026-01-29T19:26:32.4036769Z           For SearchPath "{HintPathFromItem}".
+2026-01-29T19:26:32.4037340Z           Considered "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\packages\NLog.4.6.6\lib\net45\NLog.dll", but it didn't exist.
+2026-01-29T19:26:32.4037763Z           For SearchPath "{TargetFrameworkDirectory}".
+2026-01-29T19:26:32.4038167Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\NLog.winmd", but it didn't exist.
+2026-01-29T19:26:32.4038687Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\NLog.dll", but it didn't exist.
+2026-01-29T19:26:32.4039224Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\NLog.exe", but it didn't exist.
+2026-01-29T19:26:32.4039751Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Facades\NLog.winmd", but it didn't exist.
+2026-01-29T19:26:32.4040306Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Facades\NLog.dll", but it didn't exist.
+2026-01-29T19:26:32.4040841Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Facades\NLog.exe", but it didn't exist.
+2026-01-29T19:26:32.4041433Z           For SearchPath "{AssemblyFoldersFromConfig:C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\AssemblyFolders.config,v4.7.2}".
+2026-01-29T19:26:32.4042015Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SqlDb\NLog.winmd", but it didn't exist.
+2026-01-29T19:26:32.4042564Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SqlDb\NLog.dll", but it didn't exist.
+2026-01-29T19:26:32.4043250Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SqlDb\NLog.exe", but it didn't exist.
+2026-01-29T19:26:32.4044244Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\NLog.winmd", but it didn't exist.
+2026-01-29T19:26:32.4044805Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\NLog.dll", but it didn't exist.
+2026-01-29T19:26:32.4045327Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\NLog.exe", but it didn't exist.
+2026-01-29T19:26:32.4045851Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.5\NLog.winmd", but it didn't exist.
+2026-01-29T19:26:32.4046418Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.5\NLog.dll", but it didn't exist.
+2026-01-29T19:26:32.4046960Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.5\NLog.exe", but it didn't exist.
+2026-01-29T19:26:32.4047498Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.0\NLog.winmd", but it didn't exist.
+2026-01-29T19:26:32.4048046Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.0\NLog.dll", but it didn't exist.
+2026-01-29T19:26:32.4048578Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.0\NLog.exe", but it didn't exist.
+2026-01-29T19:26:32.4049121Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v2.0\NLog.winmd", but it didn't exist.
+2026-01-29T19:26:32.4050398Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v2.0\NLog.dll", but it didn't exist.
+2026-01-29T19:26:32.4051131Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v2.0\NLog.exe", but it didn't exist.
+2026-01-29T19:26:32.4051607Z           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.7.2,AssemblyFoldersEx}".
+2026-01-29T19:26:32.4051952Z           Considered AssemblyFoldersEx locations.
+2026-01-29T19:26:32.4052194Z           For SearchPath "{AssemblyFolders}".
+2026-01-29T19:26:32.4052548Z           Considered "C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\NLog.winmd", but it didn't exist.
+2026-01-29T19:26:32.4052995Z           Considered "C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\NLog.dll", but it didn't exist.
+2026-01-29T19:26:32.4053454Z           Considered "C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\NLog.exe", but it didn't exist.
+2026-01-29T19:26:32.4053869Z           Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\NLog.winmd", but it didn't exist.
+2026-01-29T19:26:32.4054265Z           Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\NLog.dll", but it didn't exist.
+2026-01-29T19:26:32.4054645Z           Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\NLog.exe", but it didn't exist.
+2026-01-29T19:26:32.4054936Z           For SearchPath "{GAC}".
+2026-01-29T19:26:32.4055321Z           Considered "NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL", which was not found in the GAC.
+2026-01-29T19:26:32.4055729Z           For SearchPath "{RawFileName}".
+2026-01-29T19:26:32.4056148Z           Considered treating "NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL" as a file name, but it didn't exist.
+2026-01-29T19:26:32.4056579Z           For SearchPath "bin\Release\".
+2026-01-29T19:26:32.4056831Z           Considered "bin\Release\NLog.winmd", but it didn't exist.
+2026-01-29T19:26:32.4057131Z           Considered "bin\Release\NLog.dll", but it didn't exist.
+2026-01-29T19:26:32.4057678Z           Considered "bin\Release\NLog.exe", but it didn't exist.
+2026-01-29T19:26:32.4058070Z   AssemblyFoldersEx location: "{Registry:Software\Microsoft\.NETFramework,v4.7.2,AssemblyFoldersEx}"
+2026-01-29T19:26:32.4058637Z           C:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\
+2026-01-29T19:26:32.4058979Z           C:\Program Files (x86)\Microsoft Visual Studio\Shared\SDKs\Azure\v2.9\ToolsRef\
+2026-01-29T19:26:32.4059303Z           C:\Program Files\Microsoft SDKs\Azure\.NET SDK\v2.9\ref
+2026-01-29T19:26:32.4059635Z           C:\Program Files (x86)\Common Files\Microsoft Shared\MSEnv\PublicAssemblies
+2026-01-29T19:26:32.4059965Z           C:\Program Files (x86)\Microsoft Chart Controls\Assemblies
+2026-01-29T19:26:32.5042415Z CoreCompile:
+2026-01-29T19:26:32.5046374Z   C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\Roslyn\csc.exe /noconfig /nowarn:1701,1702 /fullpaths /nostdlib+ /errorreport:prompt /warn:4 /define:TRACE /highentropyva+ /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Microsoft.CSharp.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\mscorlib.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Configuration.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Data.DataSetExtensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.IO.Compression.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Net.Http.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Runtime.Serialization.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.ServiceModel.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Transactions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Xml.Linq.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\Release\IGT.Utils.dll /subsystemversion:6.00 /target:library /utf8output /deterministic+ /langversion:7.3 Databases\DbConnectionFactory.cs Databases\IDbConnectionFactory.cs Logging\Enums.cs Logging\ILoggerManager.cs Logging\LoggerManager.cs Properties\AssemblyInfo.cs "obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs"
+2026-01-29T19:26:36.6676749Z ##[error]CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\Logging\LoggerManager.cs(1,7): Error CS0246: The type or namespace name 'NLog' could not be found (are you missing a using directive or an assembly reference?)
+2026-01-29T19:26:36.6678521Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\Logging\LoggerManager.cs(1,7): error CS0246: The type or namespace name 'NLog' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\IGT.Utils.csproj]
+2026-01-29T19:26:36.6683162Z ##[error]CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\Logging\LoggerManager.cs(2,7): Error CS0246: The type or namespace name 'NLog' could not be found (are you missing a using directive or an assembly reference?)
+2026-01-29T19:26:36.6684648Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\Logging\LoggerManager.cs(2,7): error CS0246: The type or namespace name 'NLog' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\IGT.Utils.csproj]
+2026-01-29T19:26:36.6690299Z ##[error]CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\Logging\LoggerManager.cs(3,7): Error CS0246: The type or namespace name 'NLog' could not be found (are you missing a using directive or an assembly reference?)
+2026-01-29T19:26:36.6691806Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\Logging\LoggerManager.cs(3,7): error CS0246: The type or namespace name 'NLog' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\IGT.Utils.csproj]
+2026-01-29T19:26:36.6695474Z ##[error]CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\Logging\LoggerManager.cs(11,25): Error CS0246: The type or namespace name 'Logger' could not be found (are you missing a using directive or an assembly reference?)
+2026-01-29T19:26:36.6696903Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\Logging\LoggerManager.cs(11,25): error CS0246: The type or namespace name 'Logger' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\IGT.Utils.csproj]
+2026-01-29T19:26:36.6697691Z   CompilerServer: server - server processed compilation - IGT.Utils
+2026-01-29T19:26:36.6748577Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\IGT.Utils.csproj" (default targets) -- FAILED.
+2026-01-29T19:26:36.6796710Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.DAL\IGT.CustomerPortal.API.DAL.csproj.metaproj" (default targets) -- FAILED.
+2026-01-29T19:26:36.6988255Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.sln" (1) is building "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Model\IGT.CustomerPortal.API.Model.csproj" (4) on node 1 (default targets).
+2026-01-29T19:26:36.6988988Z PrepareForBuild:
+2026-01-29T19:26:36.6989192Z   Creating directory "bin\Release\".
+2026-01-29T19:26:36.6995285Z   Creating directory "obj\Release\".
+2026-01-29T19:26:36.7226867Z CoreCompile:
+2026-01-29T19:26:36.7232011Z   C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\Roslyn\csc.exe /noconfig /nowarn:1701,1702 /fullpaths /nostdlib+ /errorreport:prompt /warn:4 /define:TRACE /highentropyva+ /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Microsoft.CSharp.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\mscorlib.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Data.DataSetExtensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Net.Http.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Xml.Linq.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\Release\IGT.CustomerPortal.API.Model.dll /subsystemversion:6.00 /target:library /utf8output /deterministic+ /langversion:7.3 Color.cs Concept.cs ConceptDetailedGameSearch.cs ConceptFeatured.cs ConceptGameDetail.cs Customer.cs CustomerLogo.cs CustomIndexAdvanced.cs CustomIndexBasic.cs DetailedGameSearch.cs Favorite.cs Feature.cs FYTDWeeklySales.cs FYTDWeeklySalesSnapshot.cs Game.cs GameDetails.cs GameFeatured.cs GameInfo.cs GameLaunch.cs GamePrizeStructure.cs GameSales.cs GameSearch.cs iGrade\ChartIndexed.cs iGrade\LotteryAverageSellingPrice.cs iGrade\LotteryBingoCrossword.cs iGrade\LotteryFYTDWeeklySalesAndPriorYearByTicketPrice.cs iGrade\LotteryFYTDWeeklySalesAndPriorYears.cs iGrade\LotteryFYTDWeeklySalesAndPriorYearSnapshotByTicketPrice.cs iGrade\LotteryGameCountByPrice.cs iGrade\LotteryGameCountPriorYearsByTicketPrice.cs iGrade\LotteryPrimaryTheme.cs iGrade\LotteryTicketPrice.cs iGrade\LotteryTotalGameCount.cs iGrade\LotteryTotalYTDSales.cs iGrade\LotteryTotalYTDSalesSelectWithDate.cs iGrade\LotteryWithSalesInfo.cs iGrade\SalesWeekEndingsForYear.cs iGrade\WeeklySalesAndPriorYearsByTicketPrice.cs LicensedProperty.cs MetadataDetailedGameSearch.cs NaloAverageSales.cs NaloLotterySales.cs NaloYTDSales.cs PlayStyle.cs RateOfSales.cs RateOfSalesTrend.cs RegistrationUser.cs ReportActive.cs ReportClosed.cs ReportPricePoint.cs ReportPricePointDynamic.cs ReportTop.cs ReportType.cs SalesWeekendings.cs Theme.cs TicketPrice.cs TicketPriceByCustomer.cs User.cs Properties\AssemblyInfo.cs Vendor.cs WeeklySalesPenetration.cs WeeklySalesYearTicketPrice.cs WeeksInMarket.cs "obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs"
+2026-01-29T19:26:37.3777183Z   CompilerServer: server - server processed compilation - IGT.CustomerPortal.API.Model
+2026-01-29T19:26:37.3819977Z CopyFilesToOutputDirectory:
+2026-01-29T19:26:37.3822058Z   Copying file from "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Model\obj\Release\IGT.CustomerPortal.API.Model.dll" to "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Model\bin\Release\IGT.CustomerPortal.API.Model.dll".
+2026-01-29T19:26:37.3913193Z   IGT.CustomerPortal.API.Model -> E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Model\bin\Release\IGT.CustomerPortal.API.Model.dll
+2026-01-29T19:26:37.3917516Z   Copying file from "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Model\obj\Release\IGT.CustomerPortal.API.Model.pdb" to "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Model\bin\Release\IGT.CustomerPortal.API.Model.pdb".
+2026-01-29T19:26:37.3987611Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Model\IGT.CustomerPortal.API.Model.csproj" (default targets).
+2026-01-29T19:26:37.4187958Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.sln" (1) is building "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.DTO\IGT.CustomerPortal.API.DTO.csproj" (5) on node 1 (default targets).
+2026-01-29T19:26:37.4188839Z PrepareForBuild:
+2026-01-29T19:26:37.4189084Z   Creating directory "bin\Release\".
+2026-01-29T19:26:37.4195133Z   Creating directory "obj\Release\".
+2026-01-29T19:26:37.4469636Z ResolveAssemblyReferences:
+2026-01-29T19:26:37.4470128Z   Primary reference "Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL".
+2026-01-29T19:26:37.4476917Z ##[warning]C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2433,5): Warning MSB3245: Could not resolve this reference. Could not locate the assembly "Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.
+2026-01-29T19:26:37.4481187Z C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2433,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.DTO\IGT.CustomerPortal.API.DTO.csproj]
+2026-01-29T19:26:37.4482288Z           For SearchPath "{HintPathFromItem}".
+2026-01-29T19:26:37.4482761Z           Considered "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll", but it didn't exist.
+2026-01-29T19:26:37.4483217Z           For SearchPath "{TargetFrameworkDirectory}".
+2026-01-29T19:26:37.4483642Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Newtonsoft.Json.winmd", but it didn't exist.
+2026-01-29T19:26:37.4484195Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Newtonsoft.Json.dll", but it didn't exist.
+2026-01-29T19:26:37.4484754Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Newtonsoft.Json.exe", but it didn't exist.
+2026-01-29T19:26:37.4485317Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Facades\Newtonsoft.Json.winmd", but it didn't exist.
+2026-01-29T19:26:37.4486351Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Facades\Newtonsoft.Json.dll", but it didn't exist.
+2026-01-29T19:26:37.4486919Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Facades\Newtonsoft.Json.exe", but it didn't exist.
+2026-01-29T19:26:37.4487532Z           For SearchPath "{AssemblyFoldersFromConfig:C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\AssemblyFolders.config,v4.7.2}".
+2026-01-29T19:26:37.4488132Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SqlDb\Newtonsoft.Json.winmd", but it didn't exist.
+2026-01-29T19:26:37.4488724Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SqlDb\Newtonsoft.Json.dll", but it didn't exist.
+2026-01-29T19:26:37.4489310Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SqlDb\Newtonsoft.Json.exe", but it didn't exist.
+2026-01-29T19:26:37.4489873Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\Newtonsoft.Json.winmd", but it didn't exist.
+2026-01-29T19:26:37.4490440Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\Newtonsoft.Json.dll", but it didn't exist.
+2026-01-29T19:26:37.4490984Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\Newtonsoft.Json.exe", but it didn't exist.
+2026-01-29T19:26:37.4491554Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.5\Newtonsoft.Json.winmd", but it didn't exist.
+2026-01-29T19:26:37.4492126Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.5\Newtonsoft.Json.dll", but it didn't exist.
+2026-01-29T19:26:37.4492711Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.5\Newtonsoft.Json.exe", but it didn't exist.
+2026-01-29T19:26:37.4493282Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.0\Newtonsoft.Json.winmd", but it didn't exist.
+2026-01-29T19:26:37.4494102Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.0\Newtonsoft.Json.dll", but it didn't exist.
+2026-01-29T19:26:37.4494671Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.0\Newtonsoft.Json.exe", but it didn't exist.
+2026-01-29T19:26:37.4495257Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v2.0\Newtonsoft.Json.winmd", but it didn't exist.
+2026-01-29T19:26:37.4495828Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v2.0\Newtonsoft.Json.dll", but it didn't exist.
+2026-01-29T19:26:37.4496409Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v2.0\Newtonsoft.Json.exe", but it didn't exist.
+2026-01-29T19:26:37.4496927Z           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.7.2,AssemblyFoldersEx}".
+2026-01-29T19:26:37.4497260Z           Considered AssemblyFoldersEx locations.
+2026-01-29T19:26:37.4497628Z           Considered "C:\Program Files (x86)\Microsoft Visual Studio\Shared\SDKs\Azure\v2.9\ToolsRef\Newtonsoft.Json.dll",
+2026-01-29T19:26:37.4498096Z   			but its name "Newtonsoft.Json, Version=13.0.1.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed"
+2026-01-29T19:26:37.4498620Z   			didn't match the expected name "Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL".
+2026-01-29T19:26:37.4499244Z           For SearchPath "{AssemblyFolders}".
+2026-01-29T19:26:37.4499616Z           Considered "C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Newtonsoft.Json.winmd", but it didn't exist.
+2026-01-29T19:26:37.4500100Z           Considered "C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Newtonsoft.Json.dll", but it didn't exist.
+2026-01-29T19:26:37.4500591Z           Considered "C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Newtonsoft.Json.exe", but it didn't exist.
+2026-01-29T19:26:37.4501044Z           Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\Newtonsoft.Json.winmd", but it didn't exist.
+2026-01-29T19:26:37.4501515Z           Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\Newtonsoft.Json.dll",
+2026-01-29T19:26:37.4501912Z   			but its name "Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed"
+2026-01-29T19:26:37.4502439Z   			didn't match the expected name "Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL".
+2026-01-29T19:26:37.4502922Z           Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\Newtonsoft.Json.exe", but it didn't exist.
+2026-01-29T19:26:37.4503235Z           For SearchPath "{GAC}".
+2026-01-29T19:26:37.4503643Z           Considered "Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL", which was not found in the GAC.
+2026-01-29T19:26:37.4504074Z           For SearchPath "{RawFileName}".
+2026-01-29T19:26:37.4504513Z           Considered treating "Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" as a file name, but it didn't exist.
+2026-01-29T19:26:37.4504953Z           For SearchPath "bin\Release\".
+2026-01-29T19:26:37.4505224Z           Considered "bin\Release\Newtonsoft.Json.winmd", but it didn't exist.
+2026-01-29T19:26:37.4505552Z           Considered "bin\Release\Newtonsoft.Json.dll", but it didn't exist.
+2026-01-29T19:26:37.4505889Z           Considered "bin\Release\Newtonsoft.Json.exe", but it didn't exist.
+2026-01-29T19:26:37.4506274Z   AssemblyFoldersEx location: "{Registry:Software\Microsoft\.NETFramework,v4.7.2,AssemblyFoldersEx}"
+2026-01-29T19:26:37.4507068Z           C:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\
+2026-01-29T19:26:37.4507409Z           C:\Program Files (x86)\Microsoft Visual Studio\Shared\SDKs\Azure\v2.9\ToolsRef\
+2026-01-29T19:26:37.4507747Z           C:\Program Files\Microsoft SDKs\Azure\.NET SDK\v2.9\ref
+2026-01-29T19:26:37.4508272Z           C:\Program Files (x86)\Common Files\Microsoft Shared\MSEnv\PublicAssemblies
+2026-01-29T19:26:37.4508602Z           C:\Program Files (x86)\Microsoft Chart Controls\Assemblies
+2026-01-29T19:26:37.4595083Z CoreCompile:
+2026-01-29T19:26:37.4599805Z   C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\Roslyn\csc.exe /noconfig /nowarn:1701,1702 /fullpaths /nostdlib+ /errorreport:prompt /warn:4 /define:TRACE /highentropyva+ /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Microsoft.CSharp.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\mscorlib.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.ComponentModel.DataAnnotations.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Data.DataSetExtensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Net.Http.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Xml.Linq.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\Release\IGT.CustomerPortal.API.DTO.dll /subsystemversion:6.00 /target:library /utf8output /deterministic+ /langversion:7.3 ApiFunctionalitySection.cs Request\ConceptDetailedGameSearchRequest.cs Request\GameFeaturedRequest.cs Request\MetadataDetailedGameSearchRequest.cs Request\PrizeStructureProfileRequest.cs Request\ReportTopRequest.cs Request\NaloLotterySalesRequest.cs Properties\AssemblyInfo.cs Request\NaloAverageSalesRequest.cs Request\NaloYTDSalesRequest.cs Request\ReportClosedRequest.cs Request\ApiFunctionalityRequest.cs Request\CustomIndexAdvancedRequest.cs Request\CustomIndexBasicRequest.cs Request\DetailedGameSearchRequest.cs Request\GameLaunchesRequest.cs Request\GameRequest.cs Request\DashboardCurrentRequest.cs Request\GameSearchRequest.cs Request\RateOfSalesRequest.cs Request\RateOfSalesTrendRequest.cs Request\RegisterUserRequest.cs Request\ReportActiveRequest.cs Request\ReportPricePointRequest.cs Request\WeeklySalesPenetrationRequest.cs Request\WeeksInMarketRequest.cs Response\ApiFunctionalityResponse.cs Response\ApiResponse.cs Response\ConceptResponse.cs Response\GenericResponse.cs Response\PrizeStructureProfileResponse.cs Response\RegisterUserResponse.cs "obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs"
+2026-01-29T19:26:37.5342608Z   CompilerServer: server - server processed compilation - IGT.CustomerPortal.API.DTO
+2026-01-29T19:26:37.5411563Z CopyFilesToOutputDirectory:
+2026-01-29T19:26:37.5412629Z   Copying file from "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.DTO\obj\Release\IGT.CustomerPortal.API.DTO.dll" to "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.DTO\bin\Release\IGT.CustomerPortal.API.DTO.dll".
+2026-01-29T19:26:37.5453695Z   IGT.CustomerPortal.API.DTO -> E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.DTO\bin\Release\IGT.CustomerPortal.API.DTO.dll
+2026-01-29T19:26:37.5457285Z   Copying file from "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.DTO\obj\Release\IGT.CustomerPortal.API.DTO.pdb" to "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.DTO\bin\Release\IGT.CustomerPortal.API.DTO.pdb".
+2026-01-29T19:26:37.5528368Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.DTO\IGT.CustomerPortal.API.DTO.csproj" (default targets).
+2026-01-29T19:26:37.6372476Z ##[error]CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API\IGT.CustomerPortal.API.csproj(375,5): Error : This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props.
+2026-01-29T19:26:37.6375877Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.sln" (1) is building "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API\IGT.CustomerPortal.API.csproj" (6) on node 1 (default targets).
+2026-01-29T19:26:37.6377158Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API\IGT.CustomerPortal.API.csproj(375,5): error : This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props.
+2026-01-29T19:26:37.6379274Z _CleanRecordFileWrites:
+2026-01-29T19:26:37.6379995Z   Creating directory "obj\Release\".
+2026-01-29T19:26:37.6398720Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API\IGT.CustomerPortal.API.csproj" (default targets) -- FAILED.
+2026-01-29T19:26:37.6573294Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.sln" (1) is building "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\IGT.CustomerPortal.API.Mail.csproj" (7) on node 1 (default targets).
+2026-01-29T19:26:37.6574009Z PrepareForBuild:
+2026-01-29T19:26:37.6574225Z   Creating directory "bin\Release\".
+2026-01-29T19:26:37.6580249Z   Creating directory "obj\Release\".
+2026-01-29T19:26:37.6714349Z ResolveAssemblyReferences:
+2026-01-29T19:26:37.6714721Z   Primary reference "BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942".
+2026-01-29T19:26:37.6721646Z ##[warning]C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2433,5): Warning MSB3245: Could not resolve this reference. Could not locate the assembly "BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.
+2026-01-29T19:26:37.6725060Z C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2433,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\IGT.CustomerPortal.API.Mail.csproj]
+2026-01-29T19:26:37.6726121Z           For SearchPath "{HintPathFromItem}".
+2026-01-29T19:26:37.6726577Z           Considered "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll", but it didn't exist.
+2026-01-29T19:26:37.6727599Z           For SearchPath "{TargetFrameworkDirectory}".
+2026-01-29T19:26:37.6728041Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\BouncyCastle.Crypto.winmd", but it didn't exist.
+2026-01-29T19:26:37.6728606Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\BouncyCastle.Crypto.dll", but it didn't exist.
+2026-01-29T19:26:37.6729180Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\BouncyCastle.Crypto.exe", but it didn't exist.
+2026-01-29T19:26:37.6729763Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Facades\BouncyCastle.Crypto.winmd", but it didn't exist.
+2026-01-29T19:26:37.6730359Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Facades\BouncyCastle.Crypto.dll", but it didn't exist.
+2026-01-29T19:26:37.6730955Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Facades\BouncyCastle.Crypto.exe", but it didn't exist.
+2026-01-29T19:26:37.6731566Z           For SearchPath "{AssemblyFoldersFromConfig:C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\AssemblyFolders.config,v4.7.2}".
+2026-01-29T19:26:37.6732181Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SqlDb\BouncyCastle.Crypto.winmd", but it didn't exist.
+2026-01-29T19:26:37.6732771Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SqlDb\BouncyCastle.Crypto.dll", but it didn't exist.
+2026-01-29T19:26:37.6733701Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SqlDb\BouncyCastle.Crypto.exe", but it didn't exist.
+2026-01-29T19:26:37.6734281Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\BouncyCastle.Crypto.winmd", but it didn't exist.
+2026-01-29T19:26:37.6734853Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\BouncyCastle.Crypto.dll", but it didn't exist.
+2026-01-29T19:26:37.6735410Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\BouncyCastle.Crypto.exe", but it didn't exist.
+2026-01-29T19:26:37.6735992Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.5\BouncyCastle.Crypto.winmd", but it didn't exist.
+2026-01-29T19:26:37.6736581Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.5\BouncyCastle.Crypto.dll", but it didn't exist.
+2026-01-29T19:26:37.6737175Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.5\BouncyCastle.Crypto.exe", but it didn't exist.
+2026-01-29T19:26:37.6737763Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.0\BouncyCastle.Crypto.winmd", but it didn't exist.
+2026-01-29T19:26:37.6738363Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.0\BouncyCastle.Crypto.dll", but it didn't exist.
+2026-01-29T19:26:37.6738964Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.0\BouncyCastle.Crypto.exe", but it didn't exist.
+2026-01-29T19:26:37.6739550Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v2.0\BouncyCastle.Crypto.winmd", but it didn't exist.
+2026-01-29T19:26:37.6740147Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v2.0\BouncyCastle.Crypto.dll", but it didn't exist.
+2026-01-29T19:26:37.6740983Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v2.0\BouncyCastle.Crypto.exe", but it didn't exist.
+2026-01-29T19:26:37.6741495Z           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.7.2,AssemblyFoldersEx}".
+2026-01-29T19:26:37.6741827Z           Considered AssemblyFoldersEx locations.
+2026-01-29T19:26:37.6742078Z           For SearchPath "{AssemblyFolders}".
+2026-01-29T19:26:37.6742443Z           Considered "C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\BouncyCastle.Crypto.winmd", but it didn't exist.
+2026-01-29T19:26:37.6742948Z           Considered "C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\BouncyCastle.Crypto.dll", but it didn't exist.
+2026-01-29T19:26:37.6743444Z           Considered "C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\BouncyCastle.Crypto.exe", but it didn't exist.
+2026-01-29T19:26:37.6743922Z           Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\BouncyCastle.Crypto.winmd", but it didn't exist.
+2026-01-29T19:26:37.6744360Z           Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\BouncyCastle.Crypto.dll", but it didn't exist.
+2026-01-29T19:26:37.6744799Z           Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\BouncyCastle.Crypto.exe", but it didn't exist.
+2026-01-29T19:26:37.6745105Z           For SearchPath "{GAC}".
+2026-01-29T19:26:37.6745476Z           Considered "BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942", which was not found in the GAC.
+2026-01-29T19:26:37.6745851Z           For SearchPath "{RawFileName}".
+2026-01-29T19:26:37.6746477Z           Considered treating "BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942" as a file name, but it didn't exist.
+2026-01-29T19:26:37.6746868Z           For SearchPath "bin\Release\".
+2026-01-29T19:26:37.6747159Z           Considered "bin\Release\BouncyCastle.Crypto.winmd", but it didn't exist.
+2026-01-29T19:26:37.6747504Z           Considered "bin\Release\BouncyCastle.Crypto.dll", but it didn't exist.
+2026-01-29T19:26:37.6747849Z           Considered "bin\Release\BouncyCastle.Crypto.exe", but it didn't exist.
+2026-01-29T19:26:37.6748278Z   Primary reference "MailKit, Version=2.2.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL".
+2026-01-29T19:26:37.6753067Z ##[warning]C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2433,5): Warning MSB3245: Could not resolve this reference. Could not locate the assembly "MailKit, Version=2.2.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.
+2026-01-29T19:26:37.6755334Z C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2433,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "MailKit, Version=2.2.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\IGT.CustomerPortal.API.Mail.csproj]
+2026-01-29T19:26:37.6756421Z           For SearchPath "{HintPathFromItem}".
+2026-01-29T19:26:37.6756836Z           Considered "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\packages\MailKit.2.2.0\lib\net45\MailKit.dll", but it didn't exist.
+2026-01-29T19:26:37.6757275Z           For SearchPath "{TargetFrameworkDirectory}".
+2026-01-29T19:26:37.6757669Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\MailKit.winmd", but it didn't exist.
+2026-01-29T19:26:37.6759116Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\MailKit.dll", but it didn't exist.
+2026-01-29T19:26:37.6759643Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\MailKit.exe", but it didn't exist.
+2026-01-29T19:26:37.6760192Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Facades\MailKit.winmd", but it didn't exist.
+2026-01-29T19:26:37.6760743Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Facades\MailKit.dll", but it didn't exist.
+2026-01-29T19:26:37.6761302Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Facades\MailKit.exe", but it didn't exist.
+2026-01-29T19:26:37.6761886Z           For SearchPath "{AssemblyFoldersFromConfig:C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\AssemblyFolders.config,v4.7.2}".
+2026-01-29T19:26:37.6762483Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SqlDb\MailKit.winmd", but it didn't exist.
+2026-01-29T19:26:37.6763046Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SqlDb\MailKit.dll", but it didn't exist.
+2026-01-29T19:26:37.6763591Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SqlDb\MailKit.exe", but it didn't exist.
+2026-01-29T19:26:37.6764134Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\MailKit.winmd", but it didn't exist.
+2026-01-29T19:26:37.6764936Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\MailKit.dll", but it didn't exist.
+2026-01-29T19:26:37.6765470Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\MailKit.exe", but it didn't exist.
+2026-01-29T19:26:37.6766005Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.5\MailKit.winmd", but it didn't exist.
+2026-01-29T19:26:37.6766557Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.5\MailKit.dll", but it didn't exist.
+2026-01-29T19:26:37.6767097Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.5\MailKit.exe", but it didn't exist.
+2026-01-29T19:26:37.6767649Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.0\MailKit.winmd", but it didn't exist.
+2026-01-29T19:26:37.6768196Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.0\MailKit.dll", but it didn't exist.
+2026-01-29T19:26:37.6768749Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.0\MailKit.exe", but it didn't exist.
+2026-01-29T19:26:37.6769293Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v2.0\MailKit.winmd", but it didn't exist.
+2026-01-29T19:26:37.6769845Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v2.0\MailKit.dll", but it didn't exist.
+2026-01-29T19:26:37.6770386Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v2.0\MailKit.exe", but it didn't exist.
+2026-01-29T19:26:37.6770877Z           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.7.2,AssemblyFoldersEx}".
+2026-01-29T19:26:37.6771208Z           Considered AssemblyFoldersEx locations.
+2026-01-29T19:26:37.6771455Z           For SearchPath "{AssemblyFolders}".
+2026-01-29T19:26:37.6771799Z           Considered "C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\MailKit.winmd", but it didn't exist.
+2026-01-29T19:26:37.6772962Z           Considered "C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\MailKit.dll", but it didn't exist.
+2026-01-29T19:26:37.6773417Z           Considered "C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\MailKit.exe", but it didn't exist.
+2026-01-29T19:26:37.6773848Z           Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\MailKit.winmd", but it didn't exist.
+2026-01-29T19:26:37.6774242Z           Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\MailKit.dll", but it didn't exist.
+2026-01-29T19:26:37.6774643Z           Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\MailKit.exe", but it didn't exist.
+2026-01-29T19:26:37.6774934Z           For SearchPath "{GAC}".
+2026-01-29T19:26:37.6775358Z           Considered "MailKit, Version=2.2.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL", which was not found in the GAC.
+2026-01-29T19:26:37.6775760Z           For SearchPath "{RawFileName}".
+2026-01-29T19:26:37.6776196Z           Considered treating "MailKit, Version=2.2.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL" as a file name, but it didn't exist.
+2026-01-29T19:26:37.6776615Z           For SearchPath "bin\Release\".
+2026-01-29T19:26:37.6776887Z           Considered "bin\Release\MailKit.winmd", but it didn't exist.
+2026-01-29T19:26:37.6777187Z           Considered "bin\Release\MailKit.dll", but it didn't exist.
+2026-01-29T19:26:37.6777495Z           Considered "bin\Release\MailKit.exe", but it didn't exist.
+2026-01-29T19:26:37.6777905Z   Primary reference "MimeKit, Version=2.2.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL".
+2026-01-29T19:26:37.6782765Z ##[warning]C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2433,5): Warning MSB3245: Could not resolve this reference. Could not locate the assembly "MimeKit, Version=2.2.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.
+2026-01-29T19:26:37.6784983Z C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2433,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "MimeKit, Version=2.2.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\IGT.CustomerPortal.API.Mail.csproj]
+2026-01-29T19:26:37.6786074Z           For SearchPath "{HintPathFromItem}".
+2026-01-29T19:26:37.6786494Z           Considered "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\packages\MimeKit.2.2.0\lib\net45\MimeKit.dll", but it didn't exist.
+2026-01-29T19:26:37.6786933Z           For SearchPath "{TargetFrameworkDirectory}".
+2026-01-29T19:26:37.6787332Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\MimeKit.winmd", but it didn't exist.
+2026-01-29T19:26:37.6787871Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\MimeKit.dll", but it didn't exist.
+2026-01-29T19:26:37.6788393Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\MimeKit.exe", but it didn't exist.
+2026-01-29T19:26:37.6788942Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Facades\MimeKit.winmd", but it didn't exist.
+2026-01-29T19:26:37.6789502Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Facades\MimeKit.dll", but it didn't exist.
+2026-01-29T19:26:37.6790964Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Facades\MimeKit.exe", but it didn't exist.
+2026-01-29T19:26:37.6791564Z           For SearchPath "{AssemblyFoldersFromConfig:C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\AssemblyFolders.config,v4.7.2}".
+2026-01-29T19:26:37.6792151Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SqlDb\MimeKit.winmd", but it didn't exist.
+2026-01-29T19:26:37.6792708Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SqlDb\MimeKit.dll", but it didn't exist.
+2026-01-29T19:26:37.6793259Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SqlDb\MimeKit.exe", but it didn't exist.
+2026-01-29T19:26:37.6793810Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\MimeKit.winmd", but it didn't exist.
+2026-01-29T19:26:37.6794364Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\MimeKit.dll", but it didn't exist.
+2026-01-29T19:26:37.6794883Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\MimeKit.exe", but it didn't exist.
+2026-01-29T19:26:37.6795425Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.5\MimeKit.winmd", but it didn't exist.
+2026-01-29T19:26:37.6796227Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.5\MimeKit.dll", but it didn't exist.
+2026-01-29T19:26:37.6796779Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.5\MimeKit.exe", but it didn't exist.
+2026-01-29T19:26:37.6797328Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.0\MimeKit.winmd", but it didn't exist.
+2026-01-29T19:26:37.6797888Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.0\MimeKit.dll", but it didn't exist.
+2026-01-29T19:26:37.6798429Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.0\MimeKit.exe", but it didn't exist.
+2026-01-29T19:26:37.6798985Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v2.0\MimeKit.winmd", but it didn't exist.
+2026-01-29T19:26:37.6799540Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v2.0\MimeKit.dll", but it didn't exist.
+2026-01-29T19:26:37.6800080Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v2.0\MimeKit.exe", but it didn't exist.
+2026-01-29T19:26:37.6800571Z           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.7.2,AssemblyFoldersEx}".
+2026-01-29T19:26:37.6800904Z           Considered AssemblyFoldersEx locations.
+2026-01-29T19:26:37.6801165Z           For SearchPath "{AssemblyFolders}".
+2026-01-29T19:26:37.6801513Z           Considered "C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\MimeKit.winmd", but it didn't exist.
+2026-01-29T19:26:37.6801970Z           Considered "C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\MimeKit.dll", but it didn't exist.
+2026-01-29T19:26:37.6802438Z           Considered "C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\MimeKit.exe", but it didn't exist.
+2026-01-29T19:26:37.6802866Z           Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\MimeKit.winmd", but it didn't exist.
+2026-01-29T19:26:37.6803267Z           Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\MimeKit.dll", but it didn't exist.
+2026-01-29T19:26:37.6804225Z           Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\MimeKit.exe", but it didn't exist.
+2026-01-29T19:26:37.6804530Z           For SearchPath "{GAC}".
+2026-01-29T19:26:37.6804919Z           Considered "MimeKit, Version=2.2.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL", which was not found in the GAC.
+2026-01-29T19:26:37.6805335Z           For SearchPath "{RawFileName}".
+2026-01-29T19:26:37.6805758Z           Considered treating "MimeKit, Version=2.2.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL" as a file name, but it didn't exist.
+2026-01-29T19:26:37.6806188Z           For SearchPath "bin\Release\".
+2026-01-29T19:26:37.6806445Z           Considered "bin\Release\MimeKit.winmd", but it didn't exist.
+2026-01-29T19:26:37.6806754Z           Considered "bin\Release\MimeKit.dll", but it didn't exist.
+2026-01-29T19:26:37.6807052Z           Considered "bin\Release\MimeKit.exe", but it didn't exist.
+2026-01-29T19:26:37.6807676Z   AssemblyFoldersEx location: "{Registry:Software\Microsoft\.NETFramework,v4.7.2,AssemblyFoldersEx}"
+2026-01-29T19:26:37.6808069Z           C:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\
+2026-01-29T19:26:37.6808429Z           C:\Program Files (x86)\Microsoft Visual Studio\Shared\SDKs\Azure\v2.9\ToolsRef\
+2026-01-29T19:26:37.6808752Z           C:\Program Files\Microsoft SDKs\Azure\.NET SDK\v2.9\ref
+2026-01-29T19:26:37.6809082Z           C:\Program Files (x86)\Common Files\Microsoft Shared\MSEnv\PublicAssemblies
+2026-01-29T19:26:37.6809411Z           C:\Program Files (x86)\Microsoft Chart Controls\Assemblies
+2026-01-29T19:26:37.6856340Z CoreCompile:
+2026-01-29T19:26:37.6859340Z   C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\Roslyn\csc.exe /noconfig /nowarn:1701,1702 /fullpaths /nostdlib+ /errorreport:prompt /warn:4 /define:TRACE /highentropyva+ /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Microsoft.CSharp.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\mscorlib.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Data.DataSetExtensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Net.Http.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Security.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Xml.Linq.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\Release\IGT.CustomerPortal.API.Mail.dll /subsystemversion:6.00 /target:library /utf8output /deterministic+ /langversion:7.3 Mailer.cs Properties\AssemblyInfo.cs "obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs"
+2026-01-29T19:26:37.7072584Z ##[error]CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\Mailer.cs(1,7): Error CS0246: The type or namespace name 'MailKit' could not be found (are you missing a using directive or an assembly reference?)
+2026-01-29T19:26:37.7074380Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\Mailer.cs(1,7): error CS0246: The type or namespace name 'MailKit' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\IGT.CustomerPortal.API.Mail.csproj]
+2026-01-29T19:26:37.7078958Z ##[error]CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\Mailer.cs(2,7): Error CS0246: The type or namespace name 'MailKit' could not be found (are you missing a using directive or an assembly reference?)
+2026-01-29T19:26:37.7080536Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\Mailer.cs(2,7): error CS0246: The type or namespace name 'MailKit' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\IGT.CustomerPortal.API.Mail.csproj]
+2026-01-29T19:26:37.7083922Z ##[error]CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\Mailer.cs(3,7): Error CS0246: The type or namespace name 'MimeKit' could not be found (are you missing a using directive or an assembly reference?)
+2026-01-29T19:26:37.7085402Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\Mailer.cs(3,7): error CS0246: The type or namespace name 'MimeKit' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\IGT.CustomerPortal.API.Mail.csproj]
+2026-01-29T19:26:37.7086269Z   CompilerServer: server - server processed compilation - IGT.CustomerPortal.API.Mail
+2026-01-29T19:26:37.7106240Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\IGT.CustomerPortal.API.Mail.csproj" (default targets) -- FAILED.
+2026-01-29T19:26:37.7117029Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.sln" (default targets) -- FAILED.
+2026-01-29T19:26:37.7408367Z 
+2026-01-29T19:26:37.7408773Z Build FAILED.
+2026-01-29T19:26:37.7410379Z 
+2026-01-29T19:26:37.7411080Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.sln" (default target) (1) ->
+2026-01-29T19:26:37.7411739Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.DAL\IGT.CustomerPortal.API.DAL.csproj.metaproj" (default target) (2) ->
+2026-01-29T19:26:37.7412328Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\IGT.Utils.csproj" (default target) (3) ->
+2026-01-29T19:26:37.7412716Z (ResolveAssemblyReferences target) -> 
+2026-01-29T19:26:37.7413748Z   C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2433,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\IGT.Utils.csproj]
+2026-01-29T19:26:37.7414685Z 
+2026-01-29T19:26:37.7414744Z 
+2026-01-29T19:26:37.7415078Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.sln" (default target) (1) ->
+2026-01-29T19:26:37.7415651Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.DTO\IGT.CustomerPortal.API.DTO.csproj" (default target) (5) ->
+2026-01-29T19:26:37.7416952Z   C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2433,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.DTO\IGT.CustomerPortal.API.DTO.csproj]
+2026-01-29T19:26:37.7418531Z 
+2026-01-29T19:26:37.7418591Z 
+2026-01-29T19:26:37.7418924Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.sln" (default target) (1) ->
+2026-01-29T19:26:37.7419500Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\IGT.CustomerPortal.API.Mail.csproj" (default target) (7) ->
+2026-01-29T19:26:37.7420761Z   C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2433,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\IGT.CustomerPortal.API.Mail.csproj]
+2026-01-29T19:26:37.7422666Z   C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2433,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "MailKit, Version=2.2.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\IGT.CustomerPortal.API.Mail.csproj]
+2026-01-29T19:26:37.7425461Z   C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2433,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "MimeKit, Version=2.2.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\IGT.CustomerPortal.API.Mail.csproj]
+2026-01-29T19:26:37.7426425Z 
+2026-01-29T19:26:37.7426501Z 
+2026-01-29T19:26:37.7426840Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.sln" (default target) (1) ->
+2026-01-29T19:26:37.7427494Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.DAL\IGT.CustomerPortal.API.DAL.csproj.metaproj" (default target) (2) ->
+2026-01-29T19:26:37.7428102Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\IGT.Utils.csproj" (default target) (3) ->
+2026-01-29T19:26:37.7428456Z (CoreCompile target) -> 
+2026-01-29T19:26:37.7429167Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\Logging\LoggerManager.cs(1,7): error CS0246: The type or namespace name 'NLog' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\IGT.Utils.csproj]
+2026-01-29T19:26:37.7430354Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\Logging\LoggerManager.cs(2,7): error CS0246: The type or namespace name 'NLog' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\IGT.Utils.csproj]
+2026-01-29T19:26:37.7431600Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\Logging\LoggerManager.cs(3,7): error CS0246: The type or namespace name 'NLog' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\IGT.Utils.csproj]
+2026-01-29T19:26:37.7433089Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\Logging\LoggerManager.cs(11,25): error CS0246: The type or namespace name 'Logger' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.Utils\IGT.Utils.csproj]
+2026-01-29T19:26:37.7433681Z 
+2026-01-29T19:26:37.7433739Z 
+2026-01-29T19:26:37.7434070Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.sln" (default target) (1) ->
+2026-01-29T19:26:37.7434635Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API\IGT.CustomerPortal.API.csproj" (default target) (6) ->
+2026-01-29T19:26:37.7435075Z (EnsureNuGetPackageBuildImports target) -> 
+2026-01-29T19:26:37.7435948Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API\IGT.CustomerPortal.API.csproj(375,5): error : This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props.
+2026-01-29T19:26:37.7436690Z 
+2026-01-29T19:26:37.7436748Z 
+2026-01-29T19:26:37.7437071Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.sln" (default target) (1) ->
+2026-01-29T19:26:37.7437908Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\IGT.CustomerPortal.API.Mail.csproj" (default target) (7) ->
+2026-01-29T19:26:37.7438323Z (CoreCompile target) -> 
+2026-01-29T19:26:37.7439100Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\Mailer.cs(1,7): error CS0246: The type or namespace name 'MailKit' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\IGT.CustomerPortal.API.Mail.csproj]
+2026-01-29T19:26:37.7440447Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\Mailer.cs(2,7): error CS0246: The type or namespace name 'MailKit' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\IGT.CustomerPortal.API.Mail.csproj]
+2026-01-29T19:26:37.7441786Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\Mailer.cs(3,7): error CS0246: The type or namespace name 'MimeKit' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Api\IGT.CustomerPortal.API\IGT.CustomerPortal.API.Mail\IGT.CustomerPortal.API.Mail.csproj]
+2026-01-29T19:26:37.7442455Z 
+2026-01-29T19:26:37.7442599Z     5 Warning(s)
+2026-01-29T19:26:37.7442768Z     8 Error(s)
+2026-01-29T19:26:37.7442843Z 
+2026-01-29T19:26:37.7443029Z Time Elapsed 00:00:06.26
+2026-01-29T19:26:37.8863974Z ##[error]Process 'msbuild.exe' exited with code '1'.
+2026-01-29T19:26:37.8992557Z ##[command]"C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\msbuild.exe" "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\AWSFileUpload\AWSFileUpload.sln" /nologo /nr:false /dl:CentralLogger,"E:\TR-Pool\work\_tasks\MSBuild_c6c4c611-aa2e-4a33-b606-5eaba2196824\1.260.0\node_modules\azure-pipelines-tasks-msbuildhelpers\tools\Microsoft.TeamFoundation.DistributedTask.MSBuild.Logger.dll";"RootDetailId=|SolutionDir=E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\AWSFileUpload|enableOrphanedProjectsLogs=true"*ForwardingLogger,"E:\TR-Pool\work\_tasks\MSBuild_c6c4c611-aa2e-4a33-b606-5eaba2196824\1.260.0\node_modules\azure-pipelines-tasks-msbuildhelpers\tools\Microsoft.TeamFoundation.DistributedTask.MSBuild.Logger.dll" /p:DeployOnBuild=true /p:WebPublishMethod=FileSystem /p:PublishDir=E:\TR-Pool\work\9\a\publish /p:Platform="Any CPU" /p:configuration="Release" /p:_MSDeployUserAgent="TFS_3e9107db-9701-4be3-9614-9c9235570cb5_build_49_0"
+2026-01-29T19:26:38.2549828Z Build started 1/29/2026 2:26:38 PM.
+2026-01-29T19:26:38.2553012Z 
+2026-01-29T19:26:38.3442255Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\AWSFileUpload\AWSFileUpload.sln" on node 1 (default targets).
+2026-01-29T19:26:38.3442771Z ValidateSolutionConfiguration:
+2026-01-29T19:26:38.3443025Z   Building solution configuration "Release|Any CPU".
+2026-01-29T19:26:40.5310869Z ##[warning]C:\Program Files\dotnet\sdk\9.0.304\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.EolTargetFrameworks.targets(32,5): Warning NETSDK1138: The target framework 'netcoreapp3.0' is out of support and will not receive security updates in the future. Please refer to https://aka.ms/dotnet-core-support for more information about the support policy.
+2026-01-29T19:26:40.5323399Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\AWSFileUpload\AWSFileUpload.sln" (1) is building "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\AWSFileUpload\AWSFileUpload\AWSFileUpload.csproj" (2) on node 1 (default targets).
+2026-01-29T19:26:40.5324591Z C:\Program Files\dotnet\sdk\9.0.304\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.EolTargetFrameworks.targets(32,5): warning NETSDK1138: The target framework 'netcoreapp3.0' is out of support and will not receive security updates in the future. Please refer to https://aka.ms/dotnet-core-support for more information about the support policy. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\AWSFileUpload\AWSFileUpload\AWSFileUpload.csproj]
+2026-01-29T19:26:40.8398328Z PrepareForBuild:
+2026-01-29T19:26:40.8398671Z   Creating directory "bin\Release\netcoreapp3.0\".
+2026-01-29T19:26:40.8409262Z   Creating directory "obj\Release\netcoreapp3.0\".
+2026-01-29T19:26:40.8806935Z ##[error]C:\Program Files\dotnet\sdk\9.0.304\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(266,5): Error NETSDK1004: Assets file 'E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\AWSFileUpload\AWSFileUpload\obj\project.assets.json' not found. Run a NuGet package restore to generate this file.
+2026-01-29T19:26:40.8808971Z C:\Program Files\dotnet\sdk\9.0.304\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(266,5): error NETSDK1004: Assets file 'E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\AWSFileUpload\AWSFileUpload\obj\project.assets.json' not found. Run a NuGet package restore to generate this file. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\AWSFileUpload\AWSFileUpload\AWSFileUpload.csproj]
+2026-01-29T19:26:40.9226387Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\AWSFileUpload\AWSFileUpload\AWSFileUpload.csproj" (default targets) -- FAILED.
+2026-01-29T19:26:40.9258526Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\AWSFileUpload\AWSFileUpload.sln" (default targets) -- FAILED.
+2026-01-29T19:26:40.9285311Z 
+2026-01-29T19:26:40.9285653Z Build FAILED.
+2026-01-29T19:26:40.9287143Z 
+2026-01-29T19:26:40.9287650Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\AWSFileUpload\AWSFileUpload.sln" (default target) (1) ->
+2026-01-29T19:26:40.9288128Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\AWSFileUpload\AWSFileUpload\AWSFileUpload.csproj" (default target) (2) ->
+2026-01-29T19:26:40.9288520Z (_CheckForEolTargetFrameworks target) -> 
+2026-01-29T19:26:40.9289421Z   C:\Program Files\dotnet\sdk\9.0.304\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.EolTargetFrameworks.targets(32,5): warning NETSDK1138: The target framework 'netcoreapp3.0' is out of support and will not receive security updates in the future. Please refer to https://aka.ms/dotnet-core-support for more information about the support policy. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\AWSFileUpload\AWSFileUpload\AWSFileUpload.csproj]
+2026-01-29T19:26:40.9290797Z 
+2026-01-29T19:26:40.9290870Z 
+2026-01-29T19:26:40.9291175Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\AWSFileUpload\AWSFileUpload.sln" (default target) (1) ->
+2026-01-29T19:26:40.9291646Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\AWSFileUpload\AWSFileUpload\AWSFileUpload.csproj" (default target) (2) ->
+2026-01-29T19:26:40.9292014Z (ResolvePackageAssets target) -> 
+2026-01-29T19:26:40.9292792Z   C:\Program Files\dotnet\sdk\9.0.304\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(266,5): error NETSDK1004: Assets file 'E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\AWSFileUpload\AWSFileUpload\obj\project.assets.json' not found. Run a NuGet package restore to generate this file. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\AWSFileUpload\AWSFileUpload\AWSFileUpload.csproj]
+2026-01-29T19:26:40.9293491Z 
+2026-01-29T19:26:40.9293644Z     1 Warning(s)
+2026-01-29T19:26:40.9293804Z     1 Error(s)
+2026-01-29T19:26:40.9293877Z 
+2026-01-29T19:26:40.9294068Z Time Elapsed 00:00:02.67
+2026-01-29T19:26:40.9779355Z ##[error]Process 'msbuild.exe' exited with code '1'.
+2026-01-29T19:26:40.9877844Z ##[command]"C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\msbuild.exe" "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\FileUpload\FileUpload.sln" /nologo /nr:false /dl:CentralLogger,"E:\TR-Pool\work\_tasks\MSBuild_c6c4c611-aa2e-4a33-b606-5eaba2196824\1.260.0\node_modules\azure-pipelines-tasks-msbuildhelpers\tools\Microsoft.TeamFoundation.DistributedTask.MSBuild.Logger.dll";"RootDetailId=|SolutionDir=E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\FileUpload|enableOrphanedProjectsLogs=true"*ForwardingLogger,"E:\TR-Pool\work\_tasks\MSBuild_c6c4c611-aa2e-4a33-b606-5eaba2196824\1.260.0\node_modules\azure-pipelines-tasks-msbuildhelpers\tools\Microsoft.TeamFoundation.DistributedTask.MSBuild.Logger.dll" /p:DeployOnBuild=true /p:WebPublishMethod=FileSystem /p:PublishDir=E:\TR-Pool\work\9\a\publish /p:Platform="Any CPU" /p:configuration="Release" /p:_MSDeployUserAgent="TFS_3e9107db-9701-4be3-9614-9c9235570cb5_build_49_0"
+2026-01-29T19:26:41.3259400Z Build started 1/29/2026 2:26:41 PM.
+2026-01-29T19:26:41.3262510Z 
+2026-01-29T19:26:41.4156333Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\FileUpload\FileUpload.sln" on node 1 (default targets).
+2026-01-29T19:26:41.4156797Z ValidateSolutionConfiguration:
+2026-01-29T19:26:41.4157052Z   Building solution configuration "Release|Any CPU".
+2026-01-29T19:26:41.5485981Z ##[error]C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(1259,5): Error MSB3644: The reference assemblies for .NETFramework,Version=v4.5 were not found. To resolve this, install the Developer Pack (SDK/Targeting Pack) for this framework version or retarget your application. You can download .NET Framework Developer Packs at https://aka.ms/msbuild/developerpacks
+2026-01-29T19:26:41.5497899Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\FileUpload\FileUpload.sln" (1) is building "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\FileUpload\FileUpload\FileUpload.csproj" (2) on node 1 (default targets).
+2026-01-29T19:26:41.5499244Z C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(1259,5): error MSB3644: The reference assemblies for .NETFramework,Version=v4.5 were not found. To resolve this, install the Developer Pack (SDK/Targeting Pack) for this framework version or retarget your application. You can download .NET Framework Developer Packs at https://aka.ms/msbuild/developerpacks [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\FileUpload\FileUpload\FileUpload.csproj]
+2026-01-29T19:26:41.5581348Z _CleanRecordFileWrites:
+2026-01-29T19:26:41.5582235Z   Creating directory "obj\Release\".
+2026-01-29T19:26:41.5606099Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\FileUpload\FileUpload\FileUpload.csproj" (default targets) -- FAILED.
+2026-01-29T19:26:41.5634844Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\FileUpload\FileUpload.sln" (default targets) -- FAILED.
+2026-01-29T19:26:41.5701294Z 
+2026-01-29T19:26:41.5701666Z Build FAILED.
+2026-01-29T19:26:41.5702955Z 
+2026-01-29T19:26:41.5703424Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\FileUpload\FileUpload.sln" (default target) (1) ->
+2026-01-29T19:26:41.5703873Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\FileUpload\FileUpload\FileUpload.csproj" (default target) (2) ->
+2026-01-29T19:26:41.5704272Z (GetReferenceAssemblyPaths target) -> 
+2026-01-29T19:26:41.5705250Z   C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(1259,5): error MSB3644: The reference assemblies for .NETFramework,Version=v4.5 were not found. To resolve this, install the Developer Pack (SDK/Targeting Pack) for this framework version or retarget your application. You can download .NET Framework Developer Packs at https://aka.ms/msbuild/developerpacks [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\FileUpload\FileUpload\FileUpload.csproj]
+2026-01-29T19:26:41.5706126Z 
+2026-01-29T19:26:41.5706268Z     0 Warning(s)
+2026-01-29T19:26:41.5706441Z     1 Error(s)
+2026-01-29T19:26:41.5706517Z 
+2026-01-29T19:26:41.5706701Z Time Elapsed 00:00:00.25
+2026-01-29T19:26:41.6066685Z ##[error]Process 'msbuild.exe' exited with code '1'.
+2026-01-29T19:26:41.6201510Z ##[command]"C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\msbuild.exe" "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload.sln" /nologo /nr:false /dl:CentralLogger,"E:\TR-Pool\work\_tasks\MSBuild_c6c4c611-aa2e-4a33-b606-5eaba2196824\1.260.0\node_modules\azure-pipelines-tasks-msbuildhelpers\tools\Microsoft.TeamFoundation.DistributedTask.MSBuild.Logger.dll";"RootDetailId=|SolutionDir=E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload|enableOrphanedProjectsLogs=true"*ForwardingLogger,"E:\TR-Pool\work\_tasks\MSBuild_c6c4c611-aa2e-4a33-b606-5eaba2196824\1.260.0\node_modules\azure-pipelines-tasks-msbuildhelpers\tools\Microsoft.TeamFoundation.DistributedTask.MSBuild.Logger.dll" /p:DeployOnBuild=true /p:WebPublishMethod=FileSystem /p:PublishDir=E:\TR-Pool\work\9\a\publish /p:Platform="Any CPU" /p:configuration="Release" /p:_MSDeployUserAgent="TFS_3e9107db-9701-4be3-9614-9c9235570cb5_build_49_0"
+2026-01-29T19:26:41.9620084Z Build started 1/29/2026 2:26:41 PM.
+2026-01-29T19:26:41.9623259Z 
+2026-01-29T19:26:42.0535075Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload.sln" on node 1 (default targets).
+2026-01-29T19:26:42.0535568Z ValidateSolutionConfiguration:
+2026-01-29T19:26:42.0535869Z   Building solution configuration "Release|Any CPU".
+2026-01-29T19:26:43.0819588Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload.sln" (1) is building "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload.csproj" (2) on node 1 (default targets).
+2026-01-29T19:26:43.0820350Z PrepareForBuild:
+2026-01-29T19:26:43.0820564Z   Creating directory "bin\Release\net8.0\".
+2026-01-29T19:26:43.0830019Z   Creating directory "obj\Release\net8.0\".
+2026-01-29T19:26:43.0839369Z   Creating directory "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload\obj\Release\net8.0\refint\".
+2026-01-29T19:26:43.0842702Z   Creating directory "obj\Release\net8.0\ref".
+2026-01-29T19:26:43.1187197Z ##[error]C:\Program Files\dotnet\sdk\9.0.304\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(266,5): Error NETSDK1004: Assets file 'E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload\obj\project.assets.json' not found. Run a NuGet package restore to generate this file.
+2026-01-29T19:26:43.1200863Z C:\Program Files\dotnet\sdk\9.0.304\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(266,5): error NETSDK1004: Assets file 'E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload\obj\project.assets.json' not found. Run a NuGet package restore to generate this file. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload.csproj]
+2026-01-29T19:26:43.1259621Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload.csproj" (default targets) -- FAILED.
+2026-01-29T19:26:43.1959095Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload.sln" (1) is building "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.EmailLogSender\IGT.EmailLogSender.csproj" (3) on node 1 (default targets).
+2026-01-29T19:26:43.1959854Z PrepareForBuild:
+2026-01-29T19:26:43.1960077Z   Creating directory "bin\Release\net8.0\".
+2026-01-29T19:26:43.1969842Z   Creating directory "obj\Release\net8.0\".
+2026-01-29T19:26:43.1978071Z   Creating directory "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.EmailLogSender\obj\Release\net8.0\refint\".
+2026-01-29T19:26:43.1981535Z   Creating directory "obj\Release\net8.0\ref".
+2026-01-29T19:26:43.2188559Z ##[error]C:\Program Files\dotnet\sdk\9.0.304\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(266,5): Error NETSDK1004: Assets file 'E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.EmailLogSender\obj\project.assets.json' not found. Run a NuGet package restore to generate this file.
+2026-01-29T19:26:43.2191572Z C:\Program Files\dotnet\sdk\9.0.304\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(266,5): error NETSDK1004: Assets file 'E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.EmailLogSender\obj\project.assets.json' not found. Run a NuGet package restore to generate this file. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.EmailLogSender\IGT.EmailLogSender.csproj]
+2026-01-29T19:26:43.2206248Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.EmailLogSender\IGT.EmailLogSender.csproj" (default targets) -- FAILED.
+2026-01-29T19:26:43.2600036Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload.sln" (1) is building "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload.Core\IGT.AWS.FileUpload.Core.csproj" (4) on node 1 (default targets).
+2026-01-29T19:26:43.2600843Z PrepareForBuild:
+2026-01-29T19:26:43.2601057Z   Creating directory "bin\Release\net8.0\".
+2026-01-29T19:26:43.2608909Z   Creating directory "obj\Release\net8.0\".
+2026-01-29T19:26:43.2616672Z   Creating directory "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload.Core\obj\Release\net8.0\refint\".
+2026-01-29T19:26:43.2619994Z   Creating directory "obj\Release\net8.0\ref".
+2026-01-29T19:26:43.2677396Z ##[error]C:\Program Files\dotnet\sdk\9.0.304\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(266,5): Error NETSDK1004: Assets file 'E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload.Core\obj\project.assets.json' not found. Run a NuGet package restore to generate this file.
+2026-01-29T19:26:43.2680758Z C:\Program Files\dotnet\sdk\9.0.304\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(266,5): error NETSDK1004: Assets file 'E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload.Core\obj\project.assets.json' not found. Run a NuGet package restore to generate this file. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload.Core\IGT.AWS.FileUpload.Core.csproj]
+2026-01-29T19:26:43.2694092Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload.Core\IGT.AWS.FileUpload.Core.csproj" (default targets) -- FAILED.
+2026-01-29T19:26:43.2722354Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload.sln" (default targets) -- FAILED.
+2026-01-29T19:26:43.2752252Z 
+2026-01-29T19:26:43.2752824Z Build FAILED.
+2026-01-29T19:26:43.2754390Z 
+2026-01-29T19:26:43.2755007Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload.sln" (default target) (1) ->
+2026-01-29T19:26:43.2755615Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload.csproj" (default target) (2) ->
+2026-01-29T19:26:43.2756054Z (ResolvePackageAssets target) -> 
+2026-01-29T19:26:43.2757008Z   C:\Program Files\dotnet\sdk\9.0.304\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(266,5): error NETSDK1004: Assets file 'E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload\obj\project.assets.json' not found. Run a NuGet package restore to generate this file. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload.csproj]
+2026-01-29T19:26:43.2758454Z 
+2026-01-29T19:26:43.2758513Z 
+2026-01-29T19:26:43.2758857Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload.sln" (default target) (1) ->
+2026-01-29T19:26:43.2759456Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.EmailLogSender\IGT.EmailLogSender.csproj" (default target) (3) ->
+2026-01-29T19:26:43.2760595Z   C:\Program Files\dotnet\sdk\9.0.304\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(266,5): error NETSDK1004: Assets file 'E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.EmailLogSender\obj\project.assets.json' not found. Run a NuGet package restore to generate this file. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.EmailLogSender\IGT.EmailLogSender.csproj]
+2026-01-29T19:26:43.2761415Z 
+2026-01-29T19:26:43.2761475Z 
+2026-01-29T19:26:43.2761828Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload.sln" (default target) (1) ->
+2026-01-29T19:26:43.2762437Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload.Core\IGT.AWS.FileUpload.Core.csproj" (default target) (4) ->
+2026-01-29T19:26:43.2763640Z   C:\Program Files\dotnet\sdk\9.0.304\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(266,5): error NETSDK1004: Assets file 'E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload.Core\obj\project.assets.json' not found. Run a NuGet package restore to generate this file. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.Aws.S3TicketUpload\IGT.AWS.FileUpload\IGT.AWS.FileUpload.Core\IGT.AWS.FileUpload.Core.csproj]
+2026-01-29T19:26:43.2764479Z 
+2026-01-29T19:26:43.2764635Z     0 Warning(s)
+2026-01-29T19:26:43.2765113Z     3 Error(s)
+2026-01-29T19:26:43.2765189Z 
+2026-01-29T19:26:43.2765380Z Time Elapsed 00:00:01.31
+2026-01-29T19:26:43.3216278Z ##[error]Process 'msbuild.exe' exited with code '1'.
+2026-01-29T19:26:43.3306478Z ##[command]"C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\msbuild.exe" "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.InstantsShowcase\Igt.InstantsShowcase.sln" /nologo /nr:false /dl:CentralLogger,"E:\TR-Pool\work\_tasks\MSBuild_c6c4c611-aa2e-4a33-b606-5eaba2196824\1.260.0\node_modules\azure-pipelines-tasks-msbuildhelpers\tools\Microsoft.TeamFoundation.DistributedTask.MSBuild.Logger.dll";"RootDetailId=|SolutionDir=E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.InstantsShowcase|enableOrphanedProjectsLogs=true"*ForwardingLogger,"E:\TR-Pool\work\_tasks\MSBuild_c6c4c611-aa2e-4a33-b606-5eaba2196824\1.260.0\node_modules\azure-pipelines-tasks-msbuildhelpers\tools\Microsoft.TeamFoundation.DistributedTask.MSBuild.Logger.dll" /p:DeployOnBuild=true /p:WebPublishMethod=FileSystem /p:PublishDir=E:\TR-Pool\work\9\a\publish /p:Platform="Any CPU" /p:configuration="Release" /p:_MSDeployUserAgent="TFS_3e9107db-9701-4be3-9614-9c9235570cb5_build_49_0"
+2026-01-29T19:26:43.6800326Z Build started 1/29/2026 2:26:43 PM.
+2026-01-29T19:26:43.6803854Z 
+2026-01-29T19:26:43.7733121Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.InstantsShowcase\Igt.InstantsShowcase.sln" on node 1 (default targets).
+2026-01-29T19:26:43.7879467Z ValidateSolutionConfiguration:
+2026-01-29T19:26:43.7879840Z   Building solution configuration "Release|Any CPU".
+2026-01-29T19:26:44.9960945Z ##[warning]CustomerPortal\CustomerPortal\Igt.InstantsShowcase\Igt.InstantsShowcase.csproj(0,0): Warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.
+2026-01-29T19:26:44.9974247Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.InstantsShowcase\Igt.InstantsShowcase.sln" (1) is building "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.InstantsShowcase\Igt.InstantsShowcase.csproj" (2) on node 1 (default targets).
+2026-01-29T19:26:44.9975171Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.InstantsShowcase\Igt.InstantsShowcase.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.
+2026-01-29T19:26:45.6570575Z GenerateTargetFrameworkMonikerAttribute:
+2026-01-29T19:26:45.6571052Z Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+2026-01-29T19:26:45.8143997Z CoreGenerateAssemblyInfo:
+2026-01-29T19:26:45.8144553Z Skipping target "CoreGenerateAssemblyInfo" because all output files are up-to-date with respect to the input files.
+2026-01-29T19:26:45.8172599Z _DiscoverMvcApplicationParts:
+2026-01-29T19:26:45.8172999Z Skipping target "_DiscoverMvcApplicationParts" because all output files are up-to-date with respect to the input files.
+2026-01-29T19:26:45.8287830Z _CoreGenerateRazorAssemblyInfo:
+2026-01-29T19:26:45.8288220Z Skipping target "_CoreGenerateRazorAssemblyInfo" because all output files are up-to-date with respect to the input files.
+2026-01-29T19:26:45.9025729Z _GenerateSourceLinkFile:
+2026-01-29T19:26:45.9026122Z   Source Link is empty, file 'obj\Release\net8.0\Igt.InstantsShowcase.sourcelink.json' does not exist.
+2026-01-29T19:26:45.9222503Z CoreCompile:
+2026-01-29T19:26:45.9222876Z Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+2026-01-29T19:26:45.9228523Z _CreateAppHost:
+2026-01-29T19:26:45.9229196Z Skipping target "_CreateAppHost" because all output files are up-to-date with respect to the input files.
+2026-01-29T19:26:45.9326649Z ResolveTagHelperRazorGenerateInputs:
+2026-01-29T19:26:45.9327114Z Skipping target "ResolveTagHelperRazorGenerateInputs" because all output files are up-to-date with respect to the input files.
+2026-01-29T19:26:45.9361363Z RazorCoreGenerate:
+2026-01-29T19:26:45.9361752Z Skipping target "RazorCoreGenerate" because all output files are up-to-date with respect to the input files.
+2026-01-29T19:26:45.9377266Z CoreGenerateRazorTargetAssemblyInfo:
+2026-01-29T19:26:45.9377677Z Skipping target "CoreGenerateRazorTargetAssemblyInfo" because all output files are up-to-date with respect to the input files.
+2026-01-29T19:26:45.9399636Z RazorCoreCompile:
+2026-01-29T19:26:45.9400019Z Skipping target "RazorCoreCompile" because all output files are up-to-date with respect to the input files.
+2026-01-29T19:26:45.9718262Z _ProcessScopedCssFiles:
+2026-01-29T19:26:45.9718651Z Skipping target "_ProcessScopedCssFiles" because it has no outputs.
+2026-01-29T19:26:45.9775227Z _ProcessScopedCssFiles:
+2026-01-29T19:26:45.9775630Z Skipping target "_ProcessScopedCssFiles" because it has no outputs.
+2026-01-29T19:26:45.9883151Z ResolveBuildCompressedStaticWebAssetsConfiguration:
+2026-01-29T19:26:45.9883592Z   Resolved 0 compressed assets for 0 candidate assets.
+2026-01-29T19:26:46.1680237Z _BuildCopyStaticWebAssetsPreserveNewest:
+2026-01-29T19:26:46.1680690Z Skipping target "_BuildCopyStaticWebAssetsPreserveNewest" because it has no outputs.
+2026-01-29T19:26:46.1985430Z _CopyOutOfDateSourceItemsToOutputDirectory:
+2026-01-29T19:26:46.1985967Z Building target "_CopyOutOfDateSourceItemsToOutputDirectory" partially, because some output files are out of date with respect to their input files.
+2026-01-29T19:26:46.1996431Z   Copying file from "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.InstantsShowcase\obj\Release\net8.0\staticwebassets.development.json" to "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.InstantsShowcase\bin\Release\net8.0\Igt.InstantsShowcase.staticwebassets.runtime.json".
+2026-01-29T19:26:46.2079591Z GenerateBuildDependencyFile:
+2026-01-29T19:26:46.2080097Z Skipping target "GenerateBuildDependencyFile" because all output files are up-to-date with respect to the input files.
+2026-01-29T19:26:46.2112543Z GenerateBuildRuntimeConfigurationFiles:
+2026-01-29T19:26:46.2113474Z Skipping target "GenerateBuildRuntimeConfigurationFiles" because all output files are up-to-date with respect to the input files.
+2026-01-29T19:26:46.2176803Z CopyFilesToOutputDirectory:
+2026-01-29T19:26:46.2177410Z   Igt.InstantsShowcase -> E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.InstantsShowcase\bin\Release\net8.0\Igt.InstantsShowcase.dll
+2026-01-29T19:26:46.2187458Z _RazorCopyFilesToOutputDirectory:
+2026-01-29T19:26:46.2188089Z   Igt.InstantsShowcase -> E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.InstantsShowcase\bin\Release\net8.0\Igt.InstantsShowcase.Views.dll
+2026-01-29T19:26:46.2197672Z   Touching "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.InstantsShowcase\obj\Release\net8.0\Igt.Inst.5D3D4AB4.Up2Date".
+2026-01-29T19:26:46.2475016Z CleanupEmptyRefsFolder:
+2026-01-29T19:26:46.2475521Z   Directory "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.InstantsShowcase\bin\Release\net8.0\refs" doesn't exist. Skipping.
+2026-01-29T19:26:46.2486224Z _DeletePublishIntermediateOutputPath:
+2026-01-29T19:26:46.2486639Z   Creating directory "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.InstantsShowcase\obj\Release\net8.0\PubTmp\Out\".
+2026-01-29T19:26:46.5800169Z ResolvePublishCompressedStaticWebAssetsConfiguration:
+2026-01-29T19:26:46.5800550Z   Resolved 0 compressed assets for 0 candidate assets.
+2026-01-29T19:26:46.6038950Z PublishRunWebpack:
+2026-01-29T19:26:46.6039191Z   npm install
+2026-01-29T19:26:46.7315513Z   'npm' is not recognized as an internal or external command,
+2026-01-29T19:26:46.7315900Z   operable program or batch file.
+2026-01-29T19:26:46.7375701Z ##[error]CustomerPortal\CustomerPortal\Igt.InstantsShowcase\Igt.InstantsShowcase.csproj(249,5): Error MSB3073: The command "npm install" exited with code 9009.
+2026-01-29T19:26:46.7376945Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.InstantsShowcase\Igt.InstantsShowcase.csproj(249,5): error MSB3073: The command "npm install" exited with code 9009.
+2026-01-29T19:26:46.7377970Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.InstantsShowcase\Igt.InstantsShowcase.csproj" (default targets) -- FAILED.
+2026-01-29T19:26:46.7396682Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.InstantsShowcase\Igt.InstantsShowcase.sln" (default targets) -- FAILED.
+2026-01-29T19:26:46.7424313Z 
+2026-01-29T19:26:46.7424919Z Build FAILED.
+2026-01-29T19:26:46.7426166Z 
+2026-01-29T19:26:46.7426655Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.InstantsShowcase\Igt.InstantsShowcase.sln" (default target) (1) ->
+2026-01-29T19:26:46.7427180Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.InstantsShowcase\Igt.InstantsShowcase.csproj" (default target) (2) ->
+2026-01-29T19:26:46.7427577Z (ResolvePackageAssets target) -> 
+2026-01-29T19:26:46.7428173Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.InstantsShowcase\Igt.InstantsShowcase.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.
+2026-01-29T19:26:46.7428647Z 
+2026-01-29T19:26:46.7428705Z 
+2026-01-29T19:26:46.7429032Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.InstantsShowcase\Igt.InstantsShowcase.sln" (default target) (1) ->
+2026-01-29T19:26:46.7429529Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.InstantsShowcase\Igt.InstantsShowcase.csproj" (default target) (2) ->
+2026-01-29T19:26:46.7429901Z (PublishRunWebpack target) -> 
+2026-01-29T19:26:46.7430332Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Igt.InstantsShowcase\Igt.InstantsShowcase.csproj(249,5): error MSB3073: The command "npm install" exited with code 9009.
+2026-01-29T19:26:46.7431247Z 
+2026-01-29T19:26:46.7431397Z     1 Warning(s)
+2026-01-29T19:26:46.7431557Z     1 Error(s)
+2026-01-29T19:26:46.7431648Z 
+2026-01-29T19:26:46.7431832Z Time Elapsed 00:00:03.06
+2026-01-29T19:26:46.7952440Z ##[error]Process 'msbuild.exe' exited with code '1'.
+2026-01-29T19:26:46.8047730Z ##[command]"C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\msbuild.exe" "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\OAuth\IGT.Oauth\IGT.Oauth.sln" /nologo /nr:false /dl:CentralLogger,"E:\TR-Pool\work\_tasks\MSBuild_c6c4c611-aa2e-4a33-b606-5eaba2196824\1.260.0\node_modules\azure-pipelines-tasks-msbuildhelpers\tools\Microsoft.TeamFoundation.DistributedTask.MSBuild.Logger.dll";"RootDetailId=|SolutionDir=E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\OAuth\IGT.Oauth|enableOrphanedProjectsLogs=true"*ForwardingLogger,"E:\TR-Pool\work\_tasks\MSBuild_c6c4c611-aa2e-4a33-b606-5eaba2196824\1.260.0\node_modules\azure-pipelines-tasks-msbuildhelpers\tools\Microsoft.TeamFoundation.DistributedTask.MSBuild.Logger.dll" /p:DeployOnBuild=true /p:WebPublishMethod=FileSystem /p:PublishDir=E:\TR-Pool\work\9\a\publish /p:Platform="Any CPU" /p:configuration="Release" /p:_MSDeployUserAgent="TFS_3e9107db-9701-4be3-9614-9c9235570cb5_build_49_0"
+2026-01-29T19:26:47.1423427Z Build started 1/29/2026 2:26:47 PM.
+2026-01-29T19:26:47.1427145Z 
+2026-01-29T19:26:47.2326217Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\OAuth\IGT.Oauth\IGT.Oauth.sln" on node 1 (default targets).
+2026-01-29T19:26:47.2326664Z ValidateSolutionConfiguration:
+2026-01-29T19:26:47.2326914Z   Building solution configuration "Release|Any CPU".
+2026-01-29T19:26:47.4002620Z ##[error]CustomerPortal\CustomerPortal\OAuth\IGT.Oauth\IGT.Oauth\IGT.Oauth.csproj(176,5): Error : This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props.
+2026-01-29T19:26:47.4014017Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\OAuth\IGT.Oauth\IGT.Oauth.sln" (1) is building "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\OAuth\IGT.Oauth\IGT.Oauth\IGT.Oauth.csproj" (2) on node 1 (default targets).
+2026-01-29T19:26:47.4015753Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\OAuth\IGT.Oauth\IGT.Oauth\IGT.Oauth.csproj(176,5): error : This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props.
+2026-01-29T19:26:47.4107472Z _CleanRecordFileWrites:
+2026-01-29T19:26:47.4107779Z   Creating directory "obj\Release\".
+2026-01-29T19:26:47.4132561Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\OAuth\IGT.Oauth\IGT.Oauth\IGT.Oauth.csproj" (default targets) -- FAILED.
+2026-01-29T19:26:47.4161366Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\OAuth\IGT.Oauth\IGT.Oauth.sln" (default targets) -- FAILED.
+2026-01-29T19:26:47.4224410Z 
+2026-01-29T19:26:47.4225013Z Build FAILED.
+2026-01-29T19:26:47.4226703Z 
+2026-01-29T19:26:47.4227205Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\OAuth\IGT.Oauth\IGT.Oauth.sln" (default target) (1) ->
+2026-01-29T19:26:47.4227673Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\OAuth\IGT.Oauth\IGT.Oauth\IGT.Oauth.csproj" (default target) (2) ->
+2026-01-29T19:26:47.4228057Z (EnsureNuGetPackageBuildImports target) -> 
+2026-01-29T19:26:47.4228980Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\OAuth\IGT.Oauth\IGT.Oauth\IGT.Oauth.csproj(176,5): error : This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props.
+2026-01-29T19:26:47.4230392Z 
+2026-01-29T19:26:47.4230541Z     0 Warning(s)
+2026-01-29T19:26:47.4230716Z     1 Error(s)
+2026-01-29T19:26:47.4230794Z 
+2026-01-29T19:26:47.4230977Z Time Elapsed 00:00:00.28
+2026-01-29T19:26:47.4597218Z ##[error]Process 'msbuild.exe' exited with code '1'.
+2026-01-29T19:26:47.4686061Z ##[command]"C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\msbuild.exe" "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC.sln" /nologo /nr:false /dl:CentralLogger,"E:\TR-Pool\work\_tasks\MSBuild_c6c4c611-aa2e-4a33-b606-5eaba2196824\1.260.0\node_modules\azure-pipelines-tasks-msbuildhelpers\tools\Microsoft.TeamFoundation.DistributedTask.MSBuild.Logger.dll";"RootDetailId=|SolutionDir=E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC|enableOrphanedProjectsLogs=true"*ForwardingLogger,"E:\TR-Pool\work\_tasks\MSBuild_c6c4c611-aa2e-4a33-b606-5eaba2196824\1.260.0\node_modules\azure-pipelines-tasks-msbuildhelpers\tools\Microsoft.TeamFoundation.DistributedTask.MSBuild.Logger.dll" /p:DeployOnBuild=true /p:WebPublishMethod=FileSystem /p:PublishDir=E:\TR-Pool\work\9\a\publish /p:Platform="Any CPU" /p:configuration="Release" /p:_MSDeployUserAgent="TFS_3e9107db-9701-4be3-9614-9c9235570cb5_build_49_0"
+2026-01-29T19:26:47.8081802Z Build started 1/29/2026 2:26:47 PM.
+2026-01-29T19:26:47.8084816Z 
+2026-01-29T19:26:47.8991926Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC.sln" on node 1 (default targets).
+2026-01-29T19:26:47.8992403Z ValidateSolutionConfiguration:
+2026-01-29T19:26:47.8992708Z   Building solution configuration "Release|Any CPU".
+2026-01-29T19:26:48.0712050Z ##[error]CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC.csproj(398,5): Error : This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props.
+2026-01-29T19:26:48.0724681Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC.sln" (1) is building "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC.csproj" (2) on node 1 (default targets).
+2026-01-29T19:26:48.0725959Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC.csproj(398,5): error : This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props.
+2026-01-29T19:26:48.0818326Z _CleanRecordFileWrites:
+2026-01-29T19:26:48.0818706Z   Creating directory "obj\Release\".
+2026-01-29T19:26:48.0845576Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC.csproj" (default targets) -- FAILED.
+2026-01-29T19:26:48.1131900Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC.sln" (1) is building "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC.Service\IGT.CustomerPortal.MVC.Service.csproj" (3) on node 1 (default targets).
+2026-01-29T19:26:48.1132638Z PrepareForBuild:
+2026-01-29T19:26:48.1132843Z   Creating directory "bin\Release\".
+2026-01-29T19:26:48.1138884Z   Creating directory "obj\Release\".
+2026-01-29T19:26:48.2705250Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC.Service\IGT.CustomerPortal.MVC.Service.csproj" (3) is building "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj" (4:2) on node 1 (default targets).
+2026-01-29T19:26:48.2706147Z PrepareForBuild:
+2026-01-29T19:26:48.2706364Z   Creating directory "bin\Release\".
+2026-01-29T19:26:48.2712358Z   Creating directory "obj\Release\".
+2026-01-29T19:26:48.4876503Z ResolveAssemblyReferences:
+2026-01-29T19:26:48.4876935Z   Primary reference "IGT.CustomerPortal.API.DTO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL".
+2026-01-29T19:26:48.4892459Z ##[warning]C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2433,5): Warning MSB3245: Could not resolve this reference. Could not locate the assembly "IGT.CustomerPortal.API.DTO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.
+2026-01-29T19:26:48.4895772Z C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2433,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "IGT.CustomerPortal.API.DTO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.4896867Z           For SearchPath "{HintPathFromItem}".
+2026-01-29T19:26:48.4897364Z           Considered "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\packages\IGT.CustomerPortal.API.DTO.0.0.4\lib\net472\IGT.CustomerPortal.API.DTO.dll", but it didn't exist.
+2026-01-29T19:26:48.4897862Z           For SearchPath "{TargetFrameworkDirectory}".
+2026-01-29T19:26:48.4898756Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\IGT.CustomerPortal.API.DTO.winmd", but it didn't exist.
+2026-01-29T19:26:48.4899346Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\IGT.CustomerPortal.API.DTO.dll", but it didn't exist.
+2026-01-29T19:26:48.4899940Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\IGT.CustomerPortal.API.DTO.exe", but it didn't exist.
+2026-01-29T19:26:48.4900539Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Facades\IGT.CustomerPortal.API.DTO.winmd", but it didn't exist.
+2026-01-29T19:26:48.4901178Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Facades\IGT.CustomerPortal.API.DTO.dll", but it didn't exist.
+2026-01-29T19:26:48.4901786Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Facades\IGT.CustomerPortal.API.DTO.exe", but it didn't exist.
+2026-01-29T19:26:48.4902427Z           For SearchPath "{AssemblyFoldersFromConfig:C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\AssemblyFolders.config,v4.7.2}".
+2026-01-29T19:26:48.4903045Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SqlDb\IGT.CustomerPortal.API.DTO.winmd", but it didn't exist.
+2026-01-29T19:26:48.4903671Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SqlDb\IGT.CustomerPortal.API.DTO.dll", but it didn't exist.
+2026-01-29T19:26:48.4904589Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SqlDb\IGT.CustomerPortal.API.DTO.exe", but it didn't exist.
+2026-01-29T19:26:48.4905188Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\IGT.CustomerPortal.API.DTO.winmd", but it didn't exist.
+2026-01-29T19:26:48.4905786Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\IGT.CustomerPortal.API.DTO.dll", but it didn't exist.
+2026-01-29T19:26:48.4906368Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\IGT.CustomerPortal.API.DTO.exe", but it didn't exist.
+2026-01-29T19:26:48.4906978Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.5\IGT.CustomerPortal.API.DTO.winmd", but it didn't exist.
+2026-01-29T19:26:48.4907587Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.5\IGT.CustomerPortal.API.DTO.dll", but it didn't exist.
+2026-01-29T19:26:48.4908209Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.5\IGT.CustomerPortal.API.DTO.exe", but it didn't exist.
+2026-01-29T19:26:48.4908820Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.0\IGT.CustomerPortal.API.DTO.winmd", but it didn't exist.
+2026-01-29T19:26:48.4909445Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.0\IGT.CustomerPortal.API.DTO.dll", but it didn't exist.
+2026-01-29T19:26:48.4910051Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.0\IGT.CustomerPortal.API.DTO.exe", but it didn't exist.
+2026-01-29T19:26:48.4910673Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v2.0\IGT.CustomerPortal.API.DTO.winmd", but it didn't exist.
+2026-01-29T19:26:48.4911285Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v2.0\IGT.CustomerPortal.API.DTO.dll", but it didn't exist.
+2026-01-29T19:26:48.4912122Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v2.0\IGT.CustomerPortal.API.DTO.exe", but it didn't exist.
+2026-01-29T19:26:48.4912639Z           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.7.2,AssemblyFoldersEx}".
+2026-01-29T19:26:48.4912972Z           Considered AssemblyFoldersEx locations.
+2026-01-29T19:26:48.4913212Z           For SearchPath "{AssemblyFolders}".
+2026-01-29T19:26:48.4913603Z           Considered "C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\IGT.CustomerPortal.API.DTO.winmd", but it didn't exist.
+2026-01-29T19:26:48.4914151Z           Considered "C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\IGT.CustomerPortal.API.DTO.dll", but it didn't exist.
+2026-01-29T19:26:48.4914670Z           Considered "C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\IGT.CustomerPortal.API.DTO.exe", but it didn't exist.
+2026-01-29T19:26:48.4915173Z           Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\IGT.CustomerPortal.API.DTO.winmd", but it didn't exist.
+2026-01-29T19:26:48.4915632Z           Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\IGT.CustomerPortal.API.DTO.dll", but it didn't exist.
+2026-01-29T19:26:48.4916101Z           Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\IGT.CustomerPortal.API.DTO.exe", but it didn't exist.
+2026-01-29T19:26:48.4916420Z           For SearchPath "{GAC}".
+2026-01-29T19:26:48.4916795Z           Considered "IGT.CustomerPortal.API.DTO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL", which was not found in the GAC.
+2026-01-29T19:26:48.4917173Z           For SearchPath "{RawFileName}".
+2026-01-29T19:26:48.4917806Z           Considered treating "IGT.CustomerPortal.API.DTO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" as a file name, but it didn't exist.
+2026-01-29T19:26:48.4918201Z           For SearchPath "bin\Release\".
+2026-01-29T19:26:48.4918500Z           Considered "bin\Release\IGT.CustomerPortal.API.DTO.winmd", but it didn't exist.
+2026-01-29T19:26:48.4918865Z           Considered "bin\Release\IGT.CustomerPortal.API.DTO.dll", but it didn't exist.
+2026-01-29T19:26:48.4919237Z           Considered "bin\Release\IGT.CustomerPortal.API.DTO.exe", but it didn't exist.
+2026-01-29T19:26:48.4919705Z   Unified primary reference "Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL".
+2026-01-29T19:26:48.4920372Z       Using this version instead of original version "6.0.0.0" in "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\System.Net.Http.Formatting.dll" because AutoUnify is 'true'.
+2026-01-29T19:26:48.4925111Z ##[warning]C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2433,5): Warning MSB3245: Could not resolve this reference. Could not locate the assembly "Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.
+2026-01-29T19:26:48.4927336Z C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2433,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.4928848Z           For SearchPath "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies" (added by referencing assembly "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\System.Net.Http.Formatting.dll").
+2026-01-29T19:26:48.4929911Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\Newtonsoft.Json.winmd", but it didn't exist.
+2026-01-29T19:26:48.4930464Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\Newtonsoft.Json.dll", but it didn't exist.
+2026-01-29T19:26:48.4931018Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\Newtonsoft.Json.exe", but it didn't exist.
+2026-01-29T19:26:48.4931405Z           For SearchPath "{HintPathFromItem}".
+2026-01-29T19:26:48.4931870Z           Considered "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll", but it didn't exist.
+2026-01-29T19:26:48.4932329Z           For SearchPath "{TargetFrameworkDirectory}".
+2026-01-29T19:26:48.4932756Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Newtonsoft.Json.winmd", but it didn't exist.
+2026-01-29T19:26:48.4933309Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Newtonsoft.Json.dll", but it didn't exist.
+2026-01-29T19:26:48.4933868Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Newtonsoft.Json.exe", but it didn't exist.
+2026-01-29T19:26:48.4934432Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Facades\Newtonsoft.Json.winmd", but it didn't exist.
+2026-01-29T19:26:48.4935259Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Facades\Newtonsoft.Json.dll", but it didn't exist.
+2026-01-29T19:26:48.4935833Z           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Facades\Newtonsoft.Json.exe", but it didn't exist.
+2026-01-29T19:26:48.4936447Z           For SearchPath "{AssemblyFoldersFromConfig:C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\AssemblyFolders.config,v4.7.2}".
+2026-01-29T19:26:48.4937046Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SqlDb\Newtonsoft.Json.winmd", but it didn't exist.
+2026-01-29T19:26:48.4937642Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SqlDb\Newtonsoft.Json.dll", but it didn't exist.
+2026-01-29T19:26:48.4938215Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SqlDb\Newtonsoft.Json.exe", but it didn't exist.
+2026-01-29T19:26:48.4938796Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\Newtonsoft.Json.winmd", but it didn't exist.
+2026-01-29T19:26:48.4939349Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\Newtonsoft.Json.dll", but it didn't exist.
+2026-01-29T19:26:48.4939902Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\Newtonsoft.Json.exe", but it didn't exist.
+2026-01-29T19:26:48.4940471Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.5\Newtonsoft.Json.winmd", but it didn't exist.
+2026-01-29T19:26:48.4941043Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.5\Newtonsoft.Json.dll", but it didn't exist.
+2026-01-29T19:26:48.4941623Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.5\Newtonsoft.Json.exe", but it didn't exist.
+2026-01-29T19:26:48.4942194Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.0\Newtonsoft.Json.winmd", but it didn't exist.
+2026-01-29T19:26:48.4942984Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.0\Newtonsoft.Json.dll", but it didn't exist.
+2026-01-29T19:26:48.4943555Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v4.0\Newtonsoft.Json.exe", but it didn't exist.
+2026-01-29T19:26:48.4944137Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v2.0\Newtonsoft.Json.winmd", but it didn't exist.
+2026-01-29T19:26:48.4944709Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v2.0\Newtonsoft.Json.dll", but it didn't exist.
+2026-01-29T19:26:48.4945289Z           Considered "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\v2.0\Newtonsoft.Json.exe", but it didn't exist.
+2026-01-29T19:26:48.4945801Z           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.7.2,AssemblyFoldersEx}".
+2026-01-29T19:26:48.4946149Z           Considered AssemblyFoldersEx locations.
+2026-01-29T19:26:48.4946507Z           Considered "C:\Program Files (x86)\Microsoft Visual Studio\Shared\SDKs\Azure\v2.9\ToolsRef\Newtonsoft.Json.dll",
+2026-01-29T19:26:48.4946972Z   			but its name "Newtonsoft.Json, Version=13.0.1.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed"
+2026-01-29T19:26:48.4947487Z   			didn't match the expected name "Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL".
+2026-01-29T19:26:48.4948121Z           For SearchPath "{AssemblyFolders}".
+2026-01-29T19:26:48.4948480Z           Considered "C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Newtonsoft.Json.winmd", but it didn't exist.
+2026-01-29T19:26:48.4948978Z           Considered "C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Newtonsoft.Json.dll", but it didn't exist.
+2026-01-29T19:26:48.4949461Z           Considered "C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Newtonsoft.Json.exe", but it didn't exist.
+2026-01-29T19:26:48.4949925Z           Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\Newtonsoft.Json.winmd", but it didn't exist.
+2026-01-29T19:26:48.4950318Z           Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\Newtonsoft.Json.dll",
+2026-01-29T19:26:48.4950729Z   			but its name "Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed"
+2026-01-29T19:26:48.4951242Z   			didn't match the expected name "Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL".
+2026-01-29T19:26:48.4951757Z           Considered "C:\Program Files\IIS\Microsoft Web Deploy V3\Newtonsoft.Json.exe", but it didn't exist.
+2026-01-29T19:26:48.4952059Z           For SearchPath "{GAC}".
+2026-01-29T19:26:48.4952543Z           Considered "Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL", which was not found in the GAC.
+2026-01-29T19:26:48.4952959Z           For SearchPath "bin\Release\".
+2026-01-29T19:26:48.4953240Z           Considered "bin\Release\Newtonsoft.Json.winmd", but it didn't exist.
+2026-01-29T19:26:48.4953568Z           Considered "bin\Release\Newtonsoft.Json.dll", but it didn't exist.
+2026-01-29T19:26:48.4953908Z           Considered "bin\Release\Newtonsoft.Json.exe", but it didn't exist.
+2026-01-29T19:26:48.4954293Z   AssemblyFoldersEx location: "{Registry:Software\Microsoft\.NETFramework,v4.7.2,AssemblyFoldersEx}"
+2026-01-29T19:26:48.4954691Z           C:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\
+2026-01-29T19:26:48.4955031Z           C:\Program Files (x86)\Microsoft Visual Studio\Shared\SDKs\Azure\v2.9\ToolsRef\
+2026-01-29T19:26:48.4955361Z           C:\Program Files\Microsoft SDKs\Azure\.NET SDK\v2.9\ref
+2026-01-29T19:26:48.4955906Z           C:\Program Files (x86)\Common Files\Microsoft Shared\MSEnv\PublicAssemblies
+2026-01-29T19:26:48.4956249Z           C:\Program Files (x86)\Microsoft Chart Controls\Assemblies
+2026-01-29T19:26:48.5533794Z CoreCompile:
+2026-01-29T19:26:48.5536716Z   C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\Roslyn\csc.exe /noconfig /nowarn:1701,1702 /fullpaths /nostdlib+ /errorreport:prompt /warn:4 /define:TRACE /highentropyva+ /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\Microsoft.CSharp.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\mscorlib.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Data.DataSetExtensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Net.Http.dll" /reference:"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\System.Net.Http.Formatting.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Xml.Linq.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\Release\IGT.CustomerPortal.API.Client.dll /subsystemversion:6.00 /target:library /utf8output /deterministic+ /langversion:7.3 ClientBase.cs FavoriteClient.cs GameClient.cs UserClient.cs Properties\AssemblyInfo.cs "obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs"
+2026-01-29T19:26:48.7012046Z ##[error]CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\FavoriteClient.cs(1,30): Error CS0234: The type or namespace name 'DTO' does not exist in the namespace 'IGT.CustomerPortal.API' (are you missing an assembly reference?)
+2026-01-29T19:26:48.7013876Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\FavoriteClient.cs(1,30): error CS0234: The type or namespace name 'DTO' does not exist in the namespace 'IGT.CustomerPortal.API' (are you missing an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7017492Z ##[error]CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\FavoriteClient.cs(2,30): Error CS0234: The type or namespace name 'DTO' does not exist in the namespace 'IGT.CustomerPortal.API' (are you missing an assembly reference?)
+2026-01-29T19:26:48.7019064Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\FavoriteClient.cs(2,30): error CS0234: The type or namespace name 'DTO' does not exist in the namespace 'IGT.CustomerPortal.API' (are you missing an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7022580Z ##[error]CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\GameClient.cs(1,30): Error CS0234: The type or namespace name 'DTO' does not exist in the namespace 'IGT.CustomerPortal.API' (are you missing an assembly reference?)
+2026-01-29T19:26:48.7024138Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\GameClient.cs(1,30): error CS0234: The type or namespace name 'DTO' does not exist in the namespace 'IGT.CustomerPortal.API' (are you missing an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7027981Z ##[error]CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(1,30): Error CS0234: The type or namespace name 'DTO' does not exist in the namespace 'IGT.CustomerPortal.API' (are you missing an assembly reference?)
+2026-01-29T19:26:48.7029557Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(1,30): error CS0234: The type or namespace name 'DTO' does not exist in the namespace 'IGT.CustomerPortal.API' (are you missing an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7032988Z ##[error]CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(2,7): Error CS0246: The type or namespace name 'Newtonsoft' could not be found (are you missing a using directive or an assembly reference?)
+2026-01-29T19:26:48.7034513Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(2,7): error CS0246: The type or namespace name 'Newtonsoft' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7038201Z ##[error]CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(11,34): Error CS0246: The type or namespace name 'AccessTokenResponse' could not be found (are you missing a using directive or an assembly reference?)
+2026-01-29T19:26:48.7040139Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(11,34): error CS0246: The type or namespace name 'AccessTokenResponse' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7043582Z ##[error]CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\GameClient.cs(11,46): Error CS0246: The type or namespace name 'GameResponse' could not be found (are you missing a using directive or an assembly reference?)
+2026-01-29T19:26:48.7045104Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\GameClient.cs(11,46): error CS0246: The type or namespace name 'GameResponse' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7049647Z ##[error]CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\FavoriteClient.cs(12,46): Error CS0246: The type or namespace name 'GameResponse' could not be found (are you missing a using directive or an assembly reference?)
+2026-01-29T19:26:48.7051460Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\FavoriteClient.cs(12,46): error CS0246: The type or namespace name 'GameResponse' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7055888Z ##[error]CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(25,34): Error CS0246: The type or namespace name 'UserResponse' could not be found (are you missing a using directive or an assembly reference?)
+2026-01-29T19:26:48.7057802Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(25,34): error CS0246: The type or namespace name 'UserResponse' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7061668Z ##[error]CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\GameClient.cs(20,34): Error CS0246: The type or namespace name 'GameResponse' could not be found (are you missing a using directive or an assembly reference?)
+2026-01-29T19:26:48.7063224Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\GameClient.cs(20,34): error CS0246: The type or namespace name 'GameResponse' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7067498Z ##[error]CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\FavoriteClient.cs(21,34): Error CS0246: The type or namespace name 'GenericResponse' could not be found (are you missing a using directive or an assembly reference?)
+2026-01-29T19:26:48.7069126Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\FavoriteClient.cs(21,34): error CS0246: The type or namespace name 'GenericResponse' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7073067Z ##[error]CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\FavoriteClient.cs(34,34): Error CS0246: The type or namespace name 'GenericResponse' could not be found (are you missing a using directive or an assembly reference?)
+2026-01-29T19:26:48.7074962Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\FavoriteClient.cs(34,34): error CS0246: The type or namespace name 'GenericResponse' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7078893Z ##[error]CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(90,10): Error CS0246: The type or namespace name 'JsonPropertyAttribute' could not be found (are you missing a using directive or an assembly reference?)
+2026-01-29T19:26:48.7080499Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(90,10): error CS0246: The type or namespace name 'JsonPropertyAttribute' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7083952Z ##[error]CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(90,10): Error CS0246: The type or namespace name 'JsonProperty' could not be found (are you missing a using directive or an assembly reference?)
+2026-01-29T19:26:48.7085456Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(90,10): error CS0246: The type or namespace name 'JsonProperty' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7089154Z ##[error]CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(93,10): Error CS0246: The type or namespace name 'JsonPropertyAttribute' could not be found (are you missing a using directive or an assembly reference?)
+2026-01-29T19:26:48.7090707Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(93,10): error CS0246: The type or namespace name 'JsonPropertyAttribute' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7094207Z ##[error]CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(93,10): Error CS0246: The type or namespace name 'JsonProperty' could not be found (are you missing a using directive or an assembly reference?)
+2026-01-29T19:26:48.7095722Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(93,10): error CS0246: The type or namespace name 'JsonProperty' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7099331Z ##[error]CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(96,10): Error CS0246: The type or namespace name 'JsonPropertyAttribute' could not be found (are you missing a using directive or an assembly reference?)
+2026-01-29T19:26:48.7101214Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(96,10): error CS0246: The type or namespace name 'JsonPropertyAttribute' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7105244Z ##[error]CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(96,10): Error CS0246: The type or namespace name 'JsonProperty' could not be found (are you missing a using directive or an assembly reference?)
+2026-01-29T19:26:48.7106822Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(96,10): error CS0246: The type or namespace name 'JsonProperty' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7107734Z   CompilerServer: server - server processed compilation - IGT.CustomerPortal.API.Client
+2026-01-29T19:26:48.7108321Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj" (default targets) -- FAILED.
+2026-01-29T19:26:48.7114410Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC.Service\IGT.CustomerPortal.MVC.Service.csproj" (default targets) -- FAILED.
+2026-01-29T19:26:48.7123402Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC.sln" (default targets) -- FAILED.
+2026-01-29T19:26:48.7190230Z 
+2026-01-29T19:26:48.7190802Z Build FAILED.
+2026-01-29T19:26:48.7193463Z 
+2026-01-29T19:26:48.7194065Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC.sln" (default target) (1) ->
+2026-01-29T19:26:48.7195257Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC.Service\IGT.CustomerPortal.MVC.Service.csproj" (default target) (3) ->
+2026-01-29T19:26:48.7195966Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj" (default target) (4:2) ->
+2026-01-29T19:26:48.7196468Z (ResolveAssemblyReferences target) -> 
+2026-01-29T19:26:48.7197557Z   C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2433,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "IGT.CustomerPortal.API.DTO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7199518Z   C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2433,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7200495Z 
+2026-01-29T19:26:48.7200554Z 
+2026-01-29T19:26:48.7201170Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC.sln" (default target) (1) ->
+2026-01-29T19:26:48.7201734Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC.csproj" (default target) (2) ->
+2026-01-29T19:26:48.7202183Z (EnsureNuGetPackageBuildImports target) -> 
+2026-01-29T19:26:48.7203053Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC.csproj(398,5): error : This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props.
+2026-01-29T19:26:48.7203795Z 
+2026-01-29T19:26:48.7203853Z 
+2026-01-29T19:26:48.7204179Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC.sln" (default target) (1) ->
+2026-01-29T19:26:48.7204786Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.MVC.Service\IGT.CustomerPortal.MVC.Service.csproj" (default target) (3) ->
+2026-01-29T19:26:48.7205482Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj" (default target) (4:2) ->
+2026-01-29T19:26:48.7205950Z (CoreCompile target) -> 
+2026-01-29T19:26:48.7206771Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\FavoriteClient.cs(1,30): error CS0234: The type or namespace name 'DTO' does not exist in the namespace 'IGT.CustomerPortal.API' (are you missing an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7208209Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\FavoriteClient.cs(2,30): error CS0234: The type or namespace name 'DTO' does not exist in the namespace 'IGT.CustomerPortal.API' (are you missing an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7209872Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\GameClient.cs(1,30): error CS0234: The type or namespace name 'DTO' does not exist in the namespace 'IGT.CustomerPortal.API' (are you missing an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7211286Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(1,30): error CS0234: The type or namespace name 'DTO' does not exist in the namespace 'IGT.CustomerPortal.API' (are you missing an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7212695Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(2,7): error CS0246: The type or namespace name 'Newtonsoft' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7214095Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(11,34): error CS0246: The type or namespace name 'AccessTokenResponse' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7215756Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\GameClient.cs(11,46): error CS0246: The type or namespace name 'GameResponse' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7217162Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\FavoriteClient.cs(12,46): error CS0246: The type or namespace name 'GameResponse' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7218568Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(25,34): error CS0246: The type or namespace name 'UserResponse' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7219968Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\GameClient.cs(20,34): error CS0246: The type or namespace name 'GameResponse' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7221368Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\FavoriteClient.cs(21,34): error CS0246: The type or namespace name 'GenericResponse' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7223069Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\FavoriteClient.cs(34,34): error CS0246: The type or namespace name 'GenericResponse' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7224506Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(90,10): error CS0246: The type or namespace name 'JsonPropertyAttribute' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7225928Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(90,10): error CS0246: The type or namespace name 'JsonProperty' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7227330Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(93,10): error CS0246: The type or namespace name 'JsonPropertyAttribute' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7228972Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(93,10): error CS0246: The type or namespace name 'JsonProperty' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7230392Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(96,10): error CS0246: The type or namespace name 'JsonPropertyAttribute' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7231804Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\UserClient.cs(96,10): error CS0246: The type or namespace name 'JsonProperty' could not be found (are you missing a using directive or an assembly reference?) [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Site\IGT.CustomerPortal.MVC\IGT.CustomerPortal.API.Client\IGT.CustomerPortal.API.Client.csproj]
+2026-01-29T19:26:48.7232490Z 
+2026-01-29T19:26:48.7232635Z     2 Warning(s)
+2026-01-29T19:26:48.7232812Z     19 Error(s)
+2026-01-29T19:26:48.7232887Z 
+2026-01-29T19:26:48.7233067Z Time Elapsed 00:00:00.92
+2026-01-29T19:26:48.7604438Z ##[error]Process 'msbuild.exe' exited with code '1'.
+2026-01-29T19:26:48.7693709Z ##[command]"C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\msbuild.exe" "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Utils\IGT.Utils.sln" /nologo /nr:false /dl:CentralLogger,"E:\TR-Pool\work\_tasks\MSBuild_c6c4c611-aa2e-4a33-b606-5eaba2196824\1.260.0\node_modules\azure-pipelines-tasks-msbuildhelpers\tools\Microsoft.TeamFoundation.DistributedTask.MSBuild.Logger.dll";"RootDetailId=|SolutionDir=E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Utils|enableOrphanedProjectsLogs=true"*ForwardingLogger,"E:\TR-Pool\work\_tasks\MSBuild_c6c4c611-aa2e-4a33-b606-5eaba2196824\1.260.0\node_modules\azure-pipelines-tasks-msbuildhelpers\tools\Microsoft.TeamFoundation.DistributedTask.MSBuild.Logger.dll" /p:DeployOnBuild=true /p:WebPublishMethod=FileSystem /p:PublishDir=E:\TR-Pool\work\9\a\publish /p:Platform="Any CPU" /p:configuration="Release" /p:_MSDeployUserAgent="TFS_3e9107db-9701-4be3-9614-9c9235570cb5_build_49_0"
+2026-01-29T19:26:49.1186937Z Build started 1/29/2026 2:26:49 PM.
+2026-01-29T19:26:49.1190104Z 
+2026-01-29T19:26:49.2088922Z Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Utils\IGT.Utils.sln" on node 1 (default targets).
+2026-01-29T19:26:49.2089498Z ValidateSolutionConfiguration:
+2026-01-29T19:26:49.2089863Z   Building solution configuration "Release|Any CPU".
+2026-01-29T19:26:49.2259898Z ##[error]E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Utils\IGT.Utils.sln.metaproj(0,0): Error MSB3202: The project file "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Utils\IGT.Utils\IGT.Utils.csproj" was not found.
+2026-01-29T19:26:49.2278781Z E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Utils\IGT.Utils.sln.metaproj : error MSB3202: The project file "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Utils\IGT.Utils\IGT.Utils.csproj" was not found. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Utils\IGT.Utils.sln]
+2026-01-29T19:26:49.2287654Z Done Building Project "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Utils\IGT.Utils.sln" (default targets) -- FAILED.
+2026-01-29T19:26:49.2362562Z 
+2026-01-29T19:26:49.2363954Z Build FAILED.
+2026-01-29T19:26:49.2364270Z 
+2026-01-29T19:26:49.2364757Z "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Utils\IGT.Utils.sln" (default target) (1) ->
+2026-01-29T19:26:49.2365717Z (Build target) -> 
+2026-01-29T19:26:49.2366308Z   E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Utils\IGT.Utils.sln.metaproj : error MSB3202: The project file "E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Utils\IGT.Utils\IGT.Utils.csproj" was not found. [E:\TR-Pool\work\9\s\CustomerPortal\CustomerPortal\Utils\IGT.Utils.sln]
+2026-01-29T19:26:49.2366809Z 
+2026-01-29T19:26:49.2366979Z     0 Warning(s)
+2026-01-29T19:26:49.2367140Z     1 Error(s)
+2026-01-29T19:26:49.2367213Z 
+2026-01-29T19:26:49.2367402Z Time Elapsed 00:00:00.12
+2026-01-29T19:26:49.2710060Z ##[error]Process 'msbuild.exe' exited with code '1'.
+2026-01-29T19:26:49.3472989Z ##[section]Finishing: Publish Project with MSBuild
