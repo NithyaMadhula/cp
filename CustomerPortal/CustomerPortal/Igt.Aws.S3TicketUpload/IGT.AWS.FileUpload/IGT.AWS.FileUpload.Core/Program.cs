@@ -52,8 +52,6 @@ internal class Program
     {
         _accessKey = System.Configuration.ConfigurationManager.AppSettings["AWSAccessKey"];  
         _secretKey = System.Configuration.ConfigurationManager.AppSettings["AWSSecretKey"]; 
-        Console.WriteLine($"Access key {_accessKey}");
-        Console.WriteLine($"Secret key {_secretKey}");
         _awsConceptFolder = System.Configuration.ConfigurationManager.AppSettings["AWSConceptFolder"];
         _awsPrintedFolder = System.Configuration.ConfigurationManager.AppSettings["AWSPrintedFolder"];
 

@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using System;
 
 namespace Igt.InstantsShowcase
 {
@@ -34,7 +35,10 @@ namespace Igt.InstantsShowcase
                     logging.ClearProviders();
                     logging.AddConsole();
                     logging.AddDebug();
-                    logging.AddEventLog();
+                    if (OperatingSystem.IsWindows())
+                    {
+                        logging.AddEventLog();
+                    }
                 });
     }
 }

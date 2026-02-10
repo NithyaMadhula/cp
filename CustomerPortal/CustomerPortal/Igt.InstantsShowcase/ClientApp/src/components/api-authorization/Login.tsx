@@ -41,7 +41,7 @@ export class Login extends React.Component<IProps, IState> {
       case LoginActions.LoginFailed:
         const params = new URLSearchParams(window.location.search);
         const error = params.get(QueryParameterNames.Message) || "";
-        this.setState({ message: error });
+        this.setState({ message: this.normalizeMessage(error) });
         break;
       case LoginActions.Profile:
         this.redirectToProfile();
@@ -86,13 +86,14 @@ export class Login extends React.Component<IProps, IState> {
           await this.navigateToReturnUrl(returnUrl);
           break;
         case AuthenticationResultStatus.Fail:
-          this.setState({ message: result.message });
+          this.setState({ message: this.normalizeMessage(result.message) });
           break;
         default:
           throw new Error(`Invalid status result ${result.status}.`);
       }
     } catch (e) {
       console.error(e);
+      this.setState({ message: this.normalizeMessage(e) });
     }
   }
 
@@ -108,7 +109,7 @@ export class Login extends React.Component<IProps, IState> {
         await this.navigateToReturnUrl(this.getReturnUrl(result.state));
         break;
       case AuthenticationResultStatus.Fail:
-        this.setState({ message: result.message });
+        this.setState({ message: this.normalizeMessage(result.message) });
         break;
       default:
         throw new Error(
@@ -155,5 +156,21 @@ export class Login extends React.Component<IProps, IState> {
     // It's important that we do a replace here so that we remove the callback uri with the
     // fragment containing the tokens from the browser history.
     window.location.replace(returnUrl);
+  }
+
+  normalizeMessage(value: unknown): string {
+    if (value instanceof Error) {
+      return value.message;
+    }
+
+    if (typeof value === "string") {
+      return value;
+    }
+
+    if (value && typeof value === "object" && "message" in value) {
+      return String((value as { message: unknown }).message);
+    }
+
+    return "An unexpected error occurred.";
   }
 }

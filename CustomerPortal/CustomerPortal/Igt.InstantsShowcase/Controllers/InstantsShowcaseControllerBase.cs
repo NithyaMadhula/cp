@@ -39,8 +39,13 @@ namespace Igt.InstantsShowcase.Controllers
         {
             if (currentUser == null)
             {
-                var claimsIdentity = (ClaimsIdentity)this.User.Identity;
-                var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+                var claimsIdentity = this.User?.Identity as ClaimsIdentity;
+                var claim = claimsIdentity?.FindFirst(ClaimTypes.NameIdentifier);
+                if (claim == null)
+                {
+                    return null;
+                }
+
                 currentUser = await UserManager.FindByIdAsync(claim.Value);
             }
 

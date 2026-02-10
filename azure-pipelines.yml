@@ -9,6 +9,15 @@ variables:
 
 steps:
 
+# 🧰 NuGet (packages.config) Restore for .NET Framework projects
+- task: NuGetToolInstaller@1
+  displayName: 'Install NuGet'
+
+- task: NuGetCommand@2
+  displayName: 'Restore NuGet Packages (API)'
+  inputs:
+    command: 'restore'
+    restoreSolution: 'CustomerPortal/CustomerPortal/Api/IGT.CustomerPortal.API/IGT.CustomerPortal.API.sln'
 
 # 🛠️ Restore
 #- task: DotNetCoreCLI@2
@@ -16,6 +25,12 @@ steps:
 #  inputs:
 #    command: 'restore'
 #    projects: '**/Igt.InstantsShowcase.sln'
+
+- task: DotNetCoreCLI@2
+  displayName: 'Restore NuGet Packages (InstantsShowcase)'
+  inputs:
+    command: 'restore'
+    projects: '**/Igt.InstantsShowcase.sln'
 
 # 🧱 Build
 - task: DotNetCoreCLI@2

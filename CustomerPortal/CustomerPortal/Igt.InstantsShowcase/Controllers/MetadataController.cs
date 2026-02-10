@@ -34,6 +34,11 @@ namespace Igt.InstantsShowcase.Controllers
         public async Task<dynamic> GetCurrentUserMetadata()
         {
             var user = await GetCurrentUser();
+            if (user == null)
+            {
+                return Unauthorized();
+            }
+
             return new { user.OrganizationCode, user.UserName };
         }
     }
