@@ -6,25 +6,9 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+  publishDir: '$(Build.ArtifactStagingDirectory)\publish'
 
 steps:
-
-# 🧰 NuGet (packages.config) Restore for .NET Framework projects
-- task: NuGetToolInstaller@1
-  displayName: 'Install NuGet'
-
-- task: NuGetCommand@2
-  displayName: 'Restore NuGet Packages (API)'
-  inputs:
-    command: 'restore'
-    restoreSolution: 'CustomerPortal/CustomerPortal/Api/IGT.CustomerPortal.API/IGT.CustomerPortal.API.sln'
-
-# 🛠️ Restore
-#- task: DotNetCoreCLI@2
-#  displayName: 'Restore NuGet Packages'
-#  inputs:
-#    command: 'restore'
-#    projects: '**/Igt.InstantsShowcase.sln'
 
 - task: DotNetCoreCLI@2
   displayName: 'Restore NuGet Packages (InstantsShowcase)'
@@ -32,25 +16,19 @@ steps:
     command: 'restore'
     projects: '**/Igt.InstantsShowcase.sln'
 
-# 🧱 Build
+- task: NodeTool@0
+  displayName: 'Install Node.js'
+  inputs:
+    versionSpec: '18.x'
+
+# 🧱 Build/Publish
 - task: DotNetCoreCLI@2
-  displayName: 'Build Project'
+  displayName: 'Publish InstantsShowcase'
   inputs:
-    command: 'build'
-    arguments: '--configuration $(buildConfiguration)'
-    projects: '**/Igt.InstantsShowcase.sln'
-# 🔹 Step 3: Publish using MSBuild (new, replaces dotnet publish)
-- task: MSBuild@1
-  displayName: 'Publish Project with MSBuild'
-  inputs:
-    solution: '**/*.sln'
-    msbuildArchitecture: 'x64'
-    configuration: '$(buildConfiguration)'
-    msbuildArguments: >
-      /p:DeployOnBuild=true
-      /p:WebPublishMethod=FileSystem
-      /p:PublishDir=$(Build.ArtifactStagingDirectory)\publish
-      /p:Platform="Any CPU"
+    command: 'publish'
+    publishWebProjects: false
+    projects: 'CustomerPortal/CustomerPortal/Igt.InstantsShowcase/Igt.InstantsShowcase.sln'
+    arguments: '--configuration $(buildConfiguration) --output $(publishDir)\\Igt.InstantsShowcase'
 # 🚀 Publish Artifacts
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
