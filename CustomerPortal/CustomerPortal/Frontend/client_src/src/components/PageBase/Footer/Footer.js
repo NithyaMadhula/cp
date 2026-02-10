@@ -136,7 +136,7 @@ const Footer = (props) => {
             <hr />
             <div class="footer_bot clearfix">
               <p class="igt_copyright">
-                &copy; <span id="FooterYear">2020</span> IGT. All rights
+                &copy; <span id="FooterYear">{new Date().getFullYear()}</span> Brightstar. All rights
                 reserved.
               </p>
 
