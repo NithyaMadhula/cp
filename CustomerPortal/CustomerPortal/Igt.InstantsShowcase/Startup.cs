@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Reflection;
+using System.IO;
 using System;
 using Microsoft.OpenApi.Models;
 using Igt.InstantsShowcase.Models.Dapper;
@@ -17,7 +18,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Igt.InstantsShowcase.Models;
 using Microsoft.AspNetCore.Identity;
-using System.IO;
 
 namespace Igt.InstantsShowcase
 {
@@ -52,13 +52,6 @@ namespace Igt.InstantsShowcase
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("UserDb")));
-
-            services.AddDbContext<DataProtectionKeyContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("UserDb")));
-
-            services.AddDataProtection()
-                .PersistKeysToDbContext<DataProtectionKeyContext>()
-                .SetApplicationName("Igt.InstantsShowcase");
 
             services.AddSingleton<IDbConfig, DbConfig>(config =>
             {
