@@ -135,10 +135,17 @@ namespace Igt.InstantsShowcase.Areas.Identity.Pages.Account
 
                     var body = $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.";
                     var emailTemplate = new EmailTemplate(body);
-                    await _emailSender.SendEmailAsync(Input.Email, "Instantsshowcase - Confirm your email", emailTemplate.GetTemplate());
+                    try
+                    {
+                        await _emailSender.SendEmailAsync(Input.Email, "Instantsshowcase - Confirm your email", emailTemplate.GetTemplate());
 
-                    var accessRequestbody = $"Please activate the following account: {Input.Email}";
-                    await _emailSender.SendEmailAsync("Gonzalo.Garcia@brightstarlottery.com", "Instantsshowcase - Access Request", new EmailTemplate(accessRequestbody).GetTemplate());
+                        var accessRequestbody = $"Please activate the following account: {Input.Email}";
+                        await _emailSender.SendEmailAsync("Gonzalo.Garcia@brightstarlottery.com", "Instantsshowcase - Access Request", new EmailTemplate(accessRequestbody).GetTemplate());
+                    }
+                    catch (Exception ex)
+                    {
+                        _logger.LogWarning(ex, "Email sending failed during registration for {Email}.", Input.Email);
+                    }
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {

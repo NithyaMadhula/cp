@@ -16,7 +16,7 @@ import IndexingGameDetails from "../analytics/IndexingGameDetails/IndexingGameDe
 
 const GameLaunches = (props: any) => {
   const pageSizes = [20, 40, 100];
-  const [data, setData] = React.useState([]);
+  const [data, setData] = React.useState<any[]>([]);
   const [skip, setSkip] = React.useState(0);
   const [sort, setSort] = React.useState<SortDescriptor[]>([
     { field: "startDate", dir: "desc" },
@@ -24,6 +24,7 @@ const GameLaunches = (props: any) => {
   const [take, setTake] = React.useState(pageSizes[0]);
   const [gameData, setGameData] = React.useState<any>(null);
   const [prizeStructure, setPrizeStructure] = React.useState(null);
+  const normalizeTableData = (value: any) => (Array.isArray(value) ? value : []);
 
   const fetchGameData = (id: any) => {
     setGameData(null);
@@ -44,7 +45,9 @@ const GameLaunches = (props: any) => {
   };
 
   React.useEffect(() => {
-    fetch_data.fetchGameSearch().then((response) => setData(response));
+    fetch_data.fetchGameSearch().then((response) =>
+      setData(normalizeTableData(response))
+    );
   }, [setData]);
 
   const hasGameData = () => gameData;
@@ -63,7 +66,7 @@ const GameLaunches = (props: any) => {
         <Grid
           className="mx-auto"
           style={{ width: "1920px", height: "70vh" }}
-          data={process(data, {
+          data={process(normalizeTableData(data), {
             take: take,
             skip: skip,
             sort: sort,

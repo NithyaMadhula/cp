@@ -2,7 +2,8 @@ export const replacePipe = (value) => {
   return value ? value.replace("|", ", ") : "";
 };
 
-export const defaultify = (value, def) => (value ? value : def || "--");
+export const defaultify = (value, def) =>
+  value === null || value === undefined || value === "" ? def || "--" : value;
 
 export const formatDate = (date) => {
   let removeAfter = date.indexOf("T");

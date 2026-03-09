@@ -67,10 +67,28 @@ const IndexingGameDetails = (props: any) => {
   const [index, setIndex] = React.useState(0);
   const [open, setOpen] = React.useState(true);
   const [favoriteId, setFavoriteId] = React.useState<number | null>(null);
+  const normalizeFavorites = (value: any) => {
+    if (Array.isArray(value)) return value;
+
+    const collection =
+      value?.data ??
+      value?.items ??
+      value?.results ??
+      value?.favorites ??
+      value?.favoriteGames;
+
+    if (Array.isArray(collection)) return collection;
+    if (collection && typeof collection === "object") return [collection];
+    if (value && typeof value === "object" && "gameID" in value) return [value];
+
+    return [];
+  };
 
   React.useEffect(() => {
     fetch_data.fetchFavoriteGames().then((x: any) => {
-      const fav = x.filter((y: any) => y.gameID == props.gameData.gameID);
+      const fav = normalizeFavorites(x).filter(
+        (y: any) => y.gameID == props.gameData.gameID
+      );
 
       if (fav?.length) {
         setFavoriteId(fav[0].favoriteID);
@@ -154,11 +172,11 @@ const IndexingGameDetails = (props: any) => {
                         fetch_data
                           .saveFavorite(props.gameData.gameID)
                           .then((favs: any) => {
-                            const favorite = favs.filter(
+                            const favorite = normalizeFavorites(favs).filter(
                               (x: any) => x.gameID == props.gameData.gameID
                             )[0];
 
-                            setFavoriteId(favorite.favoriteID);
+                            setFavoriteId(favorite?.favoriteID ?? null);
                           });
                       } else {
                         fetch_data

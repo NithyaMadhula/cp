@@ -181,11 +181,10 @@ namespace Igt.InstantsShowcase
 
             app.UseSpa(spa =>
             {
-                spa.Options.SourcePath = "ClientApp/build";
+                spa.Options.SourcePath = "ClientApp";
 
                 if (env.IsDevelopment())
                 {
-                    spa.Options.SourcePath = "ClientApp";
                     spa.UseReactDevelopmentServer(npmScript: "start");
                 }
             });

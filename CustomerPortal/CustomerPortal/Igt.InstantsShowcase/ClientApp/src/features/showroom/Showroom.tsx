@@ -151,6 +151,7 @@ const Showroom = (props: any) => {
     const [jurisdiction, setJurisdiction] = React.useState<any>([]);
     const [price, setPrice] = React.useState<any>(null);
     const [searchModel, setSearchModel] = React.useState<any>({ pageSize: 5000 });
+    const normalizeSearchData = (value: any) => (Array.isArray(value) ? value : []);
     const handleChange = (event: any, newValue: any) => {
         setValue(newValue);
         if (newValue != FAVS_ID) setFavs(false);
@@ -420,7 +421,9 @@ const Showroom = (props: any) => {
                                                     : null,
                                                 pageSize: 5000,
                                             })
-                                            .then((response) => setSearchData(response));
+                                            .then((response) =>
+                                                setSearchData(normalizeSearchData(response))
+                                            );
                                         setValue(0);
                                     }}
                                 >

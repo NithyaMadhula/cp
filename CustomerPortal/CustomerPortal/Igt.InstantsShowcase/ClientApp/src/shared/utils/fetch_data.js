@@ -241,7 +241,12 @@ export const fetch_data = {
       }
       const projection = data.map((x) => ({
         ...x,
-        index: isNaN(x.index) ? 0 : Number(x.index),
+        index:
+          x.index === null || x.index === undefined || x.index === ""
+            ? null
+            : isNaN(x.index)
+            ? null
+            : Number(x.index),
       }));
 
       return projection;

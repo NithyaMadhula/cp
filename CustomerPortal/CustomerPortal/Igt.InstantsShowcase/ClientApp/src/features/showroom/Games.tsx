@@ -26,6 +26,7 @@ const Games = (props: any) => {
   const [take, setTake] = React.useState(pageSizes[0]);
   const [gameData, setGameData] = React.useState<any>(null);
   const [prizeStructure, setPrizeStructure] = React.useState(null);
+  const normalizeTableData = (value: any) => (Array.isArray(value) ? value : []);
 
   const fetchGameData = (id: any) => {
     setGameData(null);
@@ -48,7 +49,7 @@ const Games = (props: any) => {
   React.useEffect(() => {
     (props.search ? props.search : fetch_data.fetchGameSearch)(
       props.searchModel
-    ).then((response: any) => setData(response));
+    ).then((response: any) => setData(normalizeTableData(response)));
   }, [setData, props.searchData, props.search, props.searchModel]);
 
   const hasGameData = () => gameData;
@@ -67,7 +68,7 @@ const Games = (props: any) => {
     const gameTable = (tableData: any) => (
       <Grid
         style={{height: "650px", fontSize: "20px" }}
-        data={process(tableData, {
+        data={process(normalizeTableData(tableData), {
           take: take,
           skip: skip,
           sort: sort,

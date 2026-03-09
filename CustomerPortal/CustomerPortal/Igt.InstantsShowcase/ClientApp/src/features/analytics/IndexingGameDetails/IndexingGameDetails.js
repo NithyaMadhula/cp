@@ -64,9 +64,22 @@ var IndexingGameDetails = function (props) {
     var _a = React.useState(0), index = _a[0], setIndex = _a[1];
     var _b = React.useState(true), open = _b[0], setOpen = _b[1];
     var _c = React.useState(null), favoriteId = _c[0], setFavoriteId = _c[1];
+    var normalizeFavorites = function (value) {
+        var _a, _b, _c, _d, _e;
+        if (Array.isArray(value))
+            return value;
+        var collection = (_e = (_d = (_c = (_b = (_a = value === null || value === void 0 ? void 0 : value.data) !== null && _a !== void 0 ? _a : value === null || value === void 0 ? void 0 : value.items) !== null && _b !== void 0 ? _b : value === null || value === void 0 ? void 0 : value.results) !== null && _c !== void 0 ? _c : value === null || value === void 0 ? void 0 : value.favorites) !== null && _d !== void 0 ? _d : value === null || value === void 0 ? void 0 : value.favoriteGames) !== null && _e !== void 0 ? _e : void 0;
+        if (Array.isArray(collection))
+            return collection;
+        if (collection && typeof collection === "object")
+            return [collection];
+        if (value && typeof value === "object" && "gameID" in value)
+            return [value];
+        return [];
+    };
     React.useEffect(function () {
         fetch_data_1.fetch_data.fetchFavoriteGames().then(function (x) {
-            var fav = x.filter(function (y) { return y.gameID == props.gameData.gameID; });
+            var fav = normalizeFavorites(x).filter(function (y) { return y.gameID == props.gameData.gameID; });
             if (fav === null || fav === void 0 ? void 0 : fav.length) {
                 setFavoriteId(fav[0].favoriteID);
             }
@@ -103,8 +116,8 @@ var IndexingGameDetails = function (props) {
                                         fetch_data_1.fetch_data
                                             .saveFavorite(props.gameData.gameID)
                                             .then(function (favs) {
-                                            var favorite = favs.filter(function (x) { return x.gameID == props.gameData.gameID; })[0];
-                                            setFavoriteId(favorite.favoriteID);
+                                            var favorite = normalizeFavorites(favs).filter(function (x) { return x.gameID == props.gameData.gameID; })[0];
+                                            setFavoriteId((favorite === null || favorite === void 0 ? void 0 : favorite.favoriteID) !== null && (favorite === null || favorite === void 0 ? void 0 : favorite.favoriteID) !== void 0 ? favorite.favoriteID : null);
                                         });
                                     }
                                     else {
