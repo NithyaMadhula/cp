@@ -87,6 +87,11 @@ const getIconStyle = (rightPx: number, text: string): any => {
 const getValueArray = (array: string[]) =>
     array.indexOf("all") > -1 ? [] : array;
 
+const getSelectedVendorName = (vendorKey: any, vendors: any[]) =>
+    vendorKey == null || !vendors?.length
+        ? null
+        : vendors.find((x: any) => x.key == vendorKey)?.value ?? null;
+
 const getFormControl = (
     label: string,
     v: any,
@@ -149,6 +154,7 @@ const Showroom = (props: any) => {
     const [option, setOption] = React.useState<any>([]);
     const [theme, setTheme] = React.useState<any>([]);
     const [jurisdiction, setJurisdiction] = React.useState<any>([]);
+    const [vendor, setVendor] = React.useState<any>(null);
     const [price, setPrice] = React.useState<any>(null);
     const [searchModel, setSearchModel] = React.useState<any>({ pageSize: 5000 });
     const normalizeSearchData = (value: any) => (Array.isArray(value) ? value : []);
@@ -196,6 +202,7 @@ const Showroom = (props: any) => {
                         setOption([]);
                         setTheme([]);
                         setJurisdiction([]);
+                        setVendor(null);
                         setPrice(null);
                         setSearchModel({ pageSize: 5000 });
                     }}
@@ -301,6 +308,26 @@ const Showroom = (props: any) => {
                                 </FormControl>
                             </li>
                             <li className="m-2">
+                                <FormControl style={{ width: "100%", margin: "0 10px", paddingRight: "25px" }}>
+                                    <InputLabel>Vendor</InputLabel>
+                                    <Select
+                                        value={vendor ?? "all"}
+                                        onChange={(e) =>
+                                            setVendor(e.target.value == "all" ? null : e.target.value)
+                                        }
+                                    >
+                                        <MenuItem key={"all"} value={"all"}>
+                                            <ListItemText primary={"All"} />
+                                        </MenuItem>
+                                        {metadata.vendor?.map((x: any) => (
+                                            <MenuItem key={x.key} value={x.key}>
+                                                <ListItemText primary={x.value} />
+                                            </MenuItem>
+                                        ))}
+                                    </Select>
+                                </FormControl>
+                            </li>
+                            <li className="m-2">
                                 {getFormControl(
                                     "Jurisdiction",
                                     jurisdiction,
@@ -397,6 +424,7 @@ const Showroom = (props: any) => {
                                             jurisdictionIDs: jurisdiction?.length
                                                 ? jurisdiction.join(",")
                                                 : null,
+                                            vendorName: getSelectedVendorName(vendor, metadata.vendor),
                                             pageSize: 5000,
                                         });
                                         fetch_data
@@ -419,6 +447,7 @@ const Showroom = (props: any) => {
                                                 jurisdictionIDs: jurisdiction?.length
                                                     ? jurisdiction.join(",")
                                                     : null,
+                                                vendorName: getSelectedVendorName(vendor, metadata.vendor),
                                                 pageSize: 5000,
                                             })
                                             .then((response) =>

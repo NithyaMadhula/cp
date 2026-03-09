@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using Igt.InstantsShowcase.Models;
 using Igt.InstantsShowcase.Models.Application;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -96,6 +97,23 @@ namespace Igt.InstantsShowcase.Models.Repositories
 
                 var data = await dr.ReadAsync<dynamic>();
                 return data.Select(x => new TicketPrice { Value = x.TicketPrice });
+            });
+        }
+
+        public async Task<IEnumerable<KeyValue>> GetVendors()
+        {
+            return await WithConnection(async c =>
+            {
+                var data = await c.QueryAsync<dynamic>(
+                    sql: @"SELECT VendorID, VendorName
+                           FROM dbo.Vendor
+                           WHERE IsActive = 1
+                           ORDER BY VendorName");
+
+                return data.Select(x => new KeyValue(
+                    x.VendorID.ToString(),
+                    x.VendorName?.ToString()
+                ));
             });
         }
 
@@ -848,6 +866,7 @@ namespace Igt.InstantsShowcase.Models.Repositories
                         SpecialtyOptionIDs = req.SpecialtyOptionIDs ?? null,
                         PaperStockCategoryIDs = req.PaperStockCategoryIDs ?? null,
                         JurisdictionIDs = req.JurisdictionIDs ?? null,
+                        VendorName = req.VendorName ?? null,
                         SortColumn = req.SortColumn ?? null,
                         SortDirection = req.SortDirection ?? null,
                         PageIndex = req.PageIndex ?? 1,

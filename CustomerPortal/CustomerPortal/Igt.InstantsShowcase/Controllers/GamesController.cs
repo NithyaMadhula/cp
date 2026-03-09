@@ -117,6 +117,7 @@ namespace Igt.InstantsShowcase.Controllers
         {
             req.Customer = await GetCustomerCode(req.Customer);
             var value = await this.PostGameSearch(req);
+            var vendors = await CustomerPortal.GetVendors();
 
             return Ok(new
             {
@@ -332,7 +333,8 @@ new KeyValue("3","Arizona Lottery")
 ,new KeyValue("49","Wisconsin Lottery")
 ,new KeyValue("50","DC Lottery")
 
-            }.OrderBy(x => x.Value)
+            }.OrderBy(x => x.Value),
+                vendor = vendors?.OrderBy(x => x.Value)
             });
         }
     }

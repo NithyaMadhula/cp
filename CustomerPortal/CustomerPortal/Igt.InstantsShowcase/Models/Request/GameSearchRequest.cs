@@ -13,7 +13,8 @@ namespace Igt.InstantsShowcase.Models
         public string FeatureIDs { get; set; }
         public string SpecialtyOptionIDs { get; set; }
         public string PaperStockCategoryIDs { get; set; }
-        public string JurisdictionIDs { get; set; }        
+        public string JurisdictionIDs { get; set; }
+        public string VendorName { get; set; }
         public string SortColumn { get; set; }
         public string SortDirection { get; set; }
         public int? MinimumPerformance { get; set; }
