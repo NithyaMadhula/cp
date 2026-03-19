@@ -138,9 +138,6 @@ namespace Igt.InstantsShowcase.Areas.Identity.Pages.Account
                     try
                     {
                         await _emailSender.SendEmailAsync(Input.Email, "Instantsshowcase - Confirm your email", emailTemplate.GetTemplate());
-
-                        var accessRequestbody = $"Please activate the following account: {Input.Email}";
-                        await _emailSender.SendEmailAsync("Gonzalo.Garcia@brightstarlottery.com", "Instantsshowcase - Access Request", new EmailTemplate(accessRequestbody).GetTemplate());
                     }
                     catch (Exception ex)
                     {
