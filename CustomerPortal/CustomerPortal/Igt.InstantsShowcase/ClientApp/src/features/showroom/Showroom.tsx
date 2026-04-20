@@ -143,10 +143,10 @@ const Showroom = (props: any) => {
     const [search, setSearch] = React.useState(false);
     const [searchData, setSearchData] = React.useState<any>(null);
     const [metadata, setMetadata] = React.useState<any>({});
-    const [term, setTerm] = React.useState<any>(null);
-    const [perfMin, setPerfMin] = React.useState<any>(null);
-    const [start, setStart] = React.useState<any>(null);
-    const [end, setEnd] = React.useState<any>(null);
+    const [term, setTerm] = React.useState<any>("");
+    const [perfMin, setPerfMin] = React.useState<any>("");
+    const [start, setStart] = React.useState<any>("");
+    const [end, setEnd] = React.useState<any>("");
     const [color, setColor] = React.useState<any>([]);
     const [feature, setFeature] = React.useState<any>([]);
     const [stock, setStock] = React.useState<any>([]);
@@ -191,10 +191,10 @@ const Showroom = (props: any) => {
                     }}
                     onClick={(e): void => {
                         setSearchData(null);
-                        setTerm(null);
-                        setPerfMin(null);
-                        setStart(null);
-                        setEnd(null);
+                        setTerm("");
+                        setPerfMin("");
+                        setStart("");
+                        setEnd("");
                         setColor([]);
                         setFeature([]);
                         setStock([]);
@@ -302,7 +302,9 @@ const Showroom = (props: any) => {
                                             <ListItemText primary={"All"} />
                                         </MenuItem>
                                         {metadata.ticketPrice?.map((x: any) => (
-                                            <MenuItem value={x.value}>{x.key}</MenuItem>
+                                            <MenuItem key={x.value ?? x.key} value={x.value}>
+                                                {x.key}
+                                            </MenuItem>
                                         ))}
                                     </Select>
                                 </FormControl>

@@ -878,6 +878,13 @@ namespace Igt.InstantsShowcase.Models.Repositories
                 return results;
             });
         }
+
+        public async Task<(IEnumerable<GameSearchResult> Results, int TotalCount)> GetGameSearchPage(GameSearchRequest req)
+        {
+            var results = (await GetGameSearch(req)).ToList();
+            var totalCount = results.FirstOrDefault()?.TotalCount ?? 0;
+            return (results, totalCount);
+        }
         #endregion
 
         #region sp

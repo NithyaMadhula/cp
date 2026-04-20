@@ -6,7 +6,7 @@ import {
   GridColumnMenuCheckboxFilter,
   GridSortChangeEvent,
 } from "@progress/kendo-react-grid";
-import { process, SortDescriptor } from "@progress/kendo-data-query";
+import { SortDescriptor } from "@progress/kendo-data-query";
 import image_paths from "../../shared/utils/image_paths";
 import {
   replacePipe,
@@ -19,6 +19,8 @@ import IndexingGameDetails from "../analytics/IndexingGameDetails/IndexingGameDe
 const Games = (props: any) => {
   const pageSizes = [20, 40, 100];
   const [data, setData] = React.useState<any>([]);
+  const [totalCount, setTotalCount] = React.useState(0);
+  const [loading, setLoading] = React.useState(true);
   const [skip, setSkip] = React.useState(0);
   const [sort, setSort] = React.useState<SortDescriptor[]>([
     { field: "startDate", dir: "desc" },
@@ -47,10 +49,42 @@ const Games = (props: any) => {
   };
 
   React.useEffect(() => {
-    (props.search ? props.search : fetch_data.fetchGameSearch)(
-      props.searchModel
-    ).then((response: any) => setData(normalizeTableData(response)));
-  }, [setData, props.searchData, props.search, props.searchModel]);
+    setSkip(0);
+  }, [props.searchModel, props.search]);
+
+  React.useEffect(() => {
+    const searchModel = {
+      ...(props.searchModel || {}),
+      pageIndex: Math.floor(skip / take) + 1,
+      pageSize: take,
+      sortColumn: sort[0]?.field === "businessName" ? "Jurisdiction" :
+        sort[0]?.field === "ticketPrice" ? "Ticket Price" :
+        sort[0]?.field === "startDate" ? "Launch Date" :
+        sort[0]?.field === "theme" || sort[0]?.field === "primaryThemeName" ? "Theme" :
+        sort[0]?.field === "color" || sort[0]?.field === "primaryColorName" ? "Color" :
+        sort[0]?.field === "playStyle" || sort[0]?.field === "primaryPlayStyleName" ? "Play Style" :
+        sort[0]?.field === "feature" || sort[0]?.field === "primaryFeatureName" ? "Feature" :
+        (props.searchModel || {}).sortColumn,
+      sortDirection: sort[0]?.dir?.toUpperCase() || (props.searchModel || {}).sortDirection,
+    };
+
+    const fetcher = props.search ? props.search : fetch_data.fetchGameSearch;
+    setLoading(true);
+    fetcher(searchModel).then((response: any) => {
+      const results = Array.isArray(response) ? response : response?.results;
+      const total = Array.isArray(response)
+        ? Number((response as any).totalCount || response.length || 0)
+        : Number(response?.totalCount || 0);
+      setData(normalizeTableData(results));
+      setTotalCount(total);
+      setLoading(false);
+    }).catch((error: any) => {
+      console.error(error);
+      setData([]);
+      setTotalCount(0);
+      setLoading(false);
+    });
+  }, [skip, take, sort, props.searchData, props.search, props.searchModel]);
 
   const hasGameData = () => gameData;
 
@@ -68,11 +102,7 @@ const Games = (props: any) => {
     const gameTable = (tableData: any) => (
       <Grid
         style={{height: "650px", fontSize: "20px" }}
-        data={process(normalizeTableData(tableData), {
-          take: take,
-          skip: skip,
-          sort: sort,
-        })}
+        data={normalizeTableData(tableData)}
         pageable={{
           buttonCount: 5,
           info: true,
@@ -80,17 +110,21 @@ const Games = (props: any) => {
         }}
         skip={skip}
         take={take}
+        total={totalCount}
         pageSize={pageSizes[0]}
         sortable
         onSortChange={(e: GridSortChangeEvent): void => {
           const desc: SortDescriptor = e.sort[0];
-          desc.dir =
-            sort[0].field === desc.field
-              ? sort[0].dir === "asc"
-                ? "desc"
-                : "asc"
-              : "asc";
-          setSort([desc]);
+          const nextSort: SortDescriptor = {
+            field: desc.field,
+            dir:
+              sort[0].field === desc.field
+                ? sort[0].dir === "asc"
+                  ? "desc"
+                  : "asc"
+                : "asc",
+          };
+          setSort([nextSort]);
         }}
         onPageChange={pageChange}
         onRowClick={(event) => {
@@ -120,14 +154,14 @@ const Games = (props: any) => {
                       cursor: "pointer",
                     }}
                   >
-                    <img
-                      src={image_paths.baseImageUrl(props.dataItem["imgName"])}
-                      alt="main game view"
-                      onError={(e: any) => {
-                        e.target.onerror = null;
-                        e.target.src =
-                          "https://via.placeholder.com/60/FFF?text=%20";
-                      }}
+                      <img
+                        src={image_paths.baseImageUrl(props.dataItem["imgName"])}
+                        alt="main game view"
+                        onError={(e: any) => {
+                          e.target.onerror = null;
+                          e.target.src =
+                          "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'><rect width='60' height='60' fill='%23fff'/></svg>";
+                        }}
                       title={props.dataItem["gameID"]}
                                 style={{ maxWidth: "55px", maxHeight: "55px"}}
                       className="m-auto"
@@ -192,7 +226,13 @@ const Games = (props: any) => {
 
   return (
     <>
-      {props.searchData ? gameTable(props.searchData) : gameTable(data)}
+      {loading ? (
+        <div style={{ height: "650px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          Loading games...
+        </div>
+      ) : (
+        gameTable(data)
+      )}
       {(hasGameData() && (
         <IndexingGameDetails
           gameData={gameData}
@@ -206,4 +246,4 @@ const Games = (props: any) => {
   );
 };
 
-export default Games;
+export default React.memo(Games);

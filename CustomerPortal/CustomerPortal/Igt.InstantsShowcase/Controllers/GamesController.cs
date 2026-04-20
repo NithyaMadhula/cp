@@ -20,6 +20,8 @@ namespace Igt.InstantsShowcase.Controllers
     [Authorize]
     public class GamesController : InstantsShowcaseControllerBase
     {
+        private const int MaxGameSearchPageSize = 200;
+
         /// <summary>
         /// 
         /// </summary>
@@ -39,11 +41,36 @@ namespace Igt.InstantsShowcase.Controllers
         /// </remarks>
         /// <returns></returns>
         [HttpPost]
-        public async Task<IEnumerable<GameSearchResult>> PostGameSearch([FromBody] GameSearchRequest req)
+        public async Task<IActionResult> PostGameSearch([FromBody] GameSearchRequest req)
         {
+            req.PageSize = req.PageSize.HasValue
+                ? Math.Min(req.PageSize.Value, MaxGameSearchPageSize)
+                : MaxGameSearchPageSize;
             req.Customer = await GetCustomerCode(req.Customer);
-            var results = await CustomerPortal.GetGameSearch(req);
-            return results;
+            var results = (await CustomerPortal.GetGameSearch(req)).ToList();
+            var totalCount = results.FirstOrDefault()?.TotalCount ?? 0;
+            return Ok(new
+            {
+                results = results.Select(x => new
+                {
+                    x.GameID,
+                    x.StartDate,
+                    x.GameReferenceID,
+                    x.GameName,
+                    x.TicketPrice,
+                    x.PaperStock,
+                    x.BusinessName,
+                    x.SubDivisionCode,
+                    x.Theme,
+                    x.Feature,
+                    x.PlayStyle,
+                    x.Color,
+                    x.SpecialtyOption,
+                    x.ImgName,
+                    x.Index
+                }),
+                totalCount
+            });
         }
 
         /// <summary>
@@ -116,7 +143,6 @@ namespace Igt.InstantsShowcase.Controllers
         public async Task<IActionResult> PostSearchMetadata(GameSearchRequest req)
         {
             req.Customer = await GetCustomerCode(req.Customer);
-            var value = await this.PostGameSearch(req);
             var vendors = await CustomerPortal.GetVendors();
 
             return Ok(new

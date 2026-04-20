@@ -121,7 +121,7 @@ const GameLaunches = (props: any) => {
                         onError={(e: any) => {
                           e.target.onerror = null;
                           e.target.src =
-                            "https://via.placeholder.com/60/FFF?text=%20";
+                            "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'><rect width='60' height='60' fill='%23fff'/></svg>";
                         }}
                         title={props.dataItem["gameID"]}
                         style={{ maxWidth: "55px", maxHeight: "55px" }}

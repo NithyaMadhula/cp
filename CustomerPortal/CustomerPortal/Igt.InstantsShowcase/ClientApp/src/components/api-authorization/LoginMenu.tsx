@@ -58,14 +58,14 @@ export default class LoginMenu extends React.Component<IProps, IState> {
         <>
         <ul>
         <Link to="">
-            <a>HOME</a>
+            HOME
         </Link>
         <Link to="/showroom">
-            <a>SHOWROOM</a>
+            SHOWROOM
         </Link>
         {userCanAnalytics(userName) ? (
             <Link to="/analytics">
-                <a>ANALYTICS</a>
+                ANALYTICS
             </Link>
         ) : (
                         <>
@@ -74,7 +74,7 @@ export default class LoginMenu extends React.Component<IProps, IState> {
             }
 
         <div className="LogoutDropDown">                
-            <a>LOGOUT</a>
+            <span>LOGOUT</span>
                     <span>
                         <div>
                             <h1 style={{ padding: "0.1rem" }}>{this.user?.profile?.name}</h1>
@@ -85,7 +85,7 @@ export default class LoginMenu extends React.Component<IProps, IState> {
                                 <a href="/Identity/Account/Manage/ChangePassword">CHANGE PASSWORD</a>
                             </p>
                             <Link to={logoutPath}>
-                                <a>LOGOUT</a>
+                                LOGOUT
                             </Link>
                         </div>
             </span>
@@ -100,7 +100,7 @@ export default class LoginMenu extends React.Component<IProps, IState> {
         <>
             <ul>
                 <Link to={loginPath}>
-                    <a>LOGIN</a>
+                    LOGIN
                 </Link>
                 
             </ul>

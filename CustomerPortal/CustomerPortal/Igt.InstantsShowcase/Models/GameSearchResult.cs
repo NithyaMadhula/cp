@@ -22,5 +22,6 @@ namespace Igt.InstantsShowcase.Models
         public string SpecialtyOption { get; set; }
         public string ImgName { get; set; }
         public string Index { get; set; }
+        public int TotalCount { get; set; }
     }
 }

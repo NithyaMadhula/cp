@@ -235,11 +235,12 @@ export const fetch_data = {
     const url = `${IGT_API}games`;
 
     try {
-      const data = (await postData(url, model || {})) || [];
+      const data = (await postData(url, model || {})) || {};
       if (data.status == "401") {
         window.location.href = "/authentication/login";
       }
-      const projection = data.map((x) => ({
+      const results = Array.isArray(data.results) ? data.results : [];
+      const projection = results.map((x) => ({
         ...x,
         index:
           x.index === null || x.index === undefined || x.index === ""
@@ -248,8 +249,10 @@ export const fetch_data = {
             ? null
             : Number(x.index),
       }));
-
-      return projection;
+      return {
+        results: projection,
+        totalCount: Number(data.totalCount || 0),
+      };
     } catch (error) {
       return new_error(error);
     }
