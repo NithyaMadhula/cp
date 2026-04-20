@@ -19,7 +19,7 @@ steps:
 - task: NodeTool@0
   displayName: 'Install Node.js'
   inputs:
-    versionSpec: '18.x'
+    versionSpec: '22.x'
 
 # 🧱 Build/Publish
 - task: DotNetCoreCLI@2
