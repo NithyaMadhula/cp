@@ -197,6 +197,12 @@ const Games = (props: any) => {
                 />
             )}
         <Column
+          field="vendorName"
+          title="Vendor"
+          width="150"
+          cell={formatCell(defaultify)}
+        />
+        <Column
           field={props.isFavorites ? "primaryThemeName" : "theme"}
             title="Theme"
             width="150"

@@ -67,7 +67,8 @@ namespace Igt.InstantsShowcase.Controllers
                     x.Color,
                     x.SpecialtyOption,
                     x.ImgName,
-                    x.Index
+                    x.Index,
+                    x.VendorName
                 }),
                 totalCount
             });

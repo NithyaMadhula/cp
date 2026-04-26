@@ -233,7 +233,6 @@ const Showroom = (props: any) => {
             <TabPanel value={value} index={FAVS_ID}>
                 <Games search={fetch_data.fetchFavoriteGames} isFavorites={true} />
             </TabPanel>
-            c
             {metadata ? (
                 <Drawer anchor="right" open={search} style={{ display: "block" }}>
                     <h2 className="header-text pt-4 ml-2" style={{ color: "black" }}>
